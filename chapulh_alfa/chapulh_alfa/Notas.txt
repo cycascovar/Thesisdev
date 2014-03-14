@@ -1,0 +1,5 @@
+Clases importantes:
+  empleados
+  equipo_almacen
+  equipo_garantia
+  equipo_reparacion
