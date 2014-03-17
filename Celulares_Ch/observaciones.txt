@@ -1,0 +1,11 @@
+Usuario       Nivel   
+
+frank         1
+chapulhuacan  1
+abi           1
+admin         0
+
+
+permisos_apps
+
+usuario: usuario al que se requieran aplicar permisos
