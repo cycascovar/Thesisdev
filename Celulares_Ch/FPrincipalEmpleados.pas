@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ExtCtrls, StdCtrls, pngimage, ZAbstractConnection, ZConnection,
-  DB, ZAbstractRODataset, ZAbstractDataset, ZDataset, ComCtrls;
+  DB, ZAbstractRODataset, ZAbstractDataset, ZDataset, ComCtrls,
+  ZDbcIntfs, Buttons, ShellApi, ImgList, ExceptionLog, jpeg, uCore;
 
 type
   TFPrincipal = class(TForm)
@@ -49,6 +50,9 @@ type
     Label4: TLabel;
     Administrador1: TMenuItem;
     Iniciar1: TMenuItem;
+    Image6: TImage;
+    Sistema1: TMenuItem;
+    Comprobarnuevasversiones1: TMenuItem;
     procedure Acercade1Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -56,11 +60,8 @@ type
     procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Verequiposenreparacin1Click(Sender: TObject);
-    procedure Llenarsolicitud1Click(Sender: TObject);
-    procedure Llenarsolicitud2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Verequiposenalmacen1Click(Sender: TObject);
-    procedure Generarcdigos1Click(Sender: TObject);
     procedure Vercelularesasignados1Click(Sender: TObject);
     procedure Verequiposengaranta1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -68,13 +69,25 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Iniciar1Click(Sender: TObject);
+    procedure Cmousarelsistema1Click(Sender: TObject);
+    procedure Ventasdeldia1Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure Inventario1Click(Sender: TObject);
   private
     { Private declarations }
     ZQMovimiento : TZQuery;
   public
     { Public declarations }
-    idEmpleado, idSucursal : Integer;
+    idEmpleado, idSucursal,idNivel : Integer;
     sucursal : String;
+    procedure GetSystemDPI(var HorizDPI, VertDPI: Integer);
+    procedure scaleForm(F: TForm; ScreenWidth, ScreenHeight: LongInt);
+    function InetIsOffline(Flag: Integer): Boolean; stdcall;
+//    external 'URL.DLL';
   end;
 
 var
@@ -82,74 +95,133 @@ var
 
 implementation
 uses
-    FAcerca_De,F_Login,FAlmacen_Local,FGarantia,FReparacion,
-    FRecargas,FGarantia_Alta, FReparacion_Alta, FAlmacen_Venta,
-    F_RecargasAlta,FA_Login;
+    F_Login,FAlmacen_Local,FGarantia,FReparacion,
+    FRecargas,
+    FA_Login,F_About,F_Main,FR_VentaDiario,FR_Almacen;
 
 
 {$R *.dfm}
 
 procedure TFPrincipal.Acercade1Click(Sender: TObject);
 begin
-    FAcercaDe.Enabled := false;
-    FAcercaDe := TFAcercaDe.Create(self);
-    FAcercaDe.ShowModal;
+    FAbout.Enabled := false;
+    FAbout := TFAbout.Create(Application);
+    FAbout.ShowModal;
 end;
 
 procedure TFPrincipal.Button1Click(Sender: TObject);
 begin
-    FAlmacenLocal.Enabled := false;
-    FAlmacenLocal := TFAlmacenLocal.Create(self);
-    FAlmacenLocal.ShowModal;
+    try
+        FAlmacenLocal.Enabled := false;
+        FAlmacenLocal := TFAlmacenLocal.Create(self);
+        FAlmacenLocal.ShowModal;
+    finally
+        FAlmacenLocal.Free;
+    end;
 end;
 
 procedure TFPrincipal.Button2Click(Sender: TObject);
 begin
-    F_Recargas.Enabled := false;
-    F_Recargas := TF_Recargas.Create(self);
-    F_Recargas.ShowModal;
+    try
+        F_Recargas.Enabled := false;
+        F_Recargas := TF_Recargas.Create(Application);
+        F_Recargas.ShowModal;
+    finally
+        F_Recargas.Free;
+    end;
 end;
 
 procedure TFPrincipal.Button3Click(Sender: TObject);
 begin
-    FGarantias.Enabled := false;
-    FGarantias := TFGarantias.Create(self);
-    FGarantias.ShowModal;
+    try
+        FGarantias.Enabled := false;
+        FGarantias := TFGarantias.Create(Application);
+        FGarantias.ShowModal;
+    finally
+        FGarantias.Free;
+    end;
 end;
 
 procedure TFPrincipal.Button4Click(Sender: TObject);
 begin
-    FReparaciones.Enabled := false;
-    FReparaciones := TFReparaciones.Create(self);
-    FReparaciones.ShowModal;
+    try
+        FReparaciones.Enabled := false;
+        FReparaciones := TFReparaciones.Create(Application);
+        FReparaciones.ShowModal;
+    finally
+        FReparaciones.Free;
+    end;
 end;
 
 procedure TFPrincipal.Button5Click(Sender: TObject);
 begin
-    if application.MessageBox (pchar('¿Desea salir del programa?'), pchar('Confirmar'), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
-    begin
-        ZQMovimiento.Close;
-        ZQMovimiento.SQL.Clear;
-        ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha)');
-        ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
-        ZQMovimiento.ExecSQL;
-        FLogin.Close;
+    try
+        if application.MessageBox (pchar('¿Desea salir del programa?'), pchar('Confirmar'), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
+        begin
+            if idNivel = 3 then
+            begin
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha,host,userpc)');
+            ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostName()+'","'+GetUserFromWindows()+'")');
+            ZQMovimiento.ExecSQL;
+            FLogin.Close;
+            FLogin.Free;
+            FLogin := nil;
+            end
+            else if idNivel = 2 then
+            begin
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento,sucursal,usuario,fecha)');
+            ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+            ZQMovimiento.ExecSQL;
+            FLogin.Close;
+            FLogin.Free;
+            FLogin := nil;
+            end;
+        end;
+    finally
+        ZQMovimiento.Free;
     end;
+end;
+
+procedure TFPrincipal.Cmousarelsistema1Click(Sender: TObject);
+begin
+    ShellExecute(Handle, 'open', 'C:\Archivos de programa\Celulares Castillo\ayuda\ayuda.chm', nil, nil, SW_SHOWNORMAL) ; //Aqui deberia de ejecutarse el .chm o un .html para la ayuda
 end;
 
 procedure TFPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-    ZQMovimiento.Close;
-    ZQMovimiento.SQL.Clear;
-    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha)');
-    ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
-    ZQMovimiento.ExecSQL;
-    FLogin.Close;
+    if idNivel = 3 then
+    begin
+        ZQMovimiento.Close;
+        ZQMovimiento.SQL.Clear;
+        ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha,host,userpc)');
+        ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostName()+'","'+GetUserFromWindows()+'")');
+        ZQMovimiento.ExecSQL;
+        FLogin.Close;
+    end else
+    if idNivel = 2 then
+    begin
+        ZQMovimiento.Close;
+        ZQMovimiento.SQL.Clear;
+        ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento,sucursal,usuario,fecha)');
+        ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+        ZQMovimiento.ExecSQL;
+        FLogin.Close;
+    end;
+
 end;
 
 procedure TFPrincipal.FormCreate(Sender: TObject);
 begin
-    SetWindowLong(Handle, GWL_EXSTYLE, WS_EX_APPWINDOW);
+//    SetWindowLong(Handle, GWL_EXSTYLE, WS_EX_APPWINDOW);
+    ZConexion.HostName := _hostname;
+    ZConexion.Catalog := _CATALOG;
+    ZConexion.Database := _db;
+    ZConexion.User := _u;
+    ZConexion.Password := _p;
 end;
 
 procedure TFPrincipal.FormShow(Sender: TObject);
@@ -161,13 +233,13 @@ begin
 
     ZQMovimiento := TZQuery.Create(Application);
     ZQMovimiento.Connection := ZConexion;
-    ZQMovimiento.ShowRecordTypes := [usUnmodified,usModified,usInserted];
-    ZQMovimiento.Options := [doCalcDefaults];
-    ZQMovimiento.AutoCalcFields := true;
+   // InetIsOffline(0);
+
+    //Niveles : 1 = sysadmin, 2 = administrador, 3 = empleado
 
     ZQuery1.Close;
     ZQuery1.SQL.Clear;
-    ZQuery1.SQL.Add('SELECT idempleado,idsucursal');
+    ZQuery1.SQL.Add('SELECT idempleado,idsucursal,idnivel');
     ZQuery1.SQL.Add('FROM empleado');
     ZQuery1.SQL.Add('WHERE password="'+FLogin.password.Text+'"');
     ZQuery1.ExecSQL;
@@ -175,6 +247,9 @@ begin
 
     idEmpleado := ZQuery1.FieldByName('idempleado').AsInteger;
     idSucursal := ZQuery1.FieldByName('idsucursal').AsInteger;
+    idNivel := ZQuery1.FieldByName('idNivel').AsInteger;
+(*    ShowMessage('Nivel: '+IntToStr(idNivel));
+    ShowMessage('idsucursal:'+IntToStr(idSucursal)); *)
 
     ZQuery1.Close;
     ZQuery1.SQL.Clear;
@@ -184,61 +259,209 @@ begin
     ZQuery1.ExecSQL;
     ZQuery1.Open;
     Sucursal := ZQuery1.FieldByName('sucursal').AsString;
+    setSucursal(Sucursal);
+    setTitleWindow(self,'Principal - Celulares "Castillo", (sucursal '+getsucursal+')');
+//    Application.Title := 'Sistema para empleados: Celulares "Castillo", (sucursal '+getsucursal+')';
 
-    FPrincipal.Caption := 'Principal - Celulares "Chapulh", (sucursal '+sucursal+')';
-
-    ZQMovimiento.Close;
-    ZQMovimiento.SQL.Clear;
-    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha)');
-    ZQMovimiento.SQL.Add('VALUES ("Inicio de sesión.","El usuario '+FLogin.username.Text+' inicio sesion corectamente.","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
-    ZQMovimiento.ExecSQL;
-
+    if idNivel = 3 then
+    begin
+        ZQMovimiento.Close;
+        ZQMovimiento.SQL.Clear;
+        ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha,host,userpc)');
+        ZQMovimiento.SQL.Add('VALUES ("Inicio de sesión.","El usuario '+FLogin.username.Text+' inicio sesion correctamente a las '+TimeToStr(Time())+'","'+getsucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostName()+'","'+GetUserFromWindows()+'")');
+        ZQMovimiento.ExecSQL;
+    end else
+    if idNivel = 2 then
+    begin
+        ZQMovimiento.Close;
+        ZQMovimiento.SQL.Clear;
+        ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento,sucursal,usuario,fecha)');
+        ZQMovimiento.SQL.Add('VALUES ("Inicio de sesión.","El usuario '+FLogin.username.Text+' inicio sesion correctamente a las '+TimeToStr(Time())+'","'+getsucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+        ZQMovimiento.ExecSQL;
+    end;
 end;
 
-procedure TFPrincipal.Generarcdigos1Click(Sender: TObject);
+procedure TFPrincipal.GetSystemDPI(var HorizDPI, VertDPI: Integer);
+var
+  DC: HDC;
 begin
-    FRecargasAlta.Enabled := false;
-    FRecargasAlta := TFRecargasAlta.Create(self);
-    FRecargasAlta.ShowModal;
+  DC := GetDC(0);
+  try
+    HorizDPI := GetDeviceCaps(DC, LOGPIXELSX);
+    VertDPI := GetDeviceCaps(DC, LOGPIXELSY);
+  finally
+    ReleaseDC(0, DC);
+  end;
+end;
+
+procedure TFPrincipal.Image1Click(Sender: TObject);
+begin
+// agregar codigo de boton
+    try
+        FAlmacenLocal.Enabled := false;
+        FAlmacenLocal := TFAlmacenLocal.Create(self);
+        FAlmacenLocal.ShowModal;
+    finally
+        FAlmacenLocal.Free;
+    end;
+end;
+
+procedure TFPrincipal.Image2Click(Sender: TObject);
+begin
+    try
+        F_Recargas.Enabled := false;
+        F_Recargas := TF_Recargas.Create(self);
+        F_Recargas.ShowModal;
+    finally
+        F_Recargas.Free;
+    end;
+end;
+
+procedure TFPrincipal.Image3Click(Sender: TObject);
+begin
+    try
+        FGarantias.Enabled := false;
+        FGarantias := TFGarantias.Create(self);
+        FGarantias.ShowModal;
+    finally
+        FGarantias.Free;
+    end;
+end;
+
+procedure TFPrincipal.Image4Click(Sender: TObject);
+begin
+    try
+        FReparaciones.Enabled := false;
+        FReparaciones := TFReparaciones.Create(self);
+        FReparaciones.ShowModal;
+    finally
+        FReparaciones.Free;
+    end;
+end;
+
+procedure TFPrincipal.Image5Click(Sender: TObject);
+begin
+    try
+        if application.MessageBox (pchar('¿Desea salir del programa?'), pchar('Confirmar'), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
+        begin
+            if idNivel = 3 then
+            begin
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha,host,userpc)');
+            ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostName()+'","'+GetUserFromWindows()+'")');
+            ZQMovimiento.ExecSQL;
+            FLogin.Close;
+{            FLogin.Free;
+            FLogin := nil;}
+            end
+            else if idNivel = 2 then
+            begin
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento,sucursal,usuario,fecha)');
+            ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+            ZQMovimiento.ExecSQL;
+            FLogin.Close;
+{            FLogin.Free;
+            FLogin := nil;}
+            end;
+        end;
+    finally
+        ZQMovimiento.Free;
+    end;
+end;
+
+function TFPrincipal.InetIsOffline(Flag: Integer): Boolean;
+begin
+if InetIsOffline(0) then
+   ShowMessage('This computer is not connected to Internet!')
+else
+   ShowMessage('You are connected to Internet!');
 end;
 
 procedure TFPrincipal.Iniciar1Click(Sender: TObject);
 begin
-    FALogin.Enabled := false;
-    FALogin := TFALogin.Create(self);
-    FALogin.ShowModal();
+    if (idNivel = 1) or (idNivel = 2) then
+    begin
+        FMain.Enabled := false;
+        FMain := TFMain.Create(Application);
+        FMain.ShowModal();
+    end else
+    if (idNivel = 3) then
+    begin
+        FALogin.Enabled := false;
+        FALogin := TFALogin.Create(Application);
+        FALogin.ShowModal();
+    end;
 end;
 
-procedure TFPrincipal.Llenarsolicitud1Click(Sender: TObject);
+procedure TFPrincipal.Inventario1Click(Sender: TObject);
 begin
-    FGarantiasAlta.Enabled := false;
-    FGarantiasAlta := TFGarantiasAlta.Create(self);
-    FGarantiasAlta.ShowModal;
-end;
-
-procedure TFPrincipal.Llenarsolicitud2Click(Sender: TObject);
-begin
-    FReparacionesAlta.Enabled := false;
-    FReparacionesAlta := TFReparacionesAlta.Create(self);
-    FReparacionesAlta.ShowModal;
+    FRAlmacen.QRAlmacen.Preview;
 end;
 
 procedure TFPrincipal.Salir2Click(Sender: TObject);
 begin
-    if application.MessageBox (pchar('¿Desea salir del programa?'), pchar('Confirmar'), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
-    begin
-        ZQMovimiento.Close;
-        ZQMovimiento.SQL.Clear;
-        ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal)');
-        ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+'a las '+TimeToStr(Time())+'.","'+sucursal+'")');
-        ZQMovimiento.ExecSQL;
-        FLogin.Close;
+    try
+        if application.MessageBox (pchar('¿Desea salir del programa?'), pchar('Confirmar'), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
+        begin
+            if idNivel = 3 then
+            begin
+                ZQMovimiento.Close;
+                ZQMovimiento.SQL.Clear;
+                ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles,sucursal,empleado,fecha,host,userpc)');
+                ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostName()+'","'+GetUserFromWindows()+'")');
+                ZQMovimiento.ExecSQL;
+                FLogin.Close;
+{                FLogin.Free;
+                FLogin := nil;}
+            end
+            else if idNivel = 2 then
+            begin
+                ZQMovimiento.Close;
+                ZQMovimiento.SQL.Clear;
+                ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento,sucursal,usuario,fecha)');
+                ZQMovimiento.SQL.Add('VALUES ("Salida del programa.","El usuario '+FLogin.username.Text+' dejó de usar el sistema el dia '+DateToStr(Date())+' a las '+TimeToStr(Time())+'","'+sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+                ZQMovimiento.ExecSQL;
+                FLogin.Close;
+{                FLogin.Free;
+                FLogin := nil;}
+            end;
+        end;
+    finally
+        ZQMovimiento.Free;
     end;
+end;
+
+
+procedure TFPrincipal.scaleForm(F: TForm; ScreenWidth, ScreenHeight: Integer);
+begin
+F.Scaled := True;
+   F.AutoScroll := False;
+   F.Position := poScreenCenter;
+   F.Font.Name := 'Arial';
+   if (Screen.Width <> ScreenWidth) then begin
+     F.Height :=
+         LongInt(F.Height) * LongInt(Screen.Height)
+         div ScreenHeight;
+     F.Width :=
+         LongInt(F.Width) * LongInt(Screen.Width)
+         div ScreenWidth;
+     F.ScaleBy(Screen.Width,ScreenWidth) ;
+   end;
 end;
 
 procedure TFPrincipal.Timer1Timer(Sender: TObject);
 begin
     StatusBar1.Panels[1].Text := TimeToStr(Time());
+end;
+
+procedure TFPrincipal.Ventasdeldia1Click(Sender: TObject);
+begin
+    FRVentaDiario.QuickRep1.Preview;
+//    FRVentaDiario.QuickRep1.PrinterSetup;
+  //  FRVentaDiario.QuickRep1.Print;
 end;
 
 procedure TFPrincipal.Vercelularesasignados1Click(Sender: TObject);
@@ -270,7 +493,3 @@ begin
 end;
 
 end.
-
-
-
-

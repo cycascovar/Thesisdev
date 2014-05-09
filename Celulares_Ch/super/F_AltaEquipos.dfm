@@ -2,8 +2,8 @@ object FAltaEquipo: TFAltaEquipo
   Left = 0
   Top = 0
   Caption = 'Sistema para administradores: Alta de equipos'
-  ClientHeight = 360
-  ClientWidth = 1033
+  ClientHeight = 357
+  ClientWidth = 1044
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,26 +15,13 @@ object FAltaEquipo: TFAltaEquipo
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 8
-    Top = 8
-    Width = 450
-    Height = 13
-    Caption = 
-      'Este formulario deberia de contener textedits y botones para dar' +
-      ' de alta equipos por sucursal'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHighlight
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label2: TLabel
     Left = 16
     Top = 64
     Width = 33
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Marca:'
   end
   object Label3: TLabel
@@ -42,6 +29,8 @@ object FAltaEquipo: TFAltaEquipo
     Top = 272
     Width = 155
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Los equipos van para la sucursal'
   end
   object Label4: TLabel
@@ -49,6 +38,8 @@ object FAltaEquipo: TFAltaEquipo
     Top = 96
     Width = 38
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Modelo:'
   end
   object Label5: TLabel
@@ -56,6 +47,8 @@ object FAltaEquipo: TFAltaEquipo
     Top = 136
     Width = 24
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Imei:'
   end
   object Label6: TLabel
@@ -63,6 +56,8 @@ object FAltaEquipo: TFAltaEquipo
     Top = 168
     Width = 33
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'ICCID:'
   end
   object Label7: TLabel
@@ -70,6 +65,8 @@ object FAltaEquipo: TFAltaEquipo
     Top = 208
     Width = 75
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'N'#250'mero celular:'
   end
   object Label8: TLabel
@@ -77,56 +74,85 @@ object FAltaEquipo: TFAltaEquipo
     Top = 238
     Width = 29
     Height = 13
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Precio'
+  end
+  object Label1: TLabel
+    Left = 18
+    Top = 8
+    Width = 137
+    Height = 19
+    Caption = 'Alta de celulares'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object listaSucursales: TDBLookupComboBox
     Left = 177
     Top = 269
     Width = 145
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     ListSource = DSListaSuc
     TabOrder = 0
   end
   object marcaequipo: TEdit
     Left = 64
-    Top = 61
+    Top = 64
     Width = 121
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 1
   end
   object modeloequipo: TEdit
     Left = 64
-    Top = 93
+    Top = 96
     Width = 121
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 2
   end
   object imeiequipo: TEdit
     Left = 64
-    Top = 138
+    Top = 141
     Width = 121
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 3
   end
   object iccidequipo: TEdit
     Left = 64
-    Top = 165
+    Top = 167
     Width = 121
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 4
   end
   object numeroequipo: TEdit
     Left = 120
-    Top = 205
+    Top = 208
     Width = 121
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 5
   end
   object Button1: TButton
-    Left = 16
-    Top = 320
+    Left = 8
+    Top = 321
     Width = 75
     Height = 25
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Dar de alta'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -139,9 +165,11 @@ object FAltaEquipo: TFAltaEquipo
   end
   object Button2: TButton
     Left = 247
-    Top = 320
+    Top = 324
     Width = 75
     Height = 25
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     Caption = 'Limpiar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -153,17 +181,20 @@ object FAltaEquipo: TFAltaEquipo
   end
   object precioequipo: TEdit
     Left = 53
-    Top = 235
+    Top = 238
     Width = 145
     Height = 21
+    Align = alCustom
+    Anchors = [akLeft, akBottom]
     TabOrder = 8
   end
   object DBAlmacenes: TDBGrid
-    AlignWithMargins = True
     Left = 344
     Top = 61
-    Width = 681
-    Height = 284
+    Width = 692
+    Height = 283
+    Align = alCustom
+    Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DSSucursales
     TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
@@ -214,11 +245,12 @@ object FAltaEquipo: TFAltaEquipo
       end>
   end
   object sucursal: TEdit
-    Left = 352
+    Left = 344
     Top = 34
     Width = 105
     Height = 21
     TabOrder = 10
+    OnKeyUp = sucursalKeyUp
   end
   object ZQSucursales: TZQuery
     Connection = FPrincipalAdmin.ZConexion

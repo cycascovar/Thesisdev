@@ -1,8 +1,13 @@
 unit uUtils;
 
 interface
+//uses
+{var
+  procedure GetSystemDPI(var HorizDPI, VertDPI: Integer);}
 
 implementation
+//uses
+  {declaracion de variables}
 //La siguiente unit contiene funciones y procedimientos para conversion de fechas y otras cosas
 {
     Notas de movimientos:
@@ -13,4 +18,5 @@ implementation
     ZQMovimiento.SQL.Add('VALUES ("Movimiento", "El usuario '+Flogin.username.Text+' ha hecho tal cosa el dia '+DateToStr(Date())+' a las '+TimetoStr(Time())+'", "'+FPrincipal.sucursal+'","'+FLogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
     ZQMovimiento.ExecSQL;
 }
+
 end.

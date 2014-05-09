@@ -17,7 +17,7 @@ var
     ZQMovimiento : TZquery;
 
     procedure creaZQuery();
-    procedure agregaMovimiento(Movimiento : String; Detalles:String);
+    procedure agregaMovimiento(Movimiento : String; Detalles:String;tipoUsuario : Integer); //Movimiento, movimiento_detalles,usuario
 
 implementation
 uses
@@ -31,7 +31,7 @@ begin
     ZQMovimiento.AutoCalcFields := true;
 end;
 
-procedure agregaMovimiento(Movimiento : String; Detalles:String);
+procedure agregaMovimiento(Movimiento : String; Detalles:String;tipoUsuario : Integer);
 begin
     ZQMovimiento.Close;
     ZQMovimiento.SQL.Clear;

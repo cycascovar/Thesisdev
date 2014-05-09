@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, StdCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ComCtrls, Buttons, ExtCtrls;
+  ZAbstractDataset, ZDataset, ComCtrls, Buttons, ExtCtrls, uCore, pngimage;
 
 type
   TFReparaciones = class(TForm)
@@ -13,7 +13,6 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
-    Label2: TLabel;
     Label3: TLabel;
     DSReparaciones: TDataSource;
     ZQReparaciones: TZQuery;
@@ -37,10 +36,11 @@ type
     fecharecibido: TDateTimePicker;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
     BitBtn4: TBitBtn;
     entregarboton: TBitBtn;
     Timer1: TTimer;
+    Image6: TImage;
+    BitBtn3: TBitBtn;
     procedure Button3Click(Sender: TObject);
     procedure entregarBotonClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -74,15 +74,21 @@ var
 
 implementation
 uses
-    FReparacion_Alta,FPrincipalEmpleados,F_login;
+    FPrincipalEmpleados,F_login;
 {$R *.dfm}
 
 procedure TFReparaciones.entregarBotonClick(Sender: TObject);
 var
     imei : String;
+    nivel : Integer;
 begin
     imei := DBGrid1.Fields[2].AsString;
+    nivel := FPrincipal.idNivel;
 
+    if imei <> '' then
+    begin
+if nivel = 3 then
+    begin
     ZQReparaciones.Close;
     ZQReparaciones.SQL.Clear;
     ZQReparaciones.SQL.Add('SELECT idequipo_reparacion AS idReparacion');
@@ -111,7 +117,56 @@ begin
 
     ZQMovimiento.Close;
     ZQMovimiento.SQL.Clear;
-    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha)');
+    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha,host,userpc)');
+    ZQMovimiento.SQL.Add('VALUES ("Entrega de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha entregado un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostname()+'","'+getUserFromWindows()+'")');
+    ZQMovimiento.ExecSQL;
+
+    ZQReparaciones.Close;
+    ZQReparaciones.SQL.Clear;
+    ZQReparaciones.SQL.Add('SELECT marca_equipo AS Marca, modelo_equipo AS Modelo, imei_equipo AS IMEI, nombre_cliente as Titular, telefono_contacto AS "Telefono titular", fecha AS "Fecha Recibido"');
+    ZQReparaciones.SQL.Add('FROM equipo_reparacion');
+    ZQReparaciones.SQL.Add('JOIN cliente_reparacion ON equipo_reparacion.idequipo_reparacion = cliente_reparacion.idequipo_reparacion');
+    ZQReparaciones.SQL.Add('JOIN sucursal ON sucursal.idsucursal = equipo_reparacion.idsucursal');
+    ZQReparaciones.SQL.Add('AND equipo_reparacion.idsucursal = '+IntToStr(FPrincipal.idSucursal)+'');
+    ZQReparaciones.SQL.Add('ORDER BY fecha DESC');
+    ZQReparaciones.ExecSQL;
+    ZQReparaciones.Open;
+    DBGrid1.Update;
+
+    Application.MessageBox('El equipo ha sido entregado y no esta mas en garantía.','Información',MB_ICONINFORMATION);
+    end
+    else
+    if nivel = 2 then
+    begin
+    ZQReparaciones.Close;
+    ZQReparaciones.SQL.Clear;
+    ZQReparaciones.SQL.Add('SELECT idequipo_reparacion AS idReparacion');
+    ZQReparaciones.SQL.Add('FROM equipo_reparacion');
+    ZQReparaciones.SQL.Add('WHERE imei_equipo='+imei+'');
+    ZQReparaciones.ExecSQL;
+    ZQReparaciones.Open;
+
+    idEquipoReparacion := ZQReparaciones.FieldByName('idReparacion').AsInteger;
+//    ShowMessage(IntToStr(idEquipoReparacion));
+
+    ZQReparaciones.Close;
+    ZQReparaciones.SQL.Clear;
+    ZQReparaciones.SQL.Add('INSERT INTO equipo_entregado (fecha_entrega, tipo, empleado, imei_equipo, sucursal)');
+    ZQReparaciones.SQL.Add('VALUES ("'+FormatDateTime('YYYY/MM/DD',Date())+'","Reparacion","'+FLogin.username.Text+'","'+imei+'","'+FPrincipal.sucursal+'")');
+    ZQReparaciones.ExecSQL;
+
+    ZQReparaciones.Close;
+    ZQReparaciones.SQL.Clear;
+    ZQReparaciones.SQL.Add('DELETE FROM cliente_reparacion WHERE idequipo_reparacion='+IntToStr(idEquipoReparacion)+'');
+    ZQReparaciones.ExecSQL;
+
+    ZQReparaciones.SQL.Clear;
+    ZQReparaciones.SQL.Add('DELETE FROM equipo_reparacion WHERE idequipo_reparacion='+IntToStr(idEquipoReparacion)+'');
+    ZQReparaciones.ExecSQL;
+
+    ZQMovimiento.Close;
+    ZQMovimiento.SQL.Clear;
+    ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento, sucursal, usuario, fecha)');
     ZQMovimiento.SQL.Add('VALUES ("Entrega de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha entregado un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
     ZQMovimiento.ExecSQL;
 
@@ -128,7 +183,9 @@ begin
     DBGrid1.Update;
 
     Application.MessageBox('El equipo ha sido entregado y no esta mas en garantía.','Información',MB_ICONINFORMATION);
-
+    end;
+    end else
+        ShowMessage('Seleccione un equipo a entregar. La lista de equipos'+#13+'en garantía está vacía.');
 end;
 
 procedure TFReparaciones.fecharecibidoChange(Sender: TObject);
@@ -186,19 +243,20 @@ begin
     ZQTemp.Open;
     idEquipo := ZQTemp.FieldByName('idEquipo').AsInteger;
 
-    if titular.Text = '' then
-        Application.MessageBox('Por favor ingrese un titular válido.','Información',MB_ICONINFORMATION);
-    if imei.Text = '' then
-        Application.MessageBox('Por favor ingrese un IMEI válido.','Información',MB_ICONINFORMATION);
-
+    if (titular.Text = '') and (imei.Text = '') then
+        Application.MessageBox('Por favor ingrese un titular o un imei válido.','Información',MB_ICONINFORMATION)
+    else
+    begin
     if idEquipo = 0 then
     begin
+        if FPrincipal.idNivel = 3 then //_____ empleado
+        begin
         idEquipo := 1;
 
         ZQReparaciones.Close;
         ZQReparaciones.SQL.Clear;
-        ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones)');
-        ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'")');
+        ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones,mes)');
+        ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'"),'+IntToStr(obtieneMes(Date))+'');
         ZQReparaciones.ExecSQL;
 
         ZQReparaciones.SQL.Clear;
@@ -213,17 +271,25 @@ begin
         ZQClienteReparacion.SQL.Add('INSERT INTO cliente_reparacion(idequipo_garantia,nombre_cliente,telefono_contacto)');
         ZQClienteReparacion.SQL.Add('VALUES ("'+IntToStr(idEquiposR)+'","'+titular.Text+'","'+telefonoContacto.Text+'")');
         ZQClienteReparacion.ExecSQL;
-    end
-    else
-    begin
+
+      ZQMovimiento.Close;
+      ZQMovimiento.SQL.Clear;
+      ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha,host,userpc)');
+      ZQMovimiento.SQL.Add('VALUES ("Alta de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostname()+'","'+getUserFromWindows()+'")');
+      ZQMovimiento.ExecSQL;
+        end else
+        if (FPrincipal.idNivel = 2) then//____ administrador
+        begin
+       idEquipo := 1;
+
         ZQReparaciones.Close;
         ZQReparaciones.SQL.Clear;
-        ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones)');
-        ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo+1)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'")');
+        ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones,mes)');
+        ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'"),'+IntToStr(obtieneMes(Date))+'');
         ZQReparaciones.ExecSQL;
 
         ZQReparaciones.SQL.Clear;
-        ZQReparaciones.SQL.Add('SELECT idequipo_reparacion FROM equipo_reparacion WHERE idequipo='+IntToStr(idEquipo+1)+'');
+        ZQReparaciones.SQL.Add('SELECT idequipo_reparacion FROM equipo_reparacion WHERE idequipo='+IntToStr(idEquipo)+'');
         ZQReparaciones.ExecSQL;
         ZQReparaciones.Open;
 
@@ -231,11 +297,80 @@ begin
 
         ZQClienteReparacion.Close;
         ZQClienteReparacion.SQL.Clear;
-        ZQClienteReparacion.SQL.Add('INSERT INTO cliente_reparacion(idequipo_reparacion,nombre_cliente,telefono_contacto)');
+        ZQClienteReparacion.SQL.Add('INSERT INTO cliente_reparacion(idequipo_garantia,nombre_cliente,telefono_contacto)');
         ZQClienteReparacion.SQL.Add('VALUES ("'+IntToStr(idEquiposR)+'","'+titular.Text+'","'+telefonoContacto.Text+'")');
         ZQClienteReparacion.ExecSQL;
-    end;
 
+      ZQMovimiento.Close;
+      ZQMovimiento.SQL.Clear;
+      ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento, sucursal, usuario, fecha)');
+      ZQMovimiento.SQL.Add('VALUES ("Alta de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+      ZQMovimiento.ExecSQL;
+        end;
+    end
+    else
+    begin
+        if (FPrincipal.idNivel = 3) then
+        begin
+            idEquipo := IdEquipo + 1;
+            ZQReparaciones.Close;
+            ZQReparaciones.SQL.Clear;
+            ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones,mes)');
+            ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'",'+IntToStr(obtieneMes(Date))+')');
+            ZQReparaciones.ExecSQL;
+
+            ZQReparaciones.SQL.Clear;
+            ZQReparaciones.SQL.Add('SELECT idequipo_reparacion FROM equipo_reparacion WHERE idequipo='+IntToStr(idEquipo)+'');
+            ZQReparaciones.ExecSQL;
+            ZQReparaciones.Open;
+
+            idEquiposR := ZQReparaciones.FieldByName('idequipo_reparacion').AsInteger;
+
+            ZQClienteReparacion.Close;
+            ZQClienteReparacion.SQL.Clear;
+            ZQClienteReparacion.SQL.Add('INSERT INTO cliente_reparacion(idequipo_reparacion,nombre_cliente,telefono_contacto)');
+            ZQClienteReparacion.SQL.Add('VALUES ("'+IntToStr(idEquiposR)+'","'+titular.Text+'","'+telefonoContacto.Text+'")');
+            ZQClienteReparacion.ExecSQL;
+
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha,host,userpc)');
+            ZQMovimiento.SQL.Add('VALUES ("Alta de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostname()+'","'+getUserFromWindows()+'")');
+            ZQMovimiento.ExecSQL;
+            Application.MessageBox('El equipo ha sido agregado a reparación.','Información',MB_ICONINFORMATION);
+        end else
+        if (FPrincipal.idNivel = 2) then
+        begin
+            idEquipo := IdEquipo + 1;
+            ZQReparaciones.Close;
+            ZQReparaciones.SQL.Clear;
+            ZQReparaciones.SQL.Add('INSERT INTO equipo_reparacion(idempleado,marca_equipo, modelo_equipo,imei_equipo,idequipo,fecha,idsucursal,observaciones,mes)');
+            ZQReparaciones.SQL.Add('VALUES ('+IntToStr(FPrincipal.idEmpleado)+',"'+marca.Text+'","'+modelo.Text+'","'+imei.Text+'","'+IntToStr(idEquipo)+'","'+FormatDateTime('YYYY/MM/DD',Date())+'",'+IntToStr(FPrincipal.idSucursal)+',"'+observaciones.Text+'",'+IntToStr(obtieneMes(Date))+')');
+            ZQReparaciones.ExecSQL;
+
+            ZQReparaciones.SQL.Clear;
+            ZQReparaciones.SQL.Add('SELECT idequipo_reparacion FROM equipo_reparacion WHERE idequipo='+IntToStr(idEquipo)+'');
+            ZQReparaciones.ExecSQL;
+            ZQReparaciones.Open;
+
+            idEquiposR := ZQReparaciones.FieldByName('idequipo_reparacion').AsInteger;
+
+            ZQClienteReparacion.Close;
+            ZQClienteReparacion.SQL.Clear;
+            ZQClienteReparacion.SQL.Add('INSERT INTO cliente_reparacion(idequipo_reparacion,nombre_cliente,telefono_contacto)');
+            ZQClienteReparacion.SQL.Add('VALUES ("'+IntToStr(idEquiposR)+'","'+titular.Text+'","'+telefonoContacto.Text+'")');
+            ZQClienteReparacion.ExecSQL;
+
+            ZQMovimiento.Close;
+            ZQMovimiento.SQL.Clear;
+            ZQMovimiento.SQL.Add('INSERT INTO administrador_movimiento (tipo,movimiento, sucursal, usuario, fecha)');
+            ZQMovimiento.SQL.Add('VALUES ("Alta de equipo (reparacion).","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+            ZQMovimiento.ExecSQL;
+
+            Application.MessageBox('El equipo ha sido agregado a reparación.','Información',MB_ICONINFORMATION);
+        end;
+    end;
+    end;
     //Al refrescar el grid, entonces se tienen que mostrar los equipos POR SUCURSAL
     ZQReparaciones.Close;
     ZQReparaciones.SQL.Clear;
@@ -247,14 +382,6 @@ begin
     ZQReparaciones.ExecSQL;
     ZQReparaciones.Open;
     DBGrid1.Update;
-
-    ZQMovimiento.Close;
-    ZQMovimiento.SQL.Clear;
-    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha)');
-    ZQMovimiento.SQL.Add('VALUES ("Alta de equipo en reparacion.","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
-    ZQMovimiento.ExecSQL;
-
-    Application.MessageBox('El equipo ha sido agregado a reparación.','Información',MB_ICONINFORMATION);
 end;
 
 procedure TFReparaciones.BitBtn4Click(Sender: TObject);
@@ -346,8 +473,8 @@ begin
 
     ZQMovimiento.Close;
     ZQMovimiento.SQL.Clear;
-    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha)');
-    ZQMovimiento.SQL.Add('VALUES ("Alta de equipo en reparacion.","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
+    ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento,movimiento_detalles, sucursal, empleado, fecha,host,userpc)');
+    ZQMovimiento.SQL.Add('VALUES ("Alta de equipo en reparacion.","El usuario '+Flogin.username.Text+' ha dado de alta un equipo en reparacion el dia '+DateToStr(date())+' a las '+TimeToStr(Time())+'","'+FPrincipal.sucursal+'","'+Flogin.username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'","'+getHostname()+'","'+getUserFromWindows()+'")');
     ZQMovimiento.ExecSQL;
 
     Application.MessageBox('El equipo ha sido agregado a reparación.','Información',MB_ICONINFORMATION);
@@ -451,7 +578,8 @@ begin
     fecharecibido.Date := Date();
     StatusBar1.Panels[0].Text := DateToStr(Date()); //fecha
     StatusBar1.Panels[0].Width := 70;
-    FReparaciones.Caption := 'Equipos en garantía - Celulares "Chapulh", (sucursal '+FPrincipal.sucursal+')';
+
+    setTitleWindow(self,'Equipos en garantía - Celulares "Chapulh", (sucursal '+FPrincipal.sucursal+')');
 
     FormatSettings.ShortDateFormat := 'yyyy-mm-dd';
 
@@ -475,3 +603,4 @@ begin
 end;
 
 end.
+

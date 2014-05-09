@@ -3,7 +3,7 @@ program CelularesChapulh;
 uses
   Forms,
   F_Login in 'F_Login.pas' {FLogin},
-  splashScreen in 'splashScreen.pas' {Form2},
+//  splashScreen in 'splashScreen.pas' {Form2},
   FPrincipalEmpleados in 'FPrincipalEmpleados.pas' {FPrincipal},
   FGarantia in 'FGarantia.pas' {FGarantias},
   FReparacion in 'FReparacion.pas' {FReparaciones},
@@ -19,14 +19,15 @@ uses
   C_Usuarios in 'super\C_Usuarios.pas' {CUsuarios},
   CClientesGarantia in 'super\CClientesGarantia.pas' {C_ClientesGarantia},
   F_AltaEquipos in 'super\F_AltaEquipos.pas' {FAltaEquipo},
-  F_Usuarios in 'super\F_Usuarios.pas' {FUsuarios};
+  F_Usuarios in 'super\F_Usuarios.pas' {FUsuarios},
+  uCore in 'uCore.pas';
 
 {$R *.res}
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFLogin, FLogin);
-  Application.CreateForm(TForm2, Form2);
+//  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TFPrincipal, FPrincipal);
   Application.CreateForm(TFGarantias, FGarantias);
   Application.CreateForm(TFReparaciones, FReparaciones);
