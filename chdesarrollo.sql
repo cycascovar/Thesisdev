@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50522
 File Encoding         : 65001
 
-Date: 2014-03-17 00:52:55
+Date: 2014-05-08 19:29:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,22 +22,468 @@ DROP TABLE IF EXISTS `administrador_movimiento`;
 CREATE TABLE `administrador_movimiento` (
   `id_movimiento` int(10) NOT NULL AUTO_INCREMENT,
   `tipo` varchar(40) DEFAULT NULL,
-  `movimiento` varchar(80) NOT NULL,
+  `movimiento` varchar(220) NOT NULL,
   `fecha` date DEFAULT NULL,
   `usuario` varchar(30) DEFAULT NULL,
   `sucursal` varchar(30) DEFAULT NULL,
+  `hostname` varchar(30) DEFAULT NULL,
+  `userpc` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_movimiento`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=471 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of administrador_movimiento
 -- ----------------------------
-INSERT INTO `administrador_movimiento` VALUES ('1', 'test', 'bla bla', '2014-02-08', 'admin', null);
-INSERT INTO `administrador_movimiento` VALUES ('2', 'test', 'bla bla', '2014-02-08', 'admin', null);
-INSERT INTO `administrador_movimiento` VALUES ('3', 'test', 'bla bla', '2014-02-08', 'admin', null);
-INSERT INTO `administrador_movimiento` VALUES ('4', 'test', 'bla bla', '2014-02-08', 'admin', null);
-INSERT INTO `administrador_movimiento` VALUES ('5', 'test', 'bla bla', '2014-02-08', 'admin', null);
-INSERT INTO `administrador_movimiento` VALUES ('6', 'test', 'bla bla', '2014-02-08', 'admin', null);
+INSERT INTO `administrador_movimiento` VALUES ('38', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:40:00 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('39', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/03/2014 a las 02:40:40 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('40', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:41:04 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('41', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/03/2014 a las 02:41:05 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('42', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:47:43 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('43', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/03/2014 a las 02:49:37 p.m.', '2014-03-25', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('44', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:47:14 a.m.', '2014-04-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('45', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/04/2014 a las 09:47:27 a.m.', '2014-04-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('46', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:32:37 a.m.', '2014-04-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('47', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/04/2014 a las 10:32:52 a.m.', '2014-04-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('48', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:56:46 a.m.', '2014-04-10', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('49', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/04/2014 a las 10:56:50 a.m.', '2014-04-10', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('50', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:56:53 a.m.', '2014-04-10', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('51', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/04/2014 a las 10:58:04 a.m.', '2014-04-10', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('52', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:01:04 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('53', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:01:13 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('54', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:02:51 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('55', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:03:01 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('56', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:39:38 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('57', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:39:40 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('58', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:40:49 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('59', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:40:51 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('60', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:41:07 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('61', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:41:22 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('62', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:44:12 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('63', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 09:44:14 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('64', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:28:01 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('65', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:28:05 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('66', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:28:44 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('67', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:28:46 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('68', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:28:53 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('69', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:28:56 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('70', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:40:20 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('71', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:40:26 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('72', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:41:34 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('73', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:41:37 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('74', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:42:57 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('75', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:43:05 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('76', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:43:47 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('77', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:43:49 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('78', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:44:21 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('79', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:44:24 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('80', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:44:40 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('81', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:44:43 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('82', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:45:20 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('83', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 10:45:27 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('84', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:01:03 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('85', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:01:31 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('86', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:03:47 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('87', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:05:00 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('88', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:06:29 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('89', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:07:34 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('90', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:11:51 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('91', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:12:32 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('92', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:13:35 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('93', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:14:00 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('94', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:14:37 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('95', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:15:41 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('96', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:20:44 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('97', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 13/04/2014 a las 11:20:54 p.m.', '2014-04-13', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('98', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:33:44 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('99', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 06:34:29 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('100', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:17:46 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('101', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:17:49 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('102', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:20:47 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('103', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:21:49 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('104', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:23:58 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('105', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:24:03 a.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('106', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:26:06 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('107', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 04:26:18 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('108', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:13:11 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('109', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:16:48 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('110', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:41:12 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('111', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:41:49 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('112', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:43:58 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('113', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:45:50 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('114', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:46:45 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('115', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:47:08 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('116', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:51:03 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('117', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:52:50 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('118', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:53:43 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('119', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:54:12 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('120', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:56:35 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('121', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:57:20 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('122', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:59:17 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('123', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 05:59:44 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('124', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:01:24 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('125', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 06:02:50 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('126', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:46:37 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('127', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 06:47:24 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('128', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:57:10 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('129', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 07:57:16 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('130', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:02:07 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('131', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 08:04:24 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('132', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:09:00 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('133', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 08:09:18 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('134', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:25:51 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('135', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 08:26:24 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('136', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:28:01 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('137', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 08:28:04 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('138', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:28:35 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('139', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:29:30 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('140', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:33:52 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('141', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:34:47 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('142', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:34:53 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('143', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 10:35:23 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('144', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:30:10 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('145', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/04/2014 a las 11:31:27 p.m.', '2014-04-14', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('146', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:04:14 a.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('147', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 12:04:38 a.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('148', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:11:38 a.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('149', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 12:12:00 a.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('150', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:21:23 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('151', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 06:21:46 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('152', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:22:03 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('153', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 06:22:35 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('154', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:29:40 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('155', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 06:31:00 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('156', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:01:22 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('157', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:01:35 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('158', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:04:48 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('159', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:04:51 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('160', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:09:42 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('161', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:10:05 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('162', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:10:29 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('163', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:12:56 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('164', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:15:05 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('165', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:15:31 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('166', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:18:04 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('167', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:18:50 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('168', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:50:21 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('169', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:51:24 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('170', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:57:41 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('171', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 07:58:18 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('172', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:08:29 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('173', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 08:08:38 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('174', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:59:13 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('175', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 08:59:19 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('176', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:00:00 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('177', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:00:40 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('178', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:02:51 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('179', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:03:14 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('180', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:04:48 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('181', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:04:55 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('182', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:05:35 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('183', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:05:42 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('184', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:06:44 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('185', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:06:58 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('186', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:08:29 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('187', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:08:39 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('188', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:09:41 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('189', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:09:58 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('190', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:13:26 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('191', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:13:55 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('192', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:14:48 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('193', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:14:49 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('194', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:18:12 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('195', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:18:13 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('196', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:23:59 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('197', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:24:13 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('198', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:25:50 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('199', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:26:48 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('200', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:31:32 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('201', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:31:43 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('202', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:31:55 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('203', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:31:58 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('204', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:56:41 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('205', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 09:56:56 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('206', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:14:28 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('207', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:14:41 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('208', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:17:26 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('209', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:18:31 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('210', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:20:07 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('211', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:20:24 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('212', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:23:02 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('213', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:23:14 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('214', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:23:45 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('215', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:24:02 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('216', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:25:31 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('217', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:26:33 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('218', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:35:04 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('219', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:35:24 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('220', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:36:25 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('221', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:36:48 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('222', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:40:18 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('223', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:42:44 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('224', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:42:59 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('225', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:52:05 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('226', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:52:43 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('227', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:55:16 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('228', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/04/2014 a las 10:55:21 p.m.', '2014-04-15', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('229', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:20:41 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('230', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/04/2014 a las 10:21:11 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('231', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:09:01 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('232', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/04/2014 a las 11:10:05 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('233', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:13:57 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('234', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/04/2014 a las 11:14:10 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('235', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:15:47 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('236', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/04/2014 a las 11:16:04 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('237', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:47:53 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('238', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:50:05 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('239', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:52:03 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('240', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:53:48 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('241', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/04/2014 a las 11:55:02 p.m.', '2014-04-16', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('242', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:44:18 a.m.', '2014-04-17', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('243', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:55:38 a.m.', '2014-04-17', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('244', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/04/2014 a las 03:56:23 a.m.', '2014-04-17', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('245', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:20:46 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('246', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:43:09 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('247', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:47:21 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('248', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 18/04/2014 a las 04:48:45 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('249', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:55:08 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('250', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 18/04/2014 a las 04:55:11 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('251', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:26:52 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('252', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 18/04/2014 a las 06:26:56 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('253', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:27:09 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('254', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 18/04/2014 a las 06:27:12 p.m.', '2014-04-18', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('255', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:48:56 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('256', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/04/2014 a las 12:50:12 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('257', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:51:51 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('258', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/04/2014 a las 12:52:13 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('259', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:29:05 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('260', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/04/2014 a las 01:29:33 p.m.', '2014-04-28', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('261', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:36:17 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('262', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:37:44 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('263', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:38:44 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('264', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:38:55 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('265', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:39:32 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('266', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:40:05 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('267', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:40:29 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('268', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:40:40 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('269', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:46:29 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('270', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:46:39 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('271', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:48:44 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('272', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:48:54 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('273', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:52:18 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('274', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:52:35 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('275', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:54:47 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('276', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 03:54:52 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('277', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:03:07 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('278', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 04:03:13 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('279', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:05:47 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('280', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 04:05:59 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('281', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:19:22 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('282', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 04:20:09 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('283', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:28:25 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('284', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 04:28:26 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('285', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:17:41 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('286', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/04/2014 a las 05:18:17 p.m.', '2014-04-29', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('287', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:47:33 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('288', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 01:49:38 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('289', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:00:53 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('290', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 02:01:24 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('291', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:11:50 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('292', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:39:31 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('293', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 03:45:08 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('294', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:51:49 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('295', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 03:55:48 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('296', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:04:24 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('297', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 04:05:50 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('298', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:10:36 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('299', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 04:12:04 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('300', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:18:22 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('301', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 30/04/2014 a las 04:18:58 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('302', 'Inicio de sesión.', 'El usuario paola inicio sesion correctamente a las 04:24:26 p.m.', '2014-04-30', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('303', 'Salida del programa.', 'El usuario paola dejó de usar el sistema el dia 30/04/2014 a las 04:24:31 p.m.', '2014-04-30', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('304', 'Inicio de sesión.', 'El usuario paola inicio sesion correctamente a las 04:24:38 p.m.', '2014-04-30', 'paola', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('305', 'Salida del programa.', 'El usuario paola dejó de usar el sistema el dia 30/04/2014 a las 04:24:43 p.m.', '2014-04-30', 'paola', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('306', 'Inicio de sesión.', 'El usuario paola inicio sesion correctamente a las 04:24:52 p.m.', '2014-04-30', 'paola', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('307', 'Salida del programa.', 'El usuario paola dejó de usar el sistema el dia 30/04/2014 a las 04:24:56 p.m.', '2014-04-30', 'paola', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('308', 'Inicio de sesión.', 'El usuario paola inicio sesion correctamente a las 04:25:02 p.m.', '2014-04-30', 'paola', 'Pisaflores', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('309', 'Salida del programa.', 'El usuario paola dejó de usar el sistema el dia 30/04/2014 a las 04:25:07 p.m.', '2014-04-30', 'paola', 'Pisaflores', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('310', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:56:37 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('311', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/04/2014 a las 05:57:43 p.m.', '2014-04-30', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('312', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:22:47 a.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('313', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/05/2014 a las 09:24:45 a.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('314', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:13:32 p.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('315', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:37:00 p.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('316', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/05/2014 a las 05:37:22 p.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('317', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:14:20 p.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('318', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/05/2014 a las 06:15:37 p.m.', '2014-05-01', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('319', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:55:03 a.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('320', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/05/2014 a las 11:55:07 a.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('321', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:35:19 p.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('322', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/05/2014 a las 12:35:22 p.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('323', 'Error SQL.', 'El sistema presento un error el dia 02/05/2014 a las 12:37:57 p.m.', '2014-05-02', 'christian', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('324', 'Error SQL.', 'El sistema presento un error el dia 02/05/2014 a las 12:38:42 p.m.', '2014-05-02', 'christian', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('325', 'Error SQL.', 'El sistema presento un error el dia 02/05/2014 a las 12:43:27 p.m.', '2014-05-02', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('326', 'Error SQL.', 'El sistema presento un error el dia 02/05/2014 a las 12:48:24 p.m.', '2014-05-02', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('327', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:37:43 p.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('328', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/05/2014 a las 01:38:01 p.m.', '2014-05-02', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('329', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:07:17 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('330', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:09:01 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('331', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:27:03 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('332', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:28:40 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('333', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:33:00 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('334', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:34:11 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('335', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:35:25 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('336', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:38:29 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('337', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:47:15 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('338', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:47:17 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('339', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:47:59 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('340', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 12:48:23 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('341', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:24:13 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('342', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 10:25:51 a.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('343', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:40:36 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('344', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 04:41:38 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('345', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:12:57 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('346', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:13:55 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('347', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:14:05 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('348', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:14:30 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('349', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:15:45 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('350', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:20:21 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('351', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:26:25 p.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('352', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:27:05 p.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('353', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:29:40 p.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('354', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:30:31 p.m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('355', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:40:40 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('356', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:40:45 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('357', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:46:54 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('358', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:46:56 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('359', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:47:38 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('360', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:47:47 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('361', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:48:47 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('362', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:48:53 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('363', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:50:53 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('364', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 05:51:18 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('365', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 05:51:39 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('366', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:36:08 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('367', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 06:36:20 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('368', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:36:47 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('369', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 06:36:50 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('370', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:36:22 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('371', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:37:10 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('372', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:37:33 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('373', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:37:58 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('374', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:43:00 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('375', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:43:45 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('376', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:49:48 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('377', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:50:00 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('378', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:50:48 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('379', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:50:58 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('380', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:55:47 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('381', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 03/05/2014 a las 08:55:54 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('382', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 03/05/2014 a las 08:56:01 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('383', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 08:56:03 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('384', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:00:24 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('385', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 09:00:33 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('386', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:07:31 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('387', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 03/05/2014 a las 09:14:27 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('388', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 03/05/2014 a las 09:14:31 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('389', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 03/05/2014 a las 09:14:34 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('390', 'Alta de equipo (reparacion).', 'El usuario admin ha dado de alta un equipo en reparacion el dia 03/05/2014 a las 09:15:05 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('391', 'Alta de equipo (reparacion).', 'El usuario admin ha dado de alta un equipo en reparacion el dia 03/05/2014 a las 09:15:34 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('392', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:32:02 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('393', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 09:32:52 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('394', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:50:47 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('395', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 09:51:13 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('396', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:28:43 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('397', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 10:29:41 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('398', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:31:56 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('399', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 10:34:31 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('400', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:57:25 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('401', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:58:25 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('402', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 10:58:32 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('403', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:07:14 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('404', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/05/2014 a las 11:07:25 p. m.', '2014-05-03', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('405', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:18:13 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('406', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 02:18:21 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('407', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:44:58 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('408', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 02:45:23 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('409', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:50:53 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('410', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 02:52:49 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('411', 'Error SQL.', 'El sistema presento un error el dia 04/05/2014 a las 02:53:11 a.m.', '2014-05-04', 'paol', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('412', 'Error SQL.', 'El sistema presento un error el dia 04/05/2014 a las 02:53:33 a.m.', '2014-05-04', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('413', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:04:52 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('414', 'Alta de equipo (reparacion).', 'El usuario admin ha dado de alta un equipo en reparacion el dia 04/05/2014 a las 03:05:10 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('415', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:05:26 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('416', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:06:03 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('417', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:07:38 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('418', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:08:33 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('419', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:08:44 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('420', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:11:03 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('421', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:13:53 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('422', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:16:54 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('423', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:17:11 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('424', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:17:43 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('425', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:17:51 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('426', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:22:40 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('427', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 03:22:45 a.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('428', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:45:01 p.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('429', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 12:45:05 p.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('430', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:46:27 p.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('431', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/05/2014 a las 12:47:44 p.m.', '2014-05-04', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('432', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 01:32:12 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('433', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 01:37:09 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('434', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 01:39:48 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('435', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 01:40:26 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('436', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 01:46:30 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('437', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 01:52:49 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('438', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 01:59:12 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('439', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 01:59:42 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('440', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:01:40 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('441', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 02:03:22 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('442', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:08:45 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('443', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 02:09:07 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('444', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:11:28 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('445', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 02:12:35 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('446', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:16:02 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('447', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 02:16:15 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('448', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:16:32 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('449', 'Salida del programa.', 'El usuario tepehuacan dejó de usar el sistema el dia 04/05/2014 a las 02:16:42 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('450', 'Inicio de sesión.', 'El usuario tepehuacan inicio sesion correctamente a las 02:17:40 p.m.', '2014-05-04', 'tepehuacan', 'Tepehuacan de Guerrero', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('451', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:06:38 p. m.', '2014-05-05', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('452', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 05/05/2014 a las 10:06:44 p. m.', '2014-05-05', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('453', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:17:38 p. m.', '2014-05-05', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('454', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 05/05/2014 a las 11:18:06 p. m.', '2014-05-05', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('455', 'Inicio de sesión.', 'El usuario paola inicio sesion correctamente a las 01:31:16 p.m.', '2014-05-06', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('456', 'Salida del programa.', 'El usuario paola dejó de usar el sistema el dia 06/05/2014 a las 01:32:09 p.m.', '2014-05-06', 'paola', 'Chapulhuacan', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('457', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:25:32 p.m.', '2014-05-06', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('458', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 06/05/2014 a las 09:26:38 p.m.', '2014-05-06', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('459', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 09:56:09 p.m.', '2014-05-06', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('460', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 06/05/2014 a las 09:56:34 p.m.', '2014-05-06', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('461', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:02:41 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('462', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/05/2014 a las 01:05:10 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('463', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:05:41 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('464', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/05/2014 a las 01:06:44 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('465', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:09:02 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('466', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/05/2014 a las 01:09:55 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('467', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:34:13 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('468', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/05/2014 a las 01:34:14 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('469', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:19:46 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+INSERT INTO `administrador_movimiento` VALUES ('470', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/05/2014 a las 02:20:11 p.m.', '2014-05-08', 'admin', 'Tlanchinol', null, null);
+
+-- ----------------------------
+-- Table structure for app_version
+-- ----------------------------
+DROP TABLE IF EXISTS `app_version`;
+CREATE TABLE `app_version` (
+  `idversion` int(10) NOT NULL,
+  `app_id` int(11) DEFAULT NULL,
+  `menor` float DEFAULT NULL,
+  `aplicacion` varchar(30) DEFAULT NULL,
+  `mayor` float DEFAULT NULL,
+  PRIMARY KEY (`idversion`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of app_version
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for cliente
@@ -51,9 +497,9 @@ CREATE TABLE `cliente` (
   `sucursal` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idventa` int(10) DEFAULT NULL,
   PRIMARY KEY (`idcliente`),
-  KEY `FK_idVenta_cliente_idx` (`idventa`),
-  CONSTRAINT `FK_idVenta_cliente` FOREIGN KEY (`idventa`) REFERENCES `venta_detalle` (`idventa_detalle`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+  KEY `FK_idVenta_cliente_idx` (`idventa`) USING BTREE,
+  CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`idventa`) REFERENCES `venta_detalle` (`idventa_detalle`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of cliente
@@ -65,15 +511,15 @@ INSERT INTO `cliente` VALUES ('4', 'Paola divanny', 'Juan Escutia #113', '771129
 INSERT INTO `cliente` VALUES ('5', 'Paola divanny', 'Juan Escutia #113', '7711297853', 'Chapulhuacan', '5');
 INSERT INTO `cliente` VALUES ('6', 'Jose Cruz Ramirez', 'Juan escutia algo', '7712300052', 'Tlanchinol', '7');
 INSERT INTO `cliente` VALUES ('7', 'Jose Cruz Ramirez', 'Juan escutia algo', '7712300052', 'Tlanchinol', '8');
-INSERT INTO `cliente` VALUES ('8', '', '', '', 'Chapulhuacan', '9');
-INSERT INTO `cliente` VALUES ('9', '', '', '', 'Tlanchinol', '10');
-INSERT INTO `cliente` VALUES ('10', '', '', '', 'Tlanchinol', '11');
-INSERT INTO `cliente` VALUES ('11', '', '', '', 'Tlanchinol', '12');
-INSERT INTO `cliente` VALUES ('12', '', '', '', 'Chapulhuacan', '13');
-INSERT INTO `cliente` VALUES ('13', '', '', '', 'Tlanchinol', '14');
-INSERT INTO `cliente` VALUES ('14', '', '', '', 'Tlanchinol', '15');
-INSERT INTO `cliente` VALUES ('15', '', '', '', 'Chapulhuacan', '16');
-INSERT INTO `cliente` VALUES ('16', '', '', '', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('8', 'test', '', '', 'Chapulhuacan', '9');
+INSERT INTO `cliente` VALUES ('9', 'test', '', '', 'Tlanchinol', '10');
+INSERT INTO `cliente` VALUES ('10', 'test', '', '', 'Tlanchinol', '11');
+INSERT INTO `cliente` VALUES ('11', 'test', '', '', 'Tlanchinol', '12');
+INSERT INTO `cliente` VALUES ('12', 'test', '', '', 'Chapulhuacan', '13');
+INSERT INTO `cliente` VALUES ('13', 'test', '', '', 'Tlanchinol', '14');
+INSERT INTO `cliente` VALUES ('14', 'test', '', '', 'Tlanchinol', '15');
+INSERT INTO `cliente` VALUES ('15', 'test', '', '', 'Chapulhuacan', '16');
+INSERT INTO `cliente` VALUES ('16', 'test', '', '', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('17', 'Juan Perez Robles', 'sdfg', 'sdf', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('18', 'Juanito X', '', '', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('19', 'Juanito Y', '', '', 'Chapulhuacan', null);
@@ -84,6 +530,18 @@ INSERT INTO `cliente` VALUES ('23', 'juanito', '', '987', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('24', 'juanito', '', '987', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('25', 'juanito', '', '987', 'Chapulhuacan', null);
 INSERT INTO `cliente` VALUES ('26', 'juanito', '', '987', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('27', 'Rocha', 'Sin domicilio', '13', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('28', 'vladimir putin', 'qweqd', '6747', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('29', 'Juanito perez robles', 'sin nimbre', '9903389', 'Pisaflores', null);
+INSERT INTO `cliente` VALUES ('30', 'Christian', 'sfsdf we fsdf', '34421421', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('31', 'Janito Robles', 'Desconocido', '33434', 'Chapulhuacan', null);
+INSERT INTO `cliente` VALUES ('32', 'zx', '', '', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('33', 'ROLLBACK', 'juanito perez robles #110', '7712149235', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('34', 'sdfsdf', '', '', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('35', 'sdf', '', '', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('36', 'lalo', '', '', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('37', 'sdf', '', '', 'Tepehuacan de Guerrero', null);
+INSERT INTO `cliente` VALUES ('38', 'tepehuacan rollback test', '', '', 'Tepehuacan de Guerrero', null);
 
 -- ----------------------------
 -- Table structure for cliente_garantia
@@ -94,26 +552,27 @@ CREATE TABLE `cliente_garantia` (
   `nombre_cliente` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
   `telefono_contacto` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idequipo_garantia` int(11) DEFAULT NULL,
+  `tipo` varchar(20) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idCliente_garantia`),
   KEY `idequipo_garantia_idx` (`idequipo_garantia`) USING BTREE,
   CONSTRAINT `cliente_garantia_ibfk_1` FOREIGN KEY (`idequipo_garantia`) REFERENCES `equipo_garantia` (`idequipo_garantia`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='Datos con clientes que metieron sus celulares a garantia';
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='Datos con clientes que metieron sus celulares a garantia';
 
 -- ----------------------------
 -- Records of cliente_garantia
 -- ----------------------------
-INSERT INTO `cliente_garantia` VALUES ('8', 'Christian Castillo', '771 214 9235', '8');
-INSERT INTO `cliente_garantia` VALUES ('9', 'Christian Castillo', '771 214 9235', '9');
-INSERT INTO `cliente_garantia` VALUES ('10', 'Paola Divanny', '771 129 7853', '10');
-INSERT INTO `cliente_garantia` VALUES ('14', 'Jose pérez', '55512345', '14');
-INSERT INTO `cliente_garantia` VALUES ('16', 'Christian Castillo', '771 214 9235', '16');
-INSERT INTO `cliente_garantia` VALUES ('17', 'Christian Castillo', '771 214 9235', '17');
-INSERT INTO `cliente_garantia` VALUES ('18', 'Paola Divanny', '7711297853', '18');
-INSERT INTO `cliente_garantia` VALUES ('19', 'Paola Divanny', '7711297853', '19');
-INSERT INTO `cliente_garantia` VALUES ('22', 'Citlali Ramirez', '7751215578', '22');
-INSERT INTO `cliente_garantia` VALUES ('23', 'Jonathan Salas Hernandez', '771 532 0101', '23');
-INSERT INTO `cliente_garantia` VALUES ('24', 'Test person', 'Not', '24');
-INSERT INTO `cliente_garantia` VALUES ('25', 'juanito robles', '7712111', '25');
+INSERT INTO `cliente_garantia` VALUES ('14', 'Jose pérez', '55512345', '14', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('16', 'Christian Castillo', '771 214 9235', '16', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('17', 'Christian Castillo', '771 214 9235', '17', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('18', 'Paola Divanny', '7711297853', '18', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('19', 'Paola Divanny', '7711297853', '19', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('22', 'Citlali Ramirez', '7751215578', '22', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('24', 'Test person', 'Not', '24', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('25', 'juanito robles', '7712111', '25', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('32', 'Christian Yamil', 'no dio', '32', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('33', 'Test person', '5500123456', '33', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('39', 'Christian Yamil', '771 214 9265', '38', 'Garantia');
+INSERT INTO `cliente_garantia` VALUES ('40', 'Christian Yamil', '771 214 9265', '39', 'Garantia');
 
 -- ----------------------------
 -- Table structure for cliente_reparacion
@@ -124,16 +583,26 @@ CREATE TABLE `cliente_reparacion` (
   `nombre_cliente` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
   `telefono_contacto` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idequipo_reparacion` int(11) DEFAULT NULL,
+  `tipo` varchar(20) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idCliente_reparacion`),
   KEY `idequipo_reparacion_idx` (`idequipo_reparacion`) USING BTREE,
   CONSTRAINT `cliente_reparacion_ibfk_1` FOREIGN KEY (`idequipo_reparacion`) REFERENCES `equipo_reparacion` (`idequipo_reparacion`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='clientes con equipos en reparacion';
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='clientes con equipos en reparacion';
 
 -- ----------------------------
 -- Records of cliente_reparacion
 -- ----------------------------
-INSERT INTO `cliente_reparacion` VALUES ('21', 'Yo', 'w234234', '23');
-INSERT INTO `cliente_reparacion` VALUES ('22', 'Yo', 'w234234', '24');
+INSERT INTO `cliente_reparacion` VALUES ('28', 'Juanito Perez Robles', '667123456', '30', 'Reparacion');
+INSERT INTO `cliente_reparacion` VALUES ('29', 'Juanito Perez Robles', '667123456', '31', 'Reparacion');
+INSERT INTO `cliente_reparacion` VALUES ('30', 'Juanito Perez Robles', '667123456', '32', 'Reparacion');
+INSERT INTO `cliente_reparacion` VALUES ('32', 'christian', '7712192020', '34', 'Reparacion');
+INSERT INTO `cliente_reparacion` VALUES ('33', 'Christian Yamil', '771 214 9235', '35', null);
+INSERT INTO `cliente_reparacion` VALUES ('34', 'Christian Yamil', '771 214 9235', '36', null);
+INSERT INTO `cliente_reparacion` VALUES ('35', 'Christian Yamil', '771 214 9235', '37', null);
+INSERT INTO `cliente_reparacion` VALUES ('36', 'Christian Yamil', '771 214 9235', '38', null);
+INSERT INTO `cliente_reparacion` VALUES ('37', 'Christian Yamil', '771 214 9235ss', '39', null);
+INSERT INTO `cliente_reparacion` VALUES ('38', 'Christian Yamil Castillo covarrubias', '771 214 9235ss', '40', null);
+INSERT INTO `cliente_reparacion` VALUES ('39', '', '', '41', null);
 
 -- ----------------------------
 -- Table structure for codigo_recarga
@@ -151,29 +620,29 @@ CREATE TABLE `codigo_recarga` (
 -- Records of codigo_recarga
 -- ----------------------------
 INSERT INTO `codigo_recarga` VALUES ('1', null, null, null);
-INSERT INTO `codigo_recarga` VALUES ('2', '9001350', '7712149235', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('3', '9005200', '111111114', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('4', '9005000', '7712149237', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('2', '9001350', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('3', '9005200', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('4', '9005000', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('5', '9002960', '7711234567', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('6', '9003160', '7712149239', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('7', '9003040', '7712149240', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('8', '9001700', '7712149241', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('9', '9003290', '7712149242', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('10', '9003310', '7712149243', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('11', '9009400', '7712149244', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('12', '9001050', '7712149245', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('13', '9001540', '7712149246', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('14', '9003800', '0', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('15', '9001400', '7712149250', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('16', '9001860', '7712149252', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('17', '9001500', '7712149254', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('18', '9001270', '7712149256', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('19', '9007000', '7712149258', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('20', '9001340', '77123455', 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('21', '9002720', '77123457', 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('22', '9005900', '771234599', 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('23', '9003670', '7712341001', 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('24', '9002600', '7711234568', 'Chapulhuacan');
+INSERT INTO `codigo_recarga` VALUES ('6', '9003160', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('7', '9003040', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('8', '9001700', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('9', '9003290', '7712149235', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('10', '9003310', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('11', '9009400', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('12', '9001050', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('13', '9001540', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('14', '9003800', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('15', '9001400', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('16', '9001860', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('17', '9001500', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('18', '9001270', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('19', '9007000', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('20', '9001340', '', 'Chapulhuacan');
+INSERT INTO `codigo_recarga` VALUES ('21', '9002720', '', 'Chapulhuacan');
+INSERT INTO `codigo_recarga` VALUES ('22', '9005900', '', 'Chapulhuacan');
+INSERT INTO `codigo_recarga` VALUES ('23', '9003670', '', 'Chapulhuacan');
+INSERT INTO `codigo_recarga` VALUES ('24', '9002600', '', 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('25', '9003920', '1,2,3', 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('26', '9005600', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('27', '9003170', null, 'Chapulhuacan');
@@ -181,7 +650,7 @@ INSERT INTO `codigo_recarga` VALUES ('28', '9004000', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('29', '9002220', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('30', '9001820', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('31', '9001710', null, 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('32', '9002870', '7712149235', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('32', '9002870', '', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('33', '9004600', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('34', '9006600', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('35', '9002330', null, 'Chapulhuacan');
@@ -215,49 +684,49 @@ INSERT INTO `codigo_recarga` VALUES ('62', '9002150', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('63', '9001950', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('64', '9004000', null, 'Chapulhuacan');
 INSERT INTO `codigo_recarga` VALUES ('65', '9001040', null, 'Chapulhuacan');
-INSERT INTO `codigo_recarga` VALUES ('66', '9003410', '1234578', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('67', '9002430', '91011121314', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('66', '9003410', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('67', '9002430', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('68', '9002960', '7711234567', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('69', '9002600', '7711234568', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('70', '9003470', '7711234569', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('71', '9002450', '7711234570', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('72', '9002430', '91011121314', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('73', '9003900', '7711234571', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('74', '9003400', '7711234572', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('75', '9003660', '7711234575', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('76', '9003620', '7711234579', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('77', '9003800', '0', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('78', '9002050', '1', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('79', '9002810', '11111111', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('80', '9002400', '111111112', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('81', '9002380', '111111113', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('82', '9005200', '111111114', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('83', '9002870', '7712149235', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('84', '9002970', '1,2,3', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('85', '9003740', '4,4,4,4', 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('86', '9003510', '1,2,3\r\n1,2,2', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('69', '9002600', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('70', '9003470', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('71', '9002450', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('72', '9002430', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('73', '9003900', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('74', '9003400', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('75', '9003660', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('76', '9003620', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('77', '9003800', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('78', '9002050', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('79', '9002810', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('80', '9002400', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('81', '9002380', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('82', '9005200', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('83', '9002870', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('84', '9002970', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('85', '9003740', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('86', '9003510', null, 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('87', '9002500', null, 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('88', '9003550', null, 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('89', '9001640', null, 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('90', '9002050', '1', null);
-INSERT INTO `codigo_recarga` VALUES ('91', '9003050', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('92', '9002460', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('93', '9002140', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('94', '9003860', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('95', '9001240', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('96', '9001120', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('91', '9003050', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('92', '9002460', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('93', '9002140', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('94', '9003860', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('95', '9001240', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('96', '9001120', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('97', '9003800', '0', null);
-INSERT INTO `codigo_recarga` VALUES ('98', '9001000', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('99', '9007500', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('100', '9005600', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('101', '9001790', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('102', '9001920', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('103', '9008900', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('104', '9001550', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('105', '9002260', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('106', '9003700', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('107', '9001530', null, 'Tlanchinol');
-INSERT INTO `codigo_recarga` VALUES ('108', '9001990', null, 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('98', '9001000', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('99', '9007500', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('100', '9005600', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('101', '9001790', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('102', '9001920', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('103', '9008900', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('104', '9001550', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('105', '9002260', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('106', '9003700', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('107', '9001530', '7711234567', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('108', '9001990', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('109', '9003120', null, null);
 INSERT INTO `codigo_recarga` VALUES ('110', '9003860', null, null);
 INSERT INTO `codigo_recarga` VALUES ('111', '9005100', null, null);
@@ -270,7 +739,7 @@ INSERT INTO `codigo_recarga` VALUES ('117', '9001980', null, null);
 INSERT INTO `codigo_recarga` VALUES ('118', '9001400', null, null);
 INSERT INTO `codigo_recarga` VALUES ('119', '9006800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('120', '9003390', null, null);
-INSERT INTO `codigo_recarga` VALUES ('121', '9003510', '1,2,3\r\n1,2,2', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('121', '9003510', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('122', '9001900', null, null);
 INSERT INTO `codigo_recarga` VALUES ('123', '9001060', null, null);
 INSERT INTO `codigo_recarga` VALUES ('124', '9006900', null, null);
@@ -296,7 +765,7 @@ INSERT INTO `codigo_recarga` VALUES ('143', '9003680', null, null);
 INSERT INTO `codigo_recarga` VALUES ('144', '9001480', null, null);
 INSERT INTO `codigo_recarga` VALUES ('145', '9002800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('146', '9002150', null, null);
-INSERT INTO `codigo_recarga` VALUES ('147', '9002810', '11111111', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('147', '9002810', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('148', '9006500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('149', '9006600', null, null);
 INSERT INTO `codigo_recarga` VALUES ('150', '9008000', null, null);
@@ -312,7 +781,7 @@ INSERT INTO `codigo_recarga` VALUES ('159', '9003480', null, null);
 INSERT INTO `codigo_recarga` VALUES ('160', '9001450', null, null);
 INSERT INTO `codigo_recarga` VALUES ('161', '9001620', null, null);
 INSERT INTO `codigo_recarga` VALUES ('162', '9005500', null, null);
-INSERT INTO `codigo_recarga` VALUES ('163', '9005200', '111111114', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('163', '9005200', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('164', '9001800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('165', '9002770', null, null);
 INSERT INTO `codigo_recarga` VALUES ('166', '9002290', null, null);
@@ -322,7 +791,7 @@ INSERT INTO `codigo_recarga` VALUES ('169', '9001600', null, null);
 INSERT INTO `codigo_recarga` VALUES ('170', '9008200', null, null);
 INSERT INTO `codigo_recarga` VALUES ('171', '9002520', null, null);
 INSERT INTO `codigo_recarga` VALUES ('172', '9001600', null, null);
-INSERT INTO `codigo_recarga` VALUES ('173', '9003290', null, null);
+INSERT INTO `codigo_recarga` VALUES ('173', '9003290', '7712149235', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('174', '9002670', null, null);
 INSERT INTO `codigo_recarga` VALUES ('175', '9001360', null, null);
 INSERT INTO `codigo_recarga` VALUES ('176', '9001160', null, null);
@@ -374,7 +843,7 @@ INSERT INTO `codigo_recarga` VALUES ('221', '9001100', null, null);
 INSERT INTO `codigo_recarga` VALUES ('222', '9001680', null, null);
 INSERT INTO `codigo_recarga` VALUES ('223', '9005100', null, null);
 INSERT INTO `codigo_recarga` VALUES ('224', '9004000', null, null);
-INSERT INTO `codigo_recarga` VALUES ('225', '9002810', '11111111', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('225', '9002810', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('226', '9003200', null, null);
 INSERT INTO `codigo_recarga` VALUES ('227', '9003540', null, null);
 INSERT INTO `codigo_recarga` VALUES ('228', '9006700', null, null);
@@ -401,7 +870,7 @@ INSERT INTO `codigo_recarga` VALUES ('248', '9009800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('249', '9002580', null, null);
 INSERT INTO `codigo_recarga` VALUES ('250', '9001770', null, null);
 INSERT INTO `codigo_recarga` VALUES ('251', '9003300', null, null);
-INSERT INTO `codigo_recarga` VALUES ('252', '9002400', '111111112', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('252', '9002400', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('253', '9003500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('254', '9001700', null, null);
 INSERT INTO `codigo_recarga` VALUES ('255', '9004900', null, null);
@@ -415,7 +884,7 @@ INSERT INTO `codigo_recarga` VALUES ('262', '9002010', null, null);
 INSERT INTO `codigo_recarga` VALUES ('263', '9008000', null, null);
 INSERT INTO `codigo_recarga` VALUES ('264', '9002310', null, null);
 INSERT INTO `codigo_recarga` VALUES ('265', '9003570', null, null);
-INSERT INTO `codigo_recarga` VALUES ('266', '9002380', '111111113', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('266', '9002380', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('267', '9001240', null, null);
 INSERT INTO `codigo_recarga` VALUES ('268', '9003300', null, null);
 INSERT INTO `codigo_recarga` VALUES ('269', '9003170', null, null);
@@ -453,7 +922,7 @@ INSERT INTO `codigo_recarga` VALUES ('300', '9002690', null, null);
 INSERT INTO `codigo_recarga` VALUES ('301', '9003330', null, null);
 INSERT INTO `codigo_recarga` VALUES ('302', '9002800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('303', '9002600', '7711234568', null);
-INSERT INTO `codigo_recarga` VALUES ('304', '9002810', '11111111', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('304', '9002810', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('305', '9001760', null, null);
 INSERT INTO `codigo_recarga` VALUES ('306', '9003570', null, null);
 INSERT INTO `codigo_recarga` VALUES ('307', '9007400', null, null);
@@ -468,7 +937,7 @@ INSERT INTO `codigo_recarga` VALUES ('315', '9005500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('316', '9003420', null, null);
 INSERT INTO `codigo_recarga` VALUES ('317', '9007100', null, null);
 INSERT INTO `codigo_recarga` VALUES ('318', '9001640', null, null);
-INSERT INTO `codigo_recarga` VALUES ('319', '9002870', '7712149235', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('319', '9002870', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('320', '9001640', null, null);
 INSERT INTO `codigo_recarga` VALUES ('321', '9008800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('322', '9003480', null, null);
@@ -515,7 +984,7 @@ INSERT INTO `codigo_recarga` VALUES ('362', '9006500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('363', '9005100', null, null);
 INSERT INTO `codigo_recarga` VALUES ('364', '9005800', null, null);
 INSERT INTO `codigo_recarga` VALUES ('365', '9001330', null, null);
-INSERT INTO `codigo_recarga` VALUES ('366', '9002870', '7712149235', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('366', '9002870', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('367', '9003000', null, null);
 INSERT INTO `codigo_recarga` VALUES ('368', '9005500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('369', '9002800', null, null);
@@ -561,7 +1030,7 @@ INSERT INTO `codigo_recarga` VALUES ('408', '9003490', null, null);
 INSERT INTO `codigo_recarga` VALUES ('409', '9002180', null, null);
 INSERT INTO `codigo_recarga` VALUES ('410', '9003550', null, null);
 INSERT INTO `codigo_recarga` VALUES ('411', '9006200', null, null);
-INSERT INTO `codigo_recarga` VALUES ('412', '9002970', '1,2,3', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('412', '9002970', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('413', '9002570', null, null);
 INSERT INTO `codigo_recarga` VALUES ('414', '9003800', '0', null);
 INSERT INTO `codigo_recarga` VALUES ('415', '9002290', null, null);
@@ -594,7 +1063,7 @@ INSERT INTO `codigo_recarga` VALUES ('441', '9003500', null, null);
 INSERT INTO `codigo_recarga` VALUES ('442', '9001680', null, null);
 INSERT INTO `codigo_recarga` VALUES ('443', '9008000', null, null);
 INSERT INTO `codigo_recarga` VALUES ('444', '9003600', null, null);
-INSERT INTO `codigo_recarga` VALUES ('445', '9002400', '111111112', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('445', '9002400', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('446', '9001730', null, null);
 INSERT INTO `codigo_recarga` VALUES ('447', '9001510', null, null);
 INSERT INTO `codigo_recarga` VALUES ('448', '9006100', null, null);
@@ -646,7 +1115,7 @@ INSERT INTO `codigo_recarga` VALUES ('493', '9002980', null, null);
 INSERT INTO `codigo_recarga` VALUES ('494', '9002580', null, null);
 INSERT INTO `codigo_recarga` VALUES ('495', '9002540', null, null);
 INSERT INTO `codigo_recarga` VALUES ('496', '9001230', null, null);
-INSERT INTO `codigo_recarga` VALUES ('497', '9002400', '111111112', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('497', '9002400', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('498', '9003930', null, null);
 INSERT INTO `codigo_recarga` VALUES ('499', '9003460', null, null);
 INSERT INTO `codigo_recarga` VALUES ('500', '9001800', null, null);
@@ -690,7 +1159,7 @@ INSERT INTO `codigo_recarga` VALUES ('537', '9002530', null, null);
 INSERT INTO `codigo_recarga` VALUES ('538', '9001960', null, null);
 INSERT INTO `codigo_recarga` VALUES ('539', '9007900', null, null);
 INSERT INTO `codigo_recarga` VALUES ('540', '9007700', null, null);
-INSERT INTO `codigo_recarga` VALUES ('541', '9002380', '111111113', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('541', '9002380', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('542', '9002170', null, null);
 INSERT INTO `codigo_recarga` VALUES ('543', '9001520', null, null);
 INSERT INTO `codigo_recarga` VALUES ('544', '9001580', null, null);
@@ -717,7 +1186,7 @@ INSERT INTO `codigo_recarga` VALUES ('564', '9003320', null, null);
 INSERT INTO `codigo_recarga` VALUES ('565', '9003050', null, null);
 INSERT INTO `codigo_recarga` VALUES ('566', '9002140', null, null);
 INSERT INTO `codigo_recarga` VALUES ('567', '9009800', null, null);
-INSERT INTO `codigo_recarga` VALUES ('568', '9002810', '11111111', 'Tlanchinol');
+INSERT INTO `codigo_recarga` VALUES ('568', '9002810', '7711234567', 'Tlanchinol');
 INSERT INTO `codigo_recarga` VALUES ('569', '9001640', null, null);
 INSERT INTO `codigo_recarga` VALUES ('570', '9002430', '91011121314', null);
 INSERT INTO `codigo_recarga` VALUES ('571', '9002900', null, null);
@@ -756,6 +1225,28 @@ INSERT INTO `codigo_recarga` VALUES ('603', '9001170', null, null);
 INSERT INTO `codigo_recarga` VALUES ('604', '9002820', null, null);
 
 -- ----------------------------
+-- Table structure for c_clientes_gr
+-- ----------------------------
+DROP TABLE IF EXISTS `c_clientes_gr`;
+CREATE TABLE `c_clientes_gr` (
+  `sucursal` varchar(100) DEFAULT NULL,
+  `titular` varchar(50) DEFAULT NULL,
+  `imei` varchar(30) DEFAULT NULL,
+  `iccid` varchar(40) DEFAULT NULL,
+  `observaciones` varchar(255) DEFAULT NULL,
+  `accesorios` varchar(180) DEFAULT NULL,
+  `tipo` varchar(60) DEFAULT NULL,
+  `id_gr` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id_gr`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of c_clientes_gr
+-- ----------------------------
+INSERT INTO `c_clientes_gr` VALUES (null, null, null, null, null, null, 'Garantia', '1');
+INSERT INTO `c_clientes_gr` VALUES (null, null, null, null, null, null, 'Garantia', '2');
+
+-- ----------------------------
 -- Table structure for empleado
 -- ----------------------------
 DROP TABLE IF EXISTS `empleado`;
@@ -764,21 +1255,30 @@ CREATE TABLE `empleado` (
   `empleado` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `password` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idsucursal` int(11) DEFAULT NULL,
+  `idnivel` int(10) DEFAULT NULL,
   PRIMARY KEY (`idempleado`),
   KEY `FK_U_SUC_idx` (`idsucursal`) USING BTREE,
-  CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`idsucursal`) REFERENCES `sucursal` (`idsucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+  KEY `idnivel_ibfk_2` (`idnivel`),
+  CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`idsucursal`) REFERENCES `sucursal` (`idsucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `idnivel_ibfk_2` FOREIGN KEY (`idnivel`) REFERENCES `nivel_usuario` (`idnivel`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of empleado
 -- ----------------------------
-INSERT INTO `empleado` VALUES ('18', 'chapulhuacan', '1', '1');
-INSERT INTO `empleado` VALUES ('19', 'admin', 'admin', '2');
-INSERT INTO `empleado` VALUES ('20', 'bety', '1', '2');
-INSERT INTO `empleado` VALUES ('21', 'frank', '1', '1');
-INSERT INTO `empleado` VALUES ('22', 'christian', '1', '1');
-INSERT INTO `empleado` VALUES ('23', 'pisa', '1', '4');
-INSERT INTO `empleado` VALUES ('24', 'pao', '1', '1');
+INSERT INTO `empleado` VALUES ('18', 'chapulhuacan', '1', '1', '3');
+INSERT INTO `empleado` VALUES ('19', 'admin', 'admin', '2', '2');
+INSERT INTO `empleado` VALUES ('20', 'bety', 'bety', '2', '3');
+INSERT INTO `empleado` VALUES ('21', 'frank', 'frank', '1', '3');
+INSERT INTO `empleado` VALUES ('22', 'christian', 'sysadmin', '1', '1');
+INSERT INTO `empleado` VALUES ('23', 'pisa', 'pisa', '4', '3');
+INSERT INTO `empleado` VALUES ('24', 'paola', 'chapulhuacan', '1', '2');
+INSERT INTO `empleado` VALUES ('25', 'super', 'super', '1', '1');
+INSERT INTO `empleado` VALUES ('26', 'paola', 'tepehuacan', '3', '2');
+INSERT INTO `empleado` VALUES ('27', 'paola', 'tlanchinol', '2', '2');
+INSERT INTO `empleado` VALUES ('28', 'paola', 'pisaflores', '4', '2');
+INSERT INTO `empleado` VALUES ('29', 't', 't', '3', '3');
+INSERT INTO `empleado` VALUES ('30', 'iza', 'iza', '1', '3');
 
 -- ----------------------------
 -- Table structure for empleado_movimiento
@@ -791,1249 +1291,465 @@ CREATE TABLE `empleado_movimiento` (
   `sucursal` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `empleado` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `host` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `userpc` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `ip` varchar(35) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idempleado_movimiento`)
-) ENGINE=InnoDB AUTO_INCREMENT=1422 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1979 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of empleado_movimiento
 -- ----------------------------
-INSERT INTO `empleado_movimiento` VALUES ('185', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('186', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('187', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/01/2014a las 03:45:45 p.m..', 'Tlanchinol', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('188', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('189', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/01/2014a las 03:46:09 p.m..', 'Chapulhuacan', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('190', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('191', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/01/2014a las 03:48:53 p.m..', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('192', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('193', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('194', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 08/01/2014 a las 04:10:20 p.m.', 'Chapulhuacan', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('195', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('196', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 08/01/2014 a las 04:14:50 p.m.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('197', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/01/2014a las 04:22:38 p.m..', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('198', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('199', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 08/01/2014 a las 04:24:16 p.m.', 'Tlanchinol', 'admin', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('200', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('201', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 08/01/2014 a las 07:19:46 p.m.', 'Chapulhuacan', 'christian', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('202', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 08/01/2014 a las 07:21:21 p.m.', 'Chapulhuacan', 'christian', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('203', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 08/01/2014 a las 07:21:24 p.m.', 'Chapulhuacan', 'christian', '2014-01-08');
-INSERT INTO `empleado_movimiento` VALUES ('204', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('205', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('206', 'Alta de equipo en garantia', 'El usuario admin ha entregado un equipo en garantia el dia 09/01/2014 a las 02:19:35 p.m.', 'Tlanchinol', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('207', 'Alta de equipo en garantia', 'El usuario admin ha entregado un equipo en garantia el dia 09/01/2014 a las 02:19:40 p.m.', 'Tlanchinol', null, null);
-INSERT INTO `empleado_movimiento` VALUES ('208', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('209', 'Alta de equipo en garantia', 'El usuario admin ha entregado un equipo en garantia el dia 09/01/2014 a las 02:22:38 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('210', 'Alta de equipo en garantia', 'El usuario admin ha entregado un equipo en garantia el dia 09/01/2014 a las 02:22:42 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('211', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 02:24:03 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('212', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('213', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('214', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 03:01:44 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('215', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('216', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 03:03:04 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('217', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('218', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 09/01/2014a las 03:03:18 p.m..', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('219', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('220', 'Alta de equipo en garantia', 'El usuario bety ha entregado un equipo en garantia el dia 09/01/2014 a las 03:03:41 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('221', 'Alta de equipo en garantia', 'El usuario bety ha entregado un equipo en garantia el dia 09/01/2014 a las 03:03:55 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('222', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('223', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('224', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 05:10:02 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('225', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('226', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 05:12:47 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('227', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('228', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 05:13:36 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('229', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('230', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 05:15:11 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('231', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('232', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('233', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('234', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 09/01/2014 a las 06:23:34 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('235', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('236', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 09/01/2014 a las 06:41:14 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('237', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 07:19:02 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('238', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('239', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 09/01/2014 a las 07:56:38 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('240', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 09/01/2014 a las 07:57:30 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('241', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 07:58:18 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('242', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('243', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 09/01/2014a las 07:58:46 p.m..', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('244', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('245', 'Entrega de equipo (garantia).', 'El usuario bety ha entregado un equipo en garantia el dia 09/01/2014 a las 07:59:23 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('246', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 09/01/2014a las 08:00:59 p.m..', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('247', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('248', 'Entrega de equipo (reparacion).', 'El usuario christian ha entregado un equipo en reparacion el dia 09/01/2014 a las 08:01:13 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('249', 'Entrega de equipo (reparacion).', 'El usuario christian ha entregado un equipo en reparacion el dia 09/01/2014 a las 08:01:22 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('250', 'Entrega de equipo (reparacion).', 'El usuario christian ha entregado un equipo en reparacion el dia 09/01/2014 a las 08:01:28 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('251', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 09/01/2014a las 08:03:46 p.m..', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('252', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('253', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 10:04:22 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('254', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('255', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 10:04:59 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('256', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 09/01/2014a las 10:05:17 p.m..', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('257', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('258', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 10:40:31 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('259', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 10:41:53 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('260', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 10:42:00 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('261', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('262', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 09/01/2014 a las 10:42:39 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('263', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 09/01/2014 a las 10:42:46 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('264', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 09/01/2014 a las 10:42:53 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('265', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 09/01/2014 a las 10:43:01 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('266', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 09/01/2014 a las 10:43:16 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('267', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('268', 'Venta de equipo.', 'El usuario bety ha vendido un equipo el dia 09/01/2014 a las 10:51:50 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('269', 'Venta de equipo.', 'El usuario bety ha vendido un equipo el dia 09/01/2014 a las 10:51:56 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('270', 'Venta de equipo.', 'El usuario bety ha vendido un equipo el dia 09/01/2014 a las 10:52:07 p.m.', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('271', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 09/01/2014a las 10:52:10 p.m..', 'Tlanchinol', 'bety', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('272', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('273', 'Inicio de sesión.', 'El usuario pao inicio sesion corectamente.', 'Chapulhuacan', 'pao', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('274', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('275', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('276', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('277', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 11:29:21 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('278', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 11:29:24 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('279', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 09/01/2014 a las 11:29:26 p.m.', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('280', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/01/2014a las 11:32:22 p.m..', 'Tlanchinol', 'admin', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('281', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('282', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 09/01/2014 a las 11:40:48 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('283', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 09/01/2014 a las 11:47:20 p.m.', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('284', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 09/01/2014a las 11:52:39 p.m..', 'Chapulhuacan', 'frank', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('285', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('286', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:16 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('287', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:19 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('288', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:20 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('289', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:22 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('290', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:24 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('291', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 09/01/2014 a las 11:54:25 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('292', 'Entrega de equipo (garantia).', 'El usuario christian ha entregado un equipo en garantia el dia 09/01/2014 a las 11:54:34 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('293', 'Entrega de equipo (garantia).', 'El usuario christian ha entregado un equipo en garantia el dia 09/01/2014 a las 11:54:38 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('294', 'Entrega de equipo (garantia).', 'El usuario christian ha entregado un equipo en garantia el dia 09/01/2014 a las 11:54:42 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('295', 'Entrega de equipo (reparacion).', 'El usuario christian ha entregado un equipo en reparacion el dia 09/01/2014 a las 11:54:52 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('296', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 09/01/2014a las 11:54:56 p.m..', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('297', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('298', 'Alta de equipo en garantia.', 'El usuario christian ha dado de alta un equipo en garantia el dia 09/01/2014 a las 11:57:43 p.m.', 'Chapulhuacan', 'christian', '2014-01-09');
-INSERT INTO `empleado_movimiento` VALUES ('299', 'Inicio de sesión.', 'El usuario pao inicio sesion corectamente.', 'Chapulhuacan', 'pao', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('300', 'Salida del programa.', 'El usuario pao dejó de usar el sistema el dia 10/01/2014a las 01:26:07 a.m..', 'Chapulhuacan', 'pao', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('301', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('302', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/01/2014 a las 01:56:04 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('303', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('304', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/01/2014 a las 01:56:13 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('305', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('306', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 10/01/2014 a las 01:56:35 a.m.', 'Chapulhuacan', 'christian', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('307', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 10/01/2014 a las 01:56:41 a.m.', 'Chapulhuacan', 'christian', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('308', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('309', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:43:06 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('310', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:43:12 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('311', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:43:14 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('312', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:43:17 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('313', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:49:03 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('314', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 02:49:11 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('315', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/01/2014 a las 02:49:18 a.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('316', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('317', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:41:57 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('318', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:42:07 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('319', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:42:24 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('320', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/01/2014 a las 12:42:31 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('321', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('322', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:45:12 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('323', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:45:15 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('324', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:45:16 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('325', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:45:19 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('326', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 12:45:30 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('327', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 10/01/2014 a las 12:47:03 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('328', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('329', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 10/01/2014 a las 12:52:59 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('330', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 10/01/2014 a las 12:53:05 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('331', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 10/01/2014 a las 12:55:57 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('332', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:59:17 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('333', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:59:23 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('334', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:59:27 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('335', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 10/01/2014 a las 12:59:45 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('336', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 01:11:22 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('337', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 10/01/2014 a las 01:11:25 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('338', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 10/01/2014 a las 01:11:33 p.m.', 'Tlanchinol', 'admin', '2014-01-10');
-INSERT INTO `empleado_movimiento` VALUES ('339', 'Inicio de sesión.', 'El usuario christian inicio sesion corectamente.', 'Chapulhuacan', 'christian', '2014-01-13');
-INSERT INTO `empleado_movimiento` VALUES ('340', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 13/01/2014 a las 11:31:58 a.m.', 'Chapulhuacan', 'christian', '2014-01-13');
-INSERT INTO `empleado_movimiento` VALUES ('341', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-13');
-INSERT INTO `empleado_movimiento` VALUES ('342', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 13/01/2014 a las 11:32:53 a.m.', 'Tlanchinol', 'bety', '2014-01-13');
-INSERT INTO `empleado_movimiento` VALUES ('343', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('344', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 03:20:10 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('345', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('346', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 03:21:08 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('347', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 04:07:04 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('348', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 04:13:43 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('349', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('350', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 06:09:15 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('351', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('352', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 06:10:14 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('353', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('354', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 06:33:41 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('355', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('356', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 06:34:52 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('357', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('358', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 07:01:49 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('359', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('360', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 10:54:03 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('361', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('362', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:00:09 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('363', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:00:14 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('364', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 11:00:18 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('365', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('366', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:01:48 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('367', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:01:52 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('368', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:01:54 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('369', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:31:02 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('370', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 11:42:22 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('371', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('372', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 14/01/2014 a las 11:46:36 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('373', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 14/01/2014 a las 11:49:21 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('374', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 14/01/2014 a las 11:49:23 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('375', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 14/01/2014 a las 11:51:19 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('376', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('377', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/01/2014 a las 11:54:12 p. m.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('378', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-14');
-INSERT INTO `empleado_movimiento` VALUES ('379', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('380', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:11:56 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('381', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:15:58 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('382', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:19:04 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('383', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:24:12 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('384', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:26:00 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('385', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 15/01/2014 a las 01:45:49 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('386', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 15/01/2014 a las 01:49:30 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('387', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 15/01/2014 a las 01:55:27 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('388', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 15/01/2014 a las 01:57:12 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('389', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 15/01/2014 a las 02:03:55 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('390', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/01/2014 a las 02:17:22 a. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('391', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('392', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/01/2014 a las 10:28:01 p. m.', 'Tlanchinol', 'admin', '2014-01-15');
-INSERT INTO `empleado_movimiento` VALUES ('393', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('394', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:30:49 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('395', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('396', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:33:07 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('397', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('398', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:34:06 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('399', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('400', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:36:21 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('401', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('402', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:44:17 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('403', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('404', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:44:50 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('405', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('406', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:49:54 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('407', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('408', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:50:16 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('409', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('410', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:53:07 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('411', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('412', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:53:39 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('413', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('414', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 06:55:10 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('415', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('416', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 09:36:26 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('417', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('418', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 09:39:10 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('419', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('420', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/01/2014 a las 09:39:46 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('421', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('422', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('423', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-16 a las 09:51:22 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('424', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('425', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-16 a las 10:04:23 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('426', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('427', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-16 a las 10:14:49 p. m.', 'Tlanchinol', 'admin', '2014-01-16');
-INSERT INTO `empleado_movimiento` VALUES ('428', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('429', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 12:46:23 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('430', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('431', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-17 a las 02:15:51 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('432', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('433', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-17 a las 02:16:35 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('434', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('435', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 02:21:35 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('436', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('437', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 17/01/2014 a las 02:26:54 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('438', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 17/01/2014 a las 02:31:34 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('439', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 17/01/2014 a las 02:31:44 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('440', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 17/01/2014 a las 02:33:44 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('441', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 02:56:41 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('442', 'Inicio de sesión.', 'El usuario chapulhuacan inicio sesion corectamente.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('443', 'Venta de equipo.', 'El usuario chapulhuacan ha vendido un equipo el dia 17/01/2014 a las 02:57:19 a. m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('444', 'Salida del programa.', 'El usuario chapulhuacan dejó de usar el sistema el dia 17/01/2014 a las 02:58:17 a. m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('445', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('446', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 03:00:36 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('447', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('448', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 03:04:06 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('449', 'Inicio de sesión.', 'El usuario chapulhuacan inicio sesion corectamente.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('450', 'Venta de equipo.', 'El usuario chapulhuacan ha vendido un equipo el dia 17/01/2014 a las 03:04:38 a. m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('451', 'Venta de equipo.', 'El usuario chapulhuacan ha vendido un equipo el dia 17/01/2014 a las 03:04:47 a. m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('452', 'Salida del programa.', 'El usuario chapulhuacan dejó de usar el sistema el dia 17/01/2014 a las 03:05:01 a. m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('453', 'Inicio de sesión.', 'El usuario pisa inicio sesion corectamente.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('454', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 17/01/2014 a las 11:50:36 a. m.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('455', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('456', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 17/01/2014 a las 11:51:26 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('457', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 17/01/2014 a las 11:51:57 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('458', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 11:52:02 a. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('459', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('460', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 07:04:37 p. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('461', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('462', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 07:05:46 p. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('463', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('464', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 07:07:18 p. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('465', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('466', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 17/01/2014 a las 07:07:53 p. m.', 'Tlanchinol', 'admin', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('467', 'Inicio de sesión.', 'El usuario pisa inicio sesion corectamente.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('468', 'Alta de equipo en reparacion.', 'El usuario pisa ha dado de alta un equipo en reparacion el dia 17/01/2014 a las 07:11:27 p. m.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('469', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 17/01/2014 a las 07:14:52 p. m.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('470', 'Inicio de sesión.', 'El usuario pisa inicio sesion corectamente.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('471', 'Entrega de equipo (reparacion).', 'El usuario pisa ha entregado un equipo en reparacion el dia 17/01/2014 a las 07:15:42 p. m.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('472', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 17/01/2014 a las 07:15:46 p. m.', 'Pisaflores', 'pisa', '2014-01-17');
-INSERT INTO `empleado_movimiento` VALUES ('473', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-18');
-INSERT INTO `empleado_movimiento` VALUES ('474', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 18/01/2014 a las 11:59:11 p.m.', 'Tlanchinol', 'admin', '2014-01-18');
-INSERT INTO `empleado_movimiento` VALUES ('475', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-18');
-INSERT INTO `empleado_movimiento` VALUES ('476', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:04:32 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('477', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('478', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/01/2014 a las 12:07:56 a.m.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('479', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('480', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:08:17 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('481', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('482', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/01/2014 a las 12:10:00 a.m.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('483', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('484', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:11:23 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('485', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('486', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/01/2014 a las 12:17:50 a.m.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('487', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('488', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:19:04 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('489', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('490', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:27:49 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('491', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('492', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/01/2014 a las 12:28:18 a.m.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('493', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('494', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 12:29:26 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('495', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('496', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/01/2014 a las 12:30:06 a.m.', 'Tlanchinol', 'admin', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('497', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('498', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/01/2014 a las 11:21:34 a.m.', 'Chapulhuacan', 'frank', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('499', 'Inicio de sesión.', 'El usuario pao inicio sesion corectamente.', 'Chapulhuacan', 'pao', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('500', 'Venta de equipo.', 'El usuario pao ha vendido un equipo el dia 19/01/2014 a las 12:50:01 p.m.', 'Chapulhuacan', 'pao', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('501', 'Venta de equipo.', 'El usuario pao ha vendido un equipo el dia 19/01/2014 a las 12:50:56 p.m.', 'Chapulhuacan', 'pao', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('502', 'Alta de equipo en garantia.', 'El usuario pao ha dado de alta un equipo en garantia el dia 19/01/2014 a las 12:51:59 p.m.', 'Chapulhuacan', 'pao', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('503', 'Salida del programa.', 'El usuario pao dejó de usar el sistema el dia 19/01/2014 a las 12:55:30 p.m.', 'Chapulhuacan', 'pao', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('504', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('505', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 19/01/2014 a las 12:56:20 p.m.', 'Tlanchinol', 'bety', '2014-01-19');
-INSERT INTO `empleado_movimiento` VALUES ('506', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('507', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('508', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('509', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('510', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('511', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/01/2014 a las 09:43:03 p. m.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('512', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('513', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/01/2014 a las 10:04:00 p. m.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('514', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('515', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/01/2014 a las 10:19:02 p. m.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('516', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('517', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/01/2014 a las 10:22:40 p. m.', 'Tlanchinol', 'admin', '2014-01-20');
-INSERT INTO `empleado_movimiento` VALUES ('518', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('519', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 21/01/2014 a las 12:18:27 a. m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('520', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 21/01/2014 a las 12:23:08 a. m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('521', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('522', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 21/01/2014 a las 12:28:44 a. m.', 'Chapulhuacan', 'frank', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('523', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('524', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 21/01/2014 a las 10:07:31 a.m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('525', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('526', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-21 a las 01:29:19 p.m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('527', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('528', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('529', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 21/01/2014 a las 02:34:27 p.m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('530', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 21/01/2014 a las 02:34:51 p.m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('531', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('532', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 21/01/2014 a las 02:43:05 p.m.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('533', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('534', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('535', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 21/01/2014 a las 10:59:25 p. m.', 'Chapulhuacan', 'frank', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('536', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-21');
-INSERT INTO `empleado_movimiento` VALUES ('537', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('538', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 22/01/2014 a las 01:09:33 a. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('539', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 01:09:37 a. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('540', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('541', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 10:00:52 p. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('542', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('543', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 10:01:00 p. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('544', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('545', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/01/2014 a las 10:02:10 p. m.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('546', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('547', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 11:20:06 p. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('548', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('549', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/01/2014 a las 11:23:56 p. m.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('550', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('551', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 11:24:19 p. m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('552', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('553', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 22/01/2014 a las 11:25:49 p. m.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('554', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/01/2014 a las 11:28:47 p. m.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('555', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('556', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 22/01/2014 a las 11:35:49 p.m.', 'Tlanchinol', 'admin', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('557', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('558', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/01/2014 a las 11:37:14 p.m.', 'Chapulhuacan', 'frank', '2014-01-22');
-INSERT INTO `empleado_movimiento` VALUES ('559', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('560', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 08:15:10 a.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('561', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('562', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 23/01/2014 a las 08:24:19 a.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('563', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 08:25:00 a.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('564', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('565', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 23/01/2014 a las 08:26:39 a.m.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('566', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('567', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 23/01/2014 a las 10:45:03 a.m.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('568', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('569', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 10:47:59 a.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('570', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('571', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 02:39:06 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('572', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('573', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 09:15:55 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('574', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('575', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 23/01/2014 a las 09:17:23 p.m.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('576', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('577', 'Intento de login fallido.', 'El usuario: bety, ingreso datos incorrectos.', null, 'bety', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('578', 'Inicio de sesión.', 'El usuario bety inicio sesion corectamente.', 'Tlanchinol', 'bety', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('579', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 23/01/2014 a las 09:20:08 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('580', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 23/01/2014 a las 09:20:14 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('581', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 23/01/2014 a las 09:20:16 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('582', 'Venta de equipo.', 'El usuario bety ha vendido un equipo el dia 23/01/2014 a las 09:20:26 p. m.', 'Tlanchinol', 'bety', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('583', 'Venta de equipo.', 'El usuario bety ha vendido un equipo el dia 23/01/2014 a las 09:20:28 p. m.', 'Tlanchinol', 'bety', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('584', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 23/01/2014 a las 09:20:31 p. m.', 'Tlanchinol', 'bety', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('585', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 09:20:29 p.m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('586', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('587', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 23/01/2014 a las 09:34:10 p. m.', 'Tlanchinol', 'admin', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('588', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('589', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 23/01/2014 a las 09:34:20 p. m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('590', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 23/01/2014 a las 09:34:23 p. m.', 'Chapulhuacan', 'frank', '2014-01-23');
-INSERT INTO `empleado_movimiento` VALUES ('591', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('592', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('593', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 01:45:06 a. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('594', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 01:45:04 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('595', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('596', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('597', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 24/01/2014 a las 01:46:47 a. m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('598', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 24/01/2014 a las 01:46:48 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('599', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 24/01/2014 a las 01:46:58 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('600', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 24/01/2014 a las 01:47:01 a. m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('601', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 01:48:09 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('602', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 24/01/2014 a las 01:48:25 a. m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('603', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('604', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 01:55:03 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('605', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('606', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('607', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 07:37:24 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('608', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('609', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 07:39:20 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('610', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('611', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 07:40:29 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('612', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('613', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 07:41:05 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('614', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('615', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 07:42:19 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('616', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('617', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 09:44:25 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('618', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('619', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 24/01/2014 a las 09:52:11 a.m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('620', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('621', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 24/01/2014 a las 10:15:03 a.m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('622', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 2014-01-24 a las 10:16:49 a.m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('623', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('624', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:20:00 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('625', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('626', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:22:03 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('627', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('628', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:25:06 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('629', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('630', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:25:48 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('631', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('632', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:26:16 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('633', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('634', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 2014-01-24 a las 10:28:00 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('635', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:28:17 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('636', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('637', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:33:33 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('638', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('639', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:34:14 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('640', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('641', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('642', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:35:38 a.m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('643', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('644', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 24/01/2014 a las 10:10:56 p. m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('645', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('646', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 10:18:03 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('647', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('648', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:57:06 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('649', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('650', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:57:52 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('651', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('652', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 10:58:21 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('653', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('654', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 24/01/2014 a las 11:19:19 p. m.', 'Chapulhuacan', 'frank', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('655', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('656', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('657', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:21:20 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('658', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('659', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:22:23 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('660', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('661', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 11:26:06 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('662', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('663', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 11:26:49 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('664', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('665', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 11:27:11 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('666', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('667', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 24/01/2014 a las 11:29:24 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('668', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:29:36 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('669', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('670', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:29:52 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('671', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('672', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-01-24 a las 11:30:28 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('673', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('674', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:31:31 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('675', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('676', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:32:21 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('677', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('678', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:34:05 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('679', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('680', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 24/01/2014 a las 11:36:22 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('681', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 24/01/2014 a las 11:37:29 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('682', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:37:32 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('683', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('684', 'Entrega de equipo (reparacion).', 'El usuario admin ha entregado un equipo en reparacion el dia 24/01/2014 a las 11:38:38 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('685', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/01/2014 a las 11:48:45 p. m.', 'Tlanchinol', 'admin', '2014-01-24');
-INSERT INTO `empleado_movimiento` VALUES ('686', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('687', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/01/2014 a las 12:17:34 a. m.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('688', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('689', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/01/2014 a las 12:51:42 a. m.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('690', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('691', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 25/01/2014 a las 12:12:09 p. m.', 'Chapulhuacan', 'frank', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('692', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('693', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/01/2014 a las 12:29:44 p. m.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('694', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('695', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/01/2014 a las 04:51:53 p. m.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('696', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('697', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 25/01/2014 a las 04:56:07 p. m.', 'Tlanchinol', 'admin', '2014-01-25');
-INSERT INTO `empleado_movimiento` VALUES ('698', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('699', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 12:02:36 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('700', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('701', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 01:28:09 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('702', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('703', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 01:50:44 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('704', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('705', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 01:58:19 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('706', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('707', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 01:59:46 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('708', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('709', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 02:01:23 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('710', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('711', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 02:10:33 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('712', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('713', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 02:11:28 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('714', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('715', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 02:12:06 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('716', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('717', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 03:19:11 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('718', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('719', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 04:35:59 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('720', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('721', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 05:48:25 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('722', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('723', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 05:59:43 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('724', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('725', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 06:01:58 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('726', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('727', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 06:49:07 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('728', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('729', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 06:49:38 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('730', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('731', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 06:55:01 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('732', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('733', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 07:03:10 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('734', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('735', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 07:04:00 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('736', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('737', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 26/01/2014 a las 07:04:31 p. m.', 'Chapulhuacan', 'frank', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('738', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('739', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 07:09:17 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('740', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('741', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('742', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 26/01/2014 a las 07:37:32 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('743', 'Alta de equipo en reparacion.', 'El usuario admin ha dado de alta un equipo en reparacion el dia 26/01/2014 a las 07:37:40 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('744', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 07:38:25 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('745', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 07:38:35 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('746', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('747', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:21:04 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('748', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('749', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:22:59 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('750', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('751', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:23:21 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('752', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('753', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:25:44 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('754', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('755', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:27:26 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('756', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('757', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:27:59 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('758', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('759', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:28:23 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('760', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('761', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:30:43 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('762', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('763', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 09:49:16 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('764', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('765', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 10:49:20 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('766', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('767', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 10:54:00 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('768', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('769', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 10:54:58 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('770', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('771', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:01:28 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('772', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('773', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:02:12 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('774', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('775', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:03:35 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('776', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('777', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:22:23 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('778', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('779', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:23:44 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('780', 'Inicio de sesión.', 'El usuario CHRISTIAN inicio sesion corectamente.', 'Chapulhuacan', 'CHRISTIAN', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('781', 'Salida del programa.', 'El usuario CHRISTIAN dejó de usar el sistema el dia 26/01/2014 a las 11:26:04 p. m.', 'Chapulhuacan', 'CHRISTIAN', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('782', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('783', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:27:44 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('784', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('785', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:29:21 p. m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('786', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('787', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:29:47 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('788', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('789', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:31:47 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('790', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('791', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:36:46 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('792', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('793', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:37:10 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('794', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('795', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:38:09 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('796', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('797', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/01/2014 a las 11:48:45 p.m.', 'Tlanchinol', 'admin', '2014-01-26');
-INSERT INTO `empleado_movimiento` VALUES ('798', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('799', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 27/01/2014 a las 11:10:31 a.m.', 'Tlanchinol', 'admin', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('800', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('801', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 27/01/2014 a las 12:02:07 p.m.', 'Tlanchinol', 'admin', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('802', 'Inicio de sesión.', 'El usuario chapulhuacan inicio sesion corectamente.', 'Chapulhuacan', 'chapulhuacan', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('803', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('804', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 27/01/2014 a las 03:15:47 p. m.', 'Chapulhuacan', 'frank', '2014-01-27');
-INSERT INTO `empleado_movimiento` VALUES ('805', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('806', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 01:19:10 a. m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('807', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('808', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 28/01/2014 a las 01:19:38 a. m.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('809', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('810', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 01:27:08 a. m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('811', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('812', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 28/01/2014 a las 01:29:59 a. m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('813', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 01:30:26 a. m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('814', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('815', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:30:30 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('816', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('817', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:40:54 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('818', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('819', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:47:52 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('820', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('821', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:52:35 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('822', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('823', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:55:37 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('824', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('825', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 11:56:46 a.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('826', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('827', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:12:18 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('828', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('829', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:13:21 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('830', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('831', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:14:16 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('832', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('833', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:19:15 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('834', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('835', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:21:48 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('836', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('837', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:22:14 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('838', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('839', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:22:50 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('840', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('841', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:23:19 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('842', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('843', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:25:33 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('844', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('845', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:27:29 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('846', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('847', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:28:24 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('848', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('849', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:29:13 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('850', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('851', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:30:29 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('852', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('853', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:32:49 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('854', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('855', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:36:17 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('856', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('857', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 28/01/2014 a las 12:38:35 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('858', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 28/01/2014 a las 12:38:38 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('859', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:40:04 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('860', 'Inicio de sesión.', 'El usuario chapulhuacan inicio sesion corectamente.', 'Chapulhuacan', 'chapulhuacan', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('861', 'Venta de equipo.', 'El usuario chapulhuacan ha vendido un equipo el dia 28/01/2014 a las 12:40:43 p.m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('862', 'Salida del programa.', 'El usuario chapulhuacan dejó de usar el sistema el dia 28/01/2014 a las 12:41:17 p.m.', 'Chapulhuacan', 'chapulhuacan', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('863', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('864', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:47:21 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('865', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('866', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 28/01/2014 a las 12:47:31 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('867', 'Venta de equipo.', 'El usuario admin ha vendido un equipo el dia 28/01/2014 a las 12:47:32 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('868', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:47:47 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('869', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('870', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 28/01/2014 a las 12:48:12 p.m.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('871', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('872', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 12:51:38 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('873', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('874', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 04:31:31 p. m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('875', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('876', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 05:51:59 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('877', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('878', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 06:13:54 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('879', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('880', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 06:14:47 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('881', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('882', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 06:24:41 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('883', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('884', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 06:47:35 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('885', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('886', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 06:53:06 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('887', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('888', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 07:01:58 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('889', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('890', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 28/01/2014 a las 07:21:36 p.m.', 'Chapulhuacan', 'frank', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('891', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('892', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 07:48:15 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('893', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('894', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 28/01/2014 a las 07:56:10 p.m.', 'Tlanchinol', 'admin', '2014-01-28');
-INSERT INTO `empleado_movimiento` VALUES ('895', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('896', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:38:49 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('897', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('898', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:42:46 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('899', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('900', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:45:44 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('901', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('902', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:47:11 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('903', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('904', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:47:59 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('905', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('906', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:48:29 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('907', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('908', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 11:52:13 a.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('909', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('910', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 01:33:34 p.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('911', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('912', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 29/01/2014 a las 02:08:26 p.m.', 'Tlanchinol', 'admin', '2014-01-29');
-INSERT INTO `empleado_movimiento` VALUES ('913', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('914', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/01/2014 a las 10:48:16 a.m.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('915', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('916', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/01/2014 a las 11:00:08 a.m.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('917', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('918', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/01/2014 a las 11:03:28 a.m.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('919', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('920', 'Intento de login fallido.', 'El usuario: pisaflores, ingreso datos incorrectos.', null, 'pisaflores', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('921', 'Inicio de sesión.', 'El usuario pisa inicio sesion corectamente.', 'Pisaflores', 'pisa', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('922', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('923', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('924', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/01/2014 a las 10:06:54 p. m.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('925', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('926', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 30/01/2014 a las 10:07:00 p. m.', 'Tlanchinol', 'admin', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('927', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('928', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('929', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('930', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('931', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/01/2014 a las 10:36:38 p. m.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('932', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('933', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/01/2014 a las 10:56:45 p. m.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('934', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('935', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/01/2014 a las 11:00:09 p. m.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('936', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('937', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/01/2014 a las 11:41:21 p. m.', 'Chapulhuacan', 'frank', '2014-01-30');
-INSERT INTO `empleado_movimiento` VALUES ('938', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('939', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('940', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 12:09:27 a.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('941', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('942', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:59:19 a.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('943', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('944', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 31/01/2014 a las 11:39:34 a.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('945', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 11:41:11 a.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('946', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('947', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 12:01:34 p.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('948', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('949', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('950', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('951', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:12:08 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('952', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('953', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 12:22:21 p.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('954', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('955', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('956', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:31:42 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('957', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('958', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:40:41 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('959', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('960', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:43:52 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('961', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('962', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:46:02 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('963', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('964', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:47:22 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('965', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('966', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 12:48:19 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('967', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('968', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 12:49:59 p.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('969', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('970', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('971', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 02:11:51 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('972', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('973', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 03:52:00 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('974', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('975', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 04:14:11 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('976', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('977', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 04:23:24 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('978', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('979', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 04:25:17 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('980', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('981', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 31/01/2014 a las 04:29:03 p.m.', 'Chapulhuacan', 'frank', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('982', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('983', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('984', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 06:01:13 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('985', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('986', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 06:02:47 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('987', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('988', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 06:05:15 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('989', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('990', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 06:24:35 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('991', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('992', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 07:21:15 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('993', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('994', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 07:31:34 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('995', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('996', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 11:22:05 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('997', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('998', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 11:25:20 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('999', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('1000', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 11:40:53 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('1001', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('1002', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 31/01/2014 a las 11:42:55 p.m.', 'Tlanchinol', 'admin', '2014-01-31');
-INSERT INTO `empleado_movimiento` VALUES ('1003', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1004', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 06:54:12 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1005', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1006', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:01:02 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1007', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1008', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:03:48 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1009', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1010', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:09:02 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1011', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1012', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1013', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1014', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 07:09:50 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1015', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1016', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 07:16:05 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1017', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1018', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:22:57 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1019', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1020', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:30:31 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1021', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1022', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:33:40 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1023', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1024', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:37:17 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1025', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1026', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:43:40 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1027', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1028', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:44:44 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1029', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1030', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 07:45:13 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1031', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1032', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1033', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 08:06:03 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1034', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1035', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 08:11:34 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1036', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1037', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 08:15:27 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1038', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1039', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1040', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 2014-02-01 a las 08:20:33 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1041', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1042', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1043', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 01/02/2014 a las 08:21:06 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1044', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 2014-02-01 a las 08:22:52 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1045', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1046', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 08:23:56 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1047', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1048', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 08:26:24 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1049', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1050', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1051', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 08:29:55 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1052', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1053', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/02/2014 a las 08:59:49 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1054', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1055', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1056', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1057', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 09:03:09 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1058', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1059', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 09:05:49 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1060', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1061', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 09:44:32 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1062', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1063', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 09:53:00 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1064', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1065', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 09:57:31 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1066', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1067', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 10:03:06 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1068', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1069', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 10:04:48 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1070', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1071', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 10:05:12 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1072', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1073', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 10:05:49 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1074', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1075', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 10:06:25 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1076', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1077', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 01/02/2014 a las 11:03:12 p.m.', 'Tlanchinol', 'admin', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1078', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1079', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 01/02/2014 a las 11:04:14 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1080', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 01/02/2014 a las 11:04:17 p.m.', 'Chapulhuacan', 'frank', '2014-02-01');
-INSERT INTO `empleado_movimiento` VALUES ('1081', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1082', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 12:57:14 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1083', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1084', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 12:59:16 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1085', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1086', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1087', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 01:03:12 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1088', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1089', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 01:05:44 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1090', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1091', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 02:08:49 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1092', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1093', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 02:18:45 a.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1094', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1095', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 12:30:18 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1096', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1097', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 03:32:37 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1098', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1099', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 03:37:48 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1100', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1101', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 03:50:24 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1102', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1103', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 03:58:31 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1104', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1105', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:00:18 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1106', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1107', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:03:05 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1108', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1109', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:06:26 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1110', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1111', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:12:37 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1112', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1113', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:15:58 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1114', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1115', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:24:10 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1116', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1117', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:32:52 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1118', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1119', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:37:12 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1120', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1121', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:45:51 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1122', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1123', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:47:29 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1124', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1125', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:53:32 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1126', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1127', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 04:54:40 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1128', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1129', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 05:57:24 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1130', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1131', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 05:59:28 p.m.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1132', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1133', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1134', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 02/02/2014 a las 21:43:48', 'Chapulhuacan', 'frank', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1135', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/02/2014 a las 21:52:04', 'Chapulhuacan', 'frank', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1136', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1137', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 21:52:31', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1138', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1139', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/02/2014 a las 21:54:43', 'Chapulhuacan', 'frank', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1140', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1141', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 02/02/2014 a las 21:58:18', 'Tlanchinol', 'admin', '2014-02-02');
-INSERT INTO `empleado_movimiento` VALUES ('1142', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-03');
-INSERT INTO `empleado_movimiento` VALUES ('1143', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 03/02/2014 a las 01:30:18 a.m.', 'Tlanchinol', 'admin', '2014-02-03');
-INSERT INTO `empleado_movimiento` VALUES ('1144', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-04');
-INSERT INTO `empleado_movimiento` VALUES ('1145', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 04/02/2014 a las 11:38:27 a.m.', 'Tlanchinol', 'admin', '2014-02-04');
-INSERT INTO `empleado_movimiento` VALUES ('1146', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-05');
-INSERT INTO `empleado_movimiento` VALUES ('1147', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 05/02/2014 a las 01:51:23 p.m.', 'Tlanchinol', 'admin', '2014-02-05');
-INSERT INTO `empleado_movimiento` VALUES ('1148', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-05');
-INSERT INTO `empleado_movimiento` VALUES ('1149', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 05/02/2014 a las 01:55:56 p.m.', 'Tlanchinol', 'admin', '2014-02-05');
-INSERT INTO `empleado_movimiento` VALUES ('1150', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1151', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 06/02/2014 a las 07:39:58 a.m.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1152', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1153', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 06/02/2014 a las 11:15:28 a.m.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1154', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1155', 'Inicio de sesión', 'El administrador ha iniciado sesión', null, null, null);
-INSERT INTO `empleado_movimiento` VALUES ('1156', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 06/02/2014 a las 12:01:44 p.m.', 'Tlanchinol', 'admin', '2014-02-06');
-INSERT INTO `empleado_movimiento` VALUES ('1157', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1158', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 01:57:53 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1159', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1160', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 02:02:46 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1161', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1162', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:09:23 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1163', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1164', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:13:08 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1165', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1166', 'Alta de equipo en garantia.', 'El usuario admin ha dado de alta un equipo en garantia el dia 08/02/2014 a las 10:21:07 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1167', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:22:08 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1168', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1169', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 08/02/2014 a las 10:24:11 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1170', 'Movimiento de prueba', 'Detalles de movimiento de prueba', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1171', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:28:12 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1172', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1173', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:44:34 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1174', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1175', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:47:09 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1176', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1177', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 10:49:07 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1178', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1179', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 11:07:26 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1180', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1181', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 11:09:14 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1182', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1183', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 11:37:05 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1184', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1185', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 11:38:09 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1186', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1187', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 08/02/2014 a las 11:44:47 p.m.', 'Tlanchinol', 'admin', '2014-02-08');
-INSERT INTO `empleado_movimiento` VALUES ('1188', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-09');
-INSERT INTO `empleado_movimiento` VALUES ('1189', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 09/02/2014 a las 12:02:24 a.m.', 'Tlanchinol', 'admin', '2014-02-09');
-INSERT INTO `empleado_movimiento` VALUES ('1190', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1191', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:09:40 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1192', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1193', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 11/02/2014 a las 08:09:59 a.m.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1194', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1195', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:12:23 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1196', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1197', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 11/02/2014 a las 08:12:51 a.m.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1198', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1199', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 11/02/2014 a las 08:16:41 a.m.', 'Chapulhuacan', 'frank', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1200', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1201', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:21:02 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1202', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1203', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1204', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:26:09 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1205', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1206', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:29:32 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1207', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1208', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:31:28 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1209', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1210', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:33:08 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1211', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1212', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 08:34:26 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1213', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1214', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 10:39:44 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1215', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1216', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/02/2014 a las 10:41:58 a.m.', 'Tlanchinol', 'admin', '2014-02-11');
-INSERT INTO `empleado_movimiento` VALUES ('1217', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1218', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 10:30:52 a.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1219', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1220', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 10:35:56 a.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1221', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1222', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1223', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:18:09 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1224', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1225', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:18:50 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1226', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1227', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:19:35 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1228', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1229', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:24:23 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1230', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1231', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:49:09 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1232', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1233', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:55:57 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1234', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1235', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 01:58:03 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1236', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1237', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 02:00:28 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1238', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1239', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 02:02:22 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1240', 'Intento de login fallido.', 'El usuario: usuario, ingreso datos incorrectos.', null, 'usuario', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1241', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1242', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 14/02/2014 a las 02:31:01 p.m.', 'Chapulhuacan', 'frank', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1243', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1244', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 14/02/2014 a las 02:41:33 p.m.', 'Chapulhuacan', 'frank', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1245', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 14/02/2014 a las 02:41:34 p.m.', 'Chapulhuacan', 'frank', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1246', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1247', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 02:43:28 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1248', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1249', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 02:48:10 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1250', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1251', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 02:52:16 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1252', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1253', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 14/02/2014 a las 09:00:47 p.m.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1254', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-14');
-INSERT INTO `empleado_movimiento` VALUES ('1255', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-15');
-INSERT INTO `empleado_movimiento` VALUES ('1256', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/02/2014 a las 12:20:34 p.m.', 'Tlanchinol', 'admin', '2014-02-15');
-INSERT INTO `empleado_movimiento` VALUES ('1257', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1258', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/02/2014 a las 02:03:10 p.m.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1259', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1260', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1261', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 19/02/2014 a las 09:56:04 p.m.', 'Chapulhuacan', 'frank', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1262', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1263', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/02/2014 a las 10:09:00 p.m.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1264', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1265', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/02/2014 a las 10:09:54 p.m.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1266', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1267', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/02/2014 a las 10:13:01 p.m.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1268', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1269', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 19/02/2014 a las 10:13:55 p.m.', 'Tlanchinol', 'admin', '2014-02-19');
-INSERT INTO `empleado_movimiento` VALUES ('1270', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/02/2014 a las 01:24:37 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1271', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/02/2014 a las 02:49:43 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1272', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:56:26 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1273', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/02/2014 a las 02:57:19 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1274', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:18:17 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1275', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 20/02/2014 a las 03:18:22 p.m.', 'Tlanchinol', 'admin', '2014-02-20');
-INSERT INTO `empleado_movimiento` VALUES ('1276', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:33:53 p.m.', 'Chapulhuacan', 'frank', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1277', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 21/02/2014 a las 06:38:28 p.m.', 'Chapulhuacan', 'frank', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1278', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 06:38:38 p.m.', 'Tlanchinol', 'bety', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1279', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 21/02/2014 a las 06:44:48 p.m.', 'Tlanchinol', 'bety', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1280', 'Inicio de sesión.', 'El usuario chapulhuacan inicio sesion correctamente a las 06:45:02 p.m.', 'Chapulhuacan', 'chapulhuacan', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1281', 'Venta de equipo.', 'El usuario chapulhuacan ha vendido un equipo el dia 21/02/2014 a las 06:54:34 p.m.', 'Chapulhuacan', 'chapulhuacan', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1282', 'Salida del programa.', 'El usuario chapulhuacan dejó de usar el sistema el dia 21/02/2014 a las 06:57:22 p.m.', 'Chapulhuacan', 'chapulhuacan', '2014-02-21');
-INSERT INTO `empleado_movimiento` VALUES ('1283', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:46:24 p. m.', 'Tlanchinol', 'admin', '2014-02-22');
-INSERT INTO `empleado_movimiento` VALUES ('1284', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1285', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/02/2014 a las 01:45:39 p.m.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1286', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1287', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/02/2014 a las 01:46:27 p.m.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1288', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1289', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/02/2014 a las 05:08:09 p.m.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1290', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1291', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 24/02/2014 a las 07:49:52 p.m.', 'Tlanchinol', 'admin', '2014-02-24');
-INSERT INTO `empleado_movimiento` VALUES ('1292', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-26');
-INSERT INTO `empleado_movimiento` VALUES ('1293', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/02/2014 a las 08:38:11 a.m.', 'Tlanchinol', 'admin', '2014-02-26');
-INSERT INTO `empleado_movimiento` VALUES ('1294', 'Inicio de sesión.', 'El usuario admin inicio sesion corectamente.', 'Tlanchinol', 'admin', '2014-02-26');
-INSERT INTO `empleado_movimiento` VALUES ('1295', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 26/02/2014 a las 01:01:36 p.m.', 'Tlanchinol', 'admin', '2014-02-26');
-INSERT INTO `empleado_movimiento` VALUES ('1296', 'Inicio de sesión.', 'El usuario frank inicio sesion corectamente.', 'Chapulhuacan', 'frank', '2014-03-03');
-INSERT INTO `empleado_movimiento` VALUES ('1297', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 03/03/2014 a las 12:45:24 p.m.', 'Chapulhuacan', 'frank', '2014-03-03');
-INSERT INTO `empleado_movimiento` VALUES ('1298', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 03/03/2014 a las 12:45:24 p.m.', 'Chapulhuacan', 'frank', '2014-03-03');
-INSERT INTO `empleado_movimiento` VALUES ('1299', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:24:01 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1300', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 01:24:38 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1301', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:58:29 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1302', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 01:58:41 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1303', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:59:06 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1304', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 01:59:18 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1305', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:59:55 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1306', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:00:07 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1307', 'Intento de login fallido.', 'El usuario:  frank, ingreso datos incorrectos.', null, ' frank', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1308', 'Intento de login fallido.', 'El usuario:  christian, ingreso datos incorrectos.', null, ' christian', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1309', 'Intento de login fallido.', 'El usuario:  frank, ingreso datos incorrectos.', null, ' frank', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1310', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1311', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1312', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1313', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1314', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1315', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1316', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1317', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1318', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1319', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1320', 'Intento de login fallido.', 'El usuario:  , ingreso datos incorrectos.', null, ' ', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1321', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:03:48 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1322', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:04:47 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1323', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:04:58 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1324', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:13:55 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1325', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:14:06 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1326', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:14:26 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1327', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:20:05 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1328', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:20:43 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1329', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:20:52 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1330', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:41:52 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1331', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:43:16 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1332', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:46:26 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1333', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 02:47:27 p.m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1334', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 10:29:13 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1335', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 10:37:43 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1336', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:34:50 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1337', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 11:35:26 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1338', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:35:30 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1339', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 11:38:00 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1340', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:43:01 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1341', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 11:43:42 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1342', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 11:51:28 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1343', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 11/03/2014 a las 11:53:54 p. m.', 'Tlanchinol', 'admin', '2014-03-11');
-INSERT INTO `empleado_movimiento` VALUES ('1344', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:10:01 a. m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1345', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 12:10:29 a. m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1346', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:34:16 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1347', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 12:35:01 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1348', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:36:13 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1349', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 12:37:47 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1350', 'Inicio de sesión.', 'El usuario christian inicio sesion correctamente a las 12:37:56 p.m.', 'Chapulhuacan', 'christian', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1351', 'Salida del programa.', 'El usuario christian dejó de usar el sistema el dia 12/03/2014 a las 12:43:02 p.m.', 'Chapulhuacan', 'christian', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1352', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:11:21 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1353', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 01:11:34 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1354', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 01:11:57 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1355', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 01:13:36 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1356', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:00:26 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1357', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 02:00:45 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1358', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:09:28 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1359', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 02:09:40 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1360', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:17:23 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1361', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 02:18:03 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1362', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1363', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1364', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1365', 'Intento de login fallido.', 'El usuario:  christian, ingreso datos incorrectos.', null, ' christian', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1366', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1367', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1368', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:20:02 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1369', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 12/03/2014 a las 02:24:31 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1370', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 02:25:22 p.m.', 'Tlanchinol', 'admin', '2014-03-12');
-INSERT INTO `empleado_movimiento` VALUES ('1371', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:53:02 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1372', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 03:54:16 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1373', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 03:54:49 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1374', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 03:57:47 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1375', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:12:26 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1376', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:12:39 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1377', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:14:44 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1378', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:15:15 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1379', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:26:44 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1380', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:26:53 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1381', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:27:55 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1382', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:28:05 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1383', 'Intento de login fallido.', 'El usuario:  admin, ingreso datos incorrectos.', null, ' admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1384', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:28:37 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1385', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:28:46 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1386', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:39:54 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1387', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:40:04 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1388', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:49:40 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1389', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:49:52 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1390', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 04:54:13 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1391', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 04:54:20 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1392', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 06:28:25 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1393', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 06:28:37 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1394', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:15:14 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1395', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 07:15:40 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1396', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 08:55:49 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1397', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 15/03/2014 a las 08:57:16 p.m.', 'Tlanchinol', 'admin', '2014-03-15');
-INSERT INTO `empleado_movimiento` VALUES ('1398', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:02:24 a.m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1399', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 12:03:11 a.m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1400', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:31:34 a.m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1401', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 12:43:24 a.m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1402', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 12:44:04 a.m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1403', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:21:28 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1404', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 07:22:14 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1405', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:27:53 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1406', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 07:28:31 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1407', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:29:03 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1408', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 07:30:39 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1409', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:31:18 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1410', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 07:34:59 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1411', 'Inicio de sesión.', 'El usuario admin inicio sesion correctamente a las 07:35:34 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1412', 'Salida del programa.', 'El usuario admin dejó de usar el sistema el dia 16/03/2014 a las 07:36:37 p. m.', 'Tlanchinol', 'admin', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1413', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1414', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1415', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:24:10 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1416', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 16/03/2014 a las 08:24:31 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1417', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 16/03/2014 a las 08:25:51 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1418', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 16/03/2014 a las 08:25:53 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1419', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 16/03/2014 a las 08:25:55 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1420', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 16/03/2014 a las 08:27:27 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
-INSERT INTO `empleado_movimiento` VALUES ('1421', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 16/03/2014 a las 08:27:29 p. m.', 'Chapulhuacan', 'frank', '2014-03-16');
+INSERT INTO `empleado_movimiento` VALUES ('1524', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 02:26:34 p.m.', 'Tlanchinol', 'bety', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1525', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 25/03/2014 a las 02:26:57 p.m.', 'Tlanchinol', 'bety', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1526', 'Inicio de sesión.', 'El usuario BETY inicio sesion correctamente a las 02:32:48 p.m.', 'Tlanchinol', 'BETY', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1527', 'Salida del programa.', 'El usuario BETY dejó de usar el sistema el dia 25/03/2014 a las 02:33:16 p.m.', 'Tlanchinol', 'BETY', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1528', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:36:31 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1529', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:37:33 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1530', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:38:38 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1531', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 25/03/2014 a las 02:38:44 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1532', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 25/03/2014 a las 02:39:17 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1533', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 25/03/2014 a las 02:39:21 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1534', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:41:13 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1535', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 25/03/2014 a las 02:41:20 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1536', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 25/03/2014 a las 02:41:25 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1537', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 25/03/2014 a las 02:41:27 p.m.', 'Chapulhuacan', 'frank', '2014-03-25', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1538', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:49:51 a.m.', 'Chapulhuacan', 'frank', '2014-04-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1539', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/04/2014 a las 09:50:08 a.m.', 'Chapulhuacan', 'frank', '2014-04-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1540', 'Intento de login fallido.', 'El usuario: admin, ingreso datos incorrectos.', null, 'admin', '2014-04-13', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1541', 'Intento de login fallido.', 'El usuario: admin, ingreso datos incorrectos.', null, 'admin', '2014-04-13', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1542', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:29:44 p.m.', 'Chapulhuacan', 'frank', '2014-04-13', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1543', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 13/04/2014 a las 10:29:48 p.m.', 'Chapulhuacan', 'frank', '2014-04-13', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1544', 'Intento de login fallido.', 'El usuario: christian, ingreso datos incorrectos.', null, 'christian', '2014-04-14', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1545', 'Intento de login fallido.', 'El usuario: christian, ingreso datos incorrectos.', null, 'christian', '2014-04-14', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1546', 'Venta de equipo.', 'El usuario christian ha vendido un equipo el dia 15/04/2014 a las 10:56:00 p.m.', 'Chapulhuacan', 'christian', '2014-04-15', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1547', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:27:21 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1548', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:35 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1549', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:37 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1550', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:41 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1551', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:46 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1552', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:50 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1553', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:27:59 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1554', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 18/04/2014 a las 06:28:51 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1555', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 18/04/2014 a las 06:28:53 p.m.', 'Chapulhuacan', 'frank', '2014-04-18', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1556', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:32:05 a.m.', 'Chapulhuacan', 'frank', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1557', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 22/04/2014 a las 11:32:58 a.m.', 'Chapulhuacan', 'frank', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1558', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/04/2014 a las 11:34:00 a.m.', 'Chapulhuacan', 'frank', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1559', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:34:28 a.m.', 'Chapulhuacan', 'frank', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1560', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 22/04/2014 a las 11:34:49 a.m.', 'Chapulhuacan', 'frank', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1561', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 11:35:09 a.m.', 'Tlanchinol', 'bety', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1562', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 22/04/2014 a las 11:37:36 a.m.', 'Tlanchinol', 'bety', '2014-04-22', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1563', 'Inicio de sesión.', 'El usuario pisa inicio sesion correctamente a las 12:50:21 p.m.', 'Pisaflores', 'pisa', '2014-04-28', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1564', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 28/04/2014 a las 12:51:13 p.m.', 'Pisaflores', 'pisa', '2014-04-28', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1565', 'Inicio de sesión.', 'El usuario pisa inicio sesion correctamente a las 01:29:39 p.m.', 'Pisaflores', 'pisa', '2014-04-28', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1566', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 28/04/2014 a las 01:32:19 p.m.', 'Pisaflores', 'pisa', '2014-04-28', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1567', 'Inicio de sesión.', 'El usuario pisa inicio sesion correctamente a las 03:55:01 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1568', 'Venta de equipo.', 'El usuario pisa ha vendido un equipo el dia 29/04/2014 a las 03:55:34 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1569', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 29/04/2014 a las 03:58:53 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1570', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:03:42 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1571', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:04:25 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1572', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:05:01 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1573', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1574', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:06:08 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1575', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:06:55 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1576', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:07:56 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1577', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:10:13 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1578', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:51 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1579', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:52 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1580', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:53 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1581', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:54 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1582', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:54 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1583', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 29/04/2014 a las 04:10:55 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1584', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:10:57 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1585', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:20:15 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1586', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:20:21 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1587', 'Inicio de sesión.', 'El usuario pisa inicio sesion correctamente a las 04:20:28 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1588', 'Inicio de sesión.', 'El usuario pisa intentó iniciar sesión como administrador el día 29/04/2014 a las 04:20:37 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1589', 'Inicio de sesión.', 'El usuario pisa intentó iniciar sesión como administrador el día 29/04/2014 a las 04:20:42 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1590', 'Inicio de sesión.', 'El usuario pisa intentó iniciar sesión como administrador el día 29/04/2014 a las 04:21:01 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1591', 'Salida del programa.', 'El usuario pisa dejó de usar el sistema el dia 29/04/2014 a las 04:21:05 p.m.', 'Pisaflores', 'pisa', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1592', 'Intento de login fallido.', 'El usuario: christian, ingreso datos incorrectos.', null, 'christian', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1593', 'Intento de login fallido.', 'El usuario: christian, ingreso datos incorrectos.', null, 'christian', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1594', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1595', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:25:00 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1596', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:25:09 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1597', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:25:13 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1598', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:25:28 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1599', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:25:30 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1600', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:28:33 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1601', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:28:38 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1602', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:29:06 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1603', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:29:11 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1604', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:31:27 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1605', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:33:28 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1606', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:33:41 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1607', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:33:50 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1608', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:33:55 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1609', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:35:04 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1610', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:39:20 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1611', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:39:34 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1612', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:39:35 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1613', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:43:12 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1614', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:43:20 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1615', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 29/04/2014 a las 04:43:29 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1616', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 04:43:30 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1617', 'Intento de login fallido.', 'El usuario: vero, ingreso datos incorrectos.', null, 'vero', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1618', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:50:01 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1619', 'Venta de equipo.', 'El usuario frank ha vendido un equipo el dia 29/04/2014 a las 04:50:43 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1620', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:57:30 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1621', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 05:01:41 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1622', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:20:12 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1623', 'Entrega de equipo (reparacion).', 'El usuario frank ha entregado un equipo en reparacion el dia 29/04/2014 a las 05:20:26 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1624', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 29/04/2014 a las 05:23:41 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1625', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:53:46 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1626', 'Entrega de equipo (reparacion).', 'El usuario frank ha entregado un equipo en reparacion el dia 29/04/2014 a las 05:53:57 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1627', 'Entrega de equipo (reparacion).', 'El usuario frank ha entregado un equipo en reparacion el dia 29/04/2014 a las 05:54:00 p.m.', 'Chapulhuacan', 'frank', '2014-04-29', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1628', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:50:51 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1629', 'Alta de equipo (reparacion).', 'El usuario frank ha dado de alta un equipo en reparacion el dia 30/04/2014 a las 01:51:46 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1630', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 30/04/2014 a las 01:51:46 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1631', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/04/2014 a las 01:52:08 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1632', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:53:52 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1633', 'Alta de equipo (reparacion).', 'El usuario frank ha dado de alta un equipo en reparacion el dia 30/04/2014 a las 01:56:08 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1634', 'Alta de equipo en reparacion.', 'El usuario frank ha dado de alta un equipo en reparacion el dia 30/04/2014 a las 01:56:08 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1635', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:46:27 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1636', 'Entrega de equipo (garantia).', 'El usuario admin ha entregado un equipo en garantia el dia 30/04/2014 a las 03:52:23 p.m.', 'Tlanchinol', 'admin', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1637', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1638', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:00:33 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1639', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/04/2014 a las 04:01:26 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1640', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:20:24 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1641', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 30/04/2014 a las 04:20:52 p.m.', 'Chapulhuacan', 'frank', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1642', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 04:20:58 p.m.', 'Tlanchinol', 'bety', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1643', 'Alta de equipo en garantia.', 'El usuario bety ha dado de alta un equipo en garantia el dia 30/04/2014 a las 04:21:11 p.m.', 'Tlanchinol', 'bety', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1644', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 30/04/2014 a las 04:21:15 p.m.', 'Tlanchinol', 'bety', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1645', 'Intento de login fallido.', 'El usuario: paola, ingreso datos incorrectos.', null, 'paola', '2014-04-30', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1646', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:37:28 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1647', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:37:35 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1648', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:40:43 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1649', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:41:01 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1650', 'Inicio de sesión.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:41:17 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1651', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 05:42:22 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1652', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:46:33 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1653', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:46:41 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1654', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:47:25 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1655', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 05:47:25 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1656', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:50:04 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1657', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:50:22 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1658', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:50:28 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1659', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:50:30 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1660', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 01/05/2014 a las 05:50:54 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1661', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 05:51:34 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1662', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:54:29 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1663', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 05:55:46 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1664', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:58:10 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1665', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 05:58:45 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1666', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:05:49 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1667', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 06:06:52 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1668', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:10:44 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1669', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 06:13:34 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1670', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1671', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:17:17 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1672', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 01/05/2014 a las 06:19:54 p.m.', 'Chapulhuacan', 'frank', '2014-05-01', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1673', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:55:15 a.m.', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1674', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 11:55:21 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1675', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/05/2014 a las 12:03:59 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1676', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:05:21 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1677', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:05:28 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1678', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:05:35 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1679', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:05:42 p.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1680', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:11:57 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1681', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:12:05 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', ' ', null);
+INSERT INTO `empleado_movimiento` VALUES ('1682', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/05/2014 a las 12:12:07 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1683', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 12:30:58 p.m.', 'Tlanchinol', 'bety', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1684', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 02/05/2014 a las 12:31:14 p.m.', 'Tlanchinol', 'bety', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1685', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 12:31:35 p.m.', 'Tlanchinol', 'bety', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1686', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 02/05/2014 a las 12:32:03 p.m.', 'Tlanchinol', 'bety', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1687', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:35:29 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1688', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/05/2014 a las 12:35:46 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1689', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:37:41 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1690', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:37:47 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1691', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:38:10 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1692', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/05/2014 a las 12:39:02 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1693', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 12:41:31 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1694', 'Intento de login.', 'El usuario iza intentó iniciar sesión como administrador el día 02/05/2014 a las 12:41:51 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1695', 'Intento de login.', 'El usuario iza intentó iniciar sesión como administrador el día 02/05/2014 a las 12:41:56 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1696', 'Salida del programa.', 'El usuario iza dejó de usar el sistema el dia 02/05/2014 a las 12:42:07 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1697', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 12:42:48 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1698', 'Intento de login.', 'El usuario iza intentó iniciar sesión como administrador el día 02/05/2014 a las 12:43:34 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1699', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 12:48:03 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1700', 'Intento de login.', 'El usuario iza intentó iniciar sesión como administrador el día 02/05/2014 a las 12:48:08 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1701', 'Salida del programa.', 'El usuario iza dejó de usar el sistema el dia 02/05/2014 a las 12:49:32 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1702', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1703', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:49:59 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1704', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 02/05/2014 a las 12:50:17 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1705', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 02/05/2014 a las 12:50:28 p.m.', 'Chapulhuacan', 'frank', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1706', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1707', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1708', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1709', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1710', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1711', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1712', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1713', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1714', 'Intento de login fallido.', 'El usuario: x, ingreso datos incorrectos.', null, 'x', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1715', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 12:59:47 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1716', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 02/05/2014 a las 01:01:01 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1717', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 01:14:11 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1718', 'Venta de equipo.', 'El usuario iza ha vendido un equipo el dia 02/05/2014 a las 01:16:56 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1719', 'Salida del programa.', 'El usuario iza dejó de usar el sistema el dia 02/05/2014 a las 01:17:06 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1720', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 01:17:26 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1721', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 02/05/2014 a las 01:17:32 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1722', 'Alta de equipo en garantia.', 'El usuario iza ha dado de alta un equipo en garantia el dia 02/05/2014 a las 01:19:11 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1723', 'Alta de equipo en garantia.', 'El usuario iza ha dado de alta un equipo en garantia el dia 02/05/2014 a las 01:20:36 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1724', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 02/05/2014 a las 01:22:32 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1725', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 02/05/2014 a las 01:22:35 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1726', 'Entrega de equipo (reparacion).', 'El usuario iza ha entregado un equipo en reparacion el dia 02/05/2014 a las 01:22:45 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1727', 'Entrega de equipo (reparacion).', 'El usuario iza ha entregado un equipo en reparacion el dia 02/05/2014 a las 01:22:47 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1728', 'Entrega de equipo (reparacion).', 'El usuario iza ha entregado un equipo en reparacion el dia 02/05/2014 a las 01:22:50 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1729', 'Alta de equipo (reparacion).', 'El usuario iza ha dado de alta un equipo en reparacion el dia 02/05/2014 a las 01:23:16 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1730', 'Alta de equipo (reparacion).', 'El usuario iza ha dado de alta un equipo en reparacion el dia 02/05/2014 a las 01:23:19 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1731', 'Alta de equipo (reparacion).', 'El usuario iza ha dado de alta un equipo en reparacion el dia 02/05/2014 a las 01:23:20 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1732', 'Alta de equipo (reparacion).', 'El usuario iza ha dado de alta un equipo en reparacion el dia 02/05/2014 a las 01:23:30 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1733', 'Salida del programa.', 'El usuario iza dejó de usar el sistema el dia 02/05/2014 a las 01:25:04 p.m.', 'Chapulhuacan', 'iza', '2014-05-02', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1734', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:38:03 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1735', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 03/05/2014 a las 04:40:02 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1736', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:35:56 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1737', 'Inicio de sesión.', 'El usuario iza inicio sesion correctamente a las 05:35:58 p.m.', 'Chapulhuacan', 'iza', '2014-05-03', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1738', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 03/05/2014 a las 05:36:42 p.m.', 'Chapulhuacan', 'iza', '2014-05-03', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1739', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 05:37:03 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1740', 'Entrega de equipo (garantia).', 'El usuario iza ha entregado un equipo en garantia el dia 03/05/2014 a las 05:37:02 p.m.', 'Chapulhuacan', 'iza', '2014-05-03', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1741', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 03/05/2014 a las 05:38:42 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1742', 'Salida del programa.', 'El usuario iza dejó de usar el sistema el dia 03/05/2014 a las 05:54:30 p.m.', 'Chapulhuacan', 'iza', '2014-05-03', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1743', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:43:51 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1744', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 08:44:39 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1745', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 08:44:42 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1746', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 08:44:42 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1747', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 08:44:43 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1748', 'Entrega de equipo (garantia).', 'El usuario frank ha entregado un equipo en garantia el dia 03/05/2014 a las 08:44:45 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1749', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 03/05/2014 a las 08:44:49 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1750', 'Alta de equipo en garantia.', 'El usuario frank ha dado de alta un equipo en garantia el dia 03/05/2014 a las 08:44:52 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1751', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 03/05/2014 a las 08:49:23 p. m.', 'Chapulhuacan', 'frank', '2014-05-03', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1752', 'Intento de login fallido.', 'El usuario: exar, ingreso datos incorrectos.', null, 'exar', '2014-05-04', null, null, null);
+INSERT INTO `empleado_movimiento` VALUES ('1753', 'Intento de login fallido.', 'El usuario: , ingreso datos incorrectos.', null, '', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1754', 'Intento de login fallido.', 'El usuario: exar, ingreso datos incorrectos.', null, 'exar', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1755', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:48:22 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1756', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:48:39 a.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1757', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:48:46 a.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1758', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 02:49:44 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1759', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:52:59 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1760', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:53:24 a.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1761', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 02:53:37 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1762', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:55:55 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1763', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:01 a.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1764', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:05 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1765', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:07 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1766', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:08 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1767', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:09 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1768', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:09 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1769', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:09 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1770', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:10 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1771', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:10 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1772', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:10 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1773', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:10 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1774', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:11 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1775', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:11 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1776', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:12 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1777', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:18 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1778', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:22 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1779', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 04/05/2014 a las 02:56:26 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1780', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 02:57:10 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1781', 'Intento de login fallido.', 'El usuario: admin, ingreso datos incorrectos.', null, 'admin', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1782', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:20:18 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1783', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:21:39 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1784', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:22:54 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1785', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:22:58 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1786', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:23:23 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1787', 'err', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:23:26 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1788', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:25:03 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1789', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:25:07 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1790', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:25:14 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1791', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:25:16 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1792', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 03:25:23 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1793', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 03:25:24 a.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1794', 'Inicio de sesión.', 'El usuario franK inicio sesion correctamente a las 03:26:15 a.m.', 'Chapulhuacan', 'franK', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1795', 'Salida del programa.', 'El usuario franK dejó de usar el sistema el dia 04/05/2014 a las 03:26:50 a.m.', 'Chapulhuacan', 'franK', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1796', 'Intento de login fallido.', 'El usuario: root, ingreso datos incorrectos.', null, 'root', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1797', 'Intento de login fallido.', 'El usuario: christian, ingreso datos incorrectos.', null, 'christian', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1798', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:58:49 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1799', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 01:00:58 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1800', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:01:45 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1801', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 01:02:08 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1802', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:04:37 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1803', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 01:04:38 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1804', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:31:13 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1805', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 01:31:20 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1806', 'Inicio de sesión.', 'El usuario bety inicio sesion correctamente a las 01:31:26 p.m.', 'Tlanchinol', 'bety', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1807', 'Salida del programa.', 'El usuario bety dejó de usar el sistema el dia 04/05/2014 a las 01:31:30 p.m.', 'Tlanchinol', 'bety', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1808', 'Venta de equipo.', 'El usuario tepehuacan ha vendido un equipo el dia 04/05/2014 a las 01:40:23 p.m.', 'Tepehuacan de Guerrero', 'tepehuacan', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1809', 'Venta de equipo.', 'El usuario tepehuacan ha vendido un equipo el dia 04/05/2014 a las 01:47:10 p.m.', 'Tepehuacan de Guerrero', 'tepehuacan', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1810', 'Venta de equipo.', 'El usuario tepehuacan ha vendido un equipo el dia 04/05/2014 a las 01:52:42 p.m.', 'Tepehuacan de Guerrero', 'tepehuacan', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1811', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:01:18 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1812', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 04/05/2014 a las 02:01:22 p.m.', 'Chapulhuacan', 'frank', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1813', 'Inicio de sesión.', 'El usuario t inicio sesion correctamente a las 02:20:13 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1817', 'Inicio de sesión.', 'El usuario T inicio sesion correctamente a las 02:22:22 p.m.', 'Tepehuacan de Guerrero', 'T', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1820', 'Inicio de sesión.', 'El usuario t inicio sesion correctamente a las 02:24:13 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1821', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:37 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1822', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:40 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1823', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:42 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1824', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:44 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1825', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:46 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1826', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:47 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1827', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:47 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1828', 'Venta de equipo.', 'El usuario t ha vendido un equipo el dia 04/05/2014 a las 02:24:49 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1829', 'Salida del programa.', 'El usuario t dejó de usar el sistema el dia 04/05/2014 a las 02:24:58 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1830', 'Inicio de sesión.', 'El usuario t inicio sesion correctamente a las 02:25:06 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1831', 'Salida del programa.', 'El usuario t dejó de usar el sistema el dia 04/05/2014 a las 02:25:12 p.m.', 'Tepehuacan de Guerrero', 't', '2014-05-04', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1832', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:03:53 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1833', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 12:04:41 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1834', 'Intento de login fallido.', 'El usuario: , ingreso datos incorrectos.', null, '', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1835', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:02:15 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1836', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 02:02:27 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1837', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:02:39 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1838', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 02:03:39 p.m.', 'Chapulhuacan', 'frank', '2014-05-05', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1839', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 07:23:20 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1840', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 07:23:43 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1841', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 07:29:14 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1842', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 07:42:40 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1843', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 07:44:28 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1844', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 07:45:17 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1845', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 07:46:16 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1846', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 07:53:31 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1847', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 07:57:44 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1848', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:00:17 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1849', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:00:35 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1850', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:08:30 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1851', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:08:51 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1852', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:17:50 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1853', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:20:03 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1854', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:36:51 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1855', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:37:12 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1856', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:38:24 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1857', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:38:39 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1858', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:42:50 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1859', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:43:15 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1860', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:45:41 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1861', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:46:04 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1862', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:47:34 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1863', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:47:52 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1864', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:52:01 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1865', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:53:43 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1866', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:55:54 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1867', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 08:56:11 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1868', 'Intento de login fallido.', 'El usuario: 1, ingreso datos incorrectos.', null, '1', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1869', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1870', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:00:38 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1871', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:00:49 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1872', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:01:10 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1873', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:01:19 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1874', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:05:51 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1875', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:06:05 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1876', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:07:46 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1877', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:08:06 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1878', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:12:41 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1879', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:12:54 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1880', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:34:31 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1881', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:34:41 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1882', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:52:12 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1883', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:52:33 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1884', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:53:33 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1885', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:53:50 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1886', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:56:58 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1887', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 09:57:05 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1888', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:07:13 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1889', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:07:20 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1890', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:13:57 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1891', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:14:06 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1892', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:22:40 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1893', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:22:45 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1894', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:27:35 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1895', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:27:45 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1896', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:31:34 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1897', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:31:44 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1898', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:34:18 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1899', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:34:26 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1900', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1901', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:35:04 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1902', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:35:16 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1903', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:35:37 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1904', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 10:35:46 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1905', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:11:59 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1906', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 11:12:05 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1907', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:12:56 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1908', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 11:13:24 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1909', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 11:17:06 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1910', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 05/05/2014 a las 11:17:19 p. m.', 'Chapulhuacan', 'frank', '2014-05-05', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1911', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:28:36 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1912', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 06/05/2014 a las 01:28:54 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1913', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 01:29:15 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1914', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:36:41 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1915', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 01:37:04 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1916', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:41:54 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1917', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 01:42:08 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1918', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:36:50 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1919', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 02:39:52 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1920', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:41:10 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1921', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 02:41:30 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1922', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 04:32:13 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1923', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 04:34:47 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1924', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:06:23 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1925', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 05:06:44 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1926', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:10:57 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1927', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 05:11:06 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1928', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1929', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:24:59 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1930', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 05:25:25 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1931', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 05:49:09 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1932', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 05:49:18 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1933', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:08:05 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1934', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 06:08:12 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1935', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:08:34 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1936', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 06:08:47 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1937', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:13:36 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1938', 'Intento de login fallido.', 'El usuario: frank, ingreso datos incorrectos.', null, 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1939', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 08:27:26 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1940', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 08:28:36 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1941', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:05:57 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1942', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 09:08:07 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1943', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:14:54 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1944', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 09:15:16 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1945', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:16:39 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1946', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 06/05/2014 a las 09:17:12 p.m.', 'Chapulhuacan', 'frank', '2014-05-06', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1947', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 09:56:38 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1948', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 08/05/2014 a las 09:56:53 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1949', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 09:57:17 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1950', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:10:56 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1951', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 10:11:31 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1952', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:17:39 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1953', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 10:18:23 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1954', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:22:47 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1955', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 10:24:54 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1956', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:37:01 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1957', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 08/05/2014 a las 10:37:06 a.m. (datos incorrectos)', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1958', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 08/05/2014 a las 10:38:23 a.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1959', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 10:40:33 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1960', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 10:42:37 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1961', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 10:43:40 a.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1962', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 12:50:13 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1963', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 12:50:51 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1964', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 01:10:30 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1965', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 01:10:35 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1966', 'Inicio de sesión.', 'El usuario frANK inicio sesion correctamente a las 01:45:50 p.m.', 'Chapulhuacan', 'frANK', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1967', 'Salida del programa.', 'El usuario frANK dejó de usar el sistema el dia 08/05/2014 a las 01:56:39 p.m.', 'Chapulhuacan', 'frANK', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1968', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:20:51 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1969', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 02:21:54 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1970', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:23:35 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1971', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 02:23:36 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1972', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:30:18 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1973', 'Intento de login.', 'El usuario frank intentó iniciar sesión como administrador el día 08/05/2014 a las 02:30:22 p.m. (privilegios insuficientes)', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1974', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 02:30:41 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1975', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 02:40:12 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1976', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 02:41:35 p.m.', 'Chapulhuacan', 'frank', '2014-05-08', 'DEVELOPMENT', 'Christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1977', 'Inicio de sesión.', 'El usuario frank inicio sesion correctamente a las 06:14:37 p. m.', 'Chapulhuacan', 'frank', '2014-05-08', 'PC001', 'christian', null);
+INSERT INTO `empleado_movimiento` VALUES ('1978', 'Salida del programa.', 'El usuario frank dejó de usar el sistema el dia 08/05/2014 a las 06:14:56 p. m.', 'Chapulhuacan', 'frank', '2014-05-08', 'PC001', 'christian', null);
 
 -- ----------------------------
 -- Table structure for equipo_almacen
@@ -2052,19 +1768,14 @@ CREATE TABLE `equipo_almacen` (
   PRIMARY KEY (`idequipo_almacen`),
   KEY `idsucursal_idx` (`idsucursal`) USING BTREE,
   CONSTRAINT `equipo_almacen_ibfk_1` FOREIGN KEY (`idsucursal`) REFERENCES `sucursal` (`idsucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of equipo_almacen
 -- ----------------------------
 INSERT INTO `equipo_almacen` VALUES ('21', 'PH06130 STATUS BLANCO 3G', '356190055612956', '0000000020', '8952020013595534908', '4', '899', 'Lanix\r', '');
 INSERT INTO `equipo_almacen` VALUES ('22', 'S100 NEGRO', '355189021656970', '0000000021', '8952020013595535009', '4', '1269', 'Lanix\r', '');
-INSERT INTO `equipo_almacen` VALUES ('24', 'P880 NEGRO 3G', '355189021656972', '0000000023', '8952020013595535211', '1', '4999', 'LG\r', '');
-INSERT INTO `equipo_almacen` VALUES ('26', 'XT925 RAZR HD', '355189021656974', '0000000025', '8952020013595535413', '3', '6249', 'Motorola\r', '');
-INSERT INTO `equipo_almacen` VALUES ('28', 'LT26 XPERIA S', '355189021656976', '0000000027', '8952020013595535120', '1', '5739', 'Motorola\r', '');
 INSERT INTO `equipo_almacen` VALUES ('29', 'MOTO X XT1058 NEGRO', '355189021656977', '0000000028', '8952020013595535221', '3', '8999', 'Motorola\r', '');
-INSERT INTO `equipo_almacen` VALUES ('30', 'MOTO X XT1058 NEGRO', '355189021656978', '0000000029', '8952020013595535322', '3', '8999', 'Motorola\r', '');
-INSERT INTO `equipo_almacen` VALUES ('32', 'ONE PLATA', '355189021656930', '0000000031', '8952020013595535524', '3', '7169', 'HTC\r', '');
 INSERT INTO `equipo_almacen` VALUES ('38', 'ONE PLATA', '355189021656936', '0000000037', '8952020013595535524', '3', '7169', 'HTC\r', '');
 INSERT INTO `equipo_almacen` VALUES ('41', 'MOTO X XT1058 NEGRO', '355189021656939', '0000000040', '8952020013594535221', '3', '8999', 'Motorola\r', '');
 INSERT INTO `equipo_almacen` VALUES ('42', 'V795 ROJO', '355189021657902', '0000000041', '8952020013592736022', '3', '979', 'ZTE\r', '');
@@ -2072,7 +1783,6 @@ INSERT INTO `equipo_almacen` VALUES ('43', 'V795 ROJO', '355189021658903', '0000
 INSERT INTO `equipo_almacen` VALUES ('44', 'V795 ROJO', '355189021659904', '0000000043', '8952020013594736424', '3', '979', 'ZTE\r', '');
 INSERT INTO `equipo_almacen` VALUES ('47', 'V795 NEGRO', '355189021726907', '0000000046', '8952020013596570221', '3', '979', 'ZTE\r', '');
 INSERT INTO `equipo_almacen` VALUES ('48', 'V795 NEGRO', '355189021736908', '0000000047', '8952020013597572322', '3', '979', 'ZTE\r', '');
-INSERT INTO `equipo_almacen` VALUES ('52', 'Modelo test', '99928345678', '0000000000', '999283456', '4', '6250', 'Modelo test', '7712149235');
 
 -- ----------------------------
 -- Table structure for equipo_entregado
@@ -2086,53 +1796,79 @@ CREATE TABLE `equipo_entregado` (
   `imei_equipo` varchar(45) DEFAULT NULL,
   `iccid_equipo` varchar(45) DEFAULT NULL,
   `sucursal` varchar(45) DEFAULT NULL,
+  `marca` varchar(45) DEFAULT NULL,
+  `modelo` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idequipo_entregado`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of equipo_entregado
 -- ----------------------------
-INSERT INTO `equipo_entregado` VALUES ('1', '2014-01-09', 'Garantia', 'bety', '999888999', '9999', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('2', '2014-01-09', 'Garantia', 'bety', '299992388299', '88813389', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('3', '2014-01-09', 'Reparacion', 'admin', '2342342424', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('4', '2014-01-09', 'Reparacion', 'admin', '1231', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('5', '2014-01-09', 'Garantia', 'bety', '234970324079234', '8883778', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('6', '2014-01-09', 'Reparacion', 'christian', '1', null, 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('7', '2014-01-09', 'Reparacion', 'christian', '2342424', null, 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('8', '2014-01-09', 'Reparacion', 'christian', '23234234234234', null, 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('9', '2014-01-09', 'Garantia', 'christian', '123456', '933498', 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('10', '2014-01-09', 'Garantia', 'christian', '997744', '913291', 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('11', '2014-01-09', 'Garantia', 'christian', '898289938888499', '1231213', 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('12', '2014-01-09', 'Reparacion', 'christian', '341234234243', null, 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('13', '2014-01-10', 'Reparacion', 'admin', '3433445', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('14', '2014-01-10', 'Reparacion', 'admin', '8888888888888888888', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('15', '2014-01-10', 'Garantia', 'admin', '234970324079234', '98897', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('16', '2014-01-10', 'Garantia', 'admin', '9840292890', '92938399', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('17', '2014-01-10', 'Reparacion', 'admin', '2342342424', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('18', '2014-01-10', 'Reparacion', 'admin', '234970324079234', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('19', '2014-01-10', 'Reparacion', 'admin', '299992388299', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('20', '2014-01-10', 'Reparacion', 'admin', '234970324079234', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('21', '2014-01-14', 'Garantia', 'admin', '999888999', '9999', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('22', '2014-01-14', 'Garantia', 'admin', '234970324079234', '98897', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('23', '2014-01-14', 'Garantia', 'admin', '234970324079234', '8883778', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('24', '2014-01-14', 'Garantia', 'admin', '22', '2134345345', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('25', '2014-01-14', 'Garantia', 'admin', '9840292890', '92938399', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('26', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('27', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('28', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('29', '2014-01-14', 'Garantia', 'admin', '513764222183965', '8965880812100011146', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('30', '2014-01-15', 'Reparacion', 'admin', '3456567', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('31', '2014-01-17', 'Garantia', 'admin', '357117056385350', '895202117831002263', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('32', '2014-01-17', 'Reparacion', 'pisa', '55778445612345', null, 'Pisaflores');
-INSERT INTO `equipo_entregado` VALUES ('33', '2014-01-21', 'Garantia', 'admin', '307312075680399', '892020227831001162', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('34', '2014-01-23', 'Garantia', 'frank', 'sssssssssssssss', 'qqq', 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('35', '2014-01-24', 'Garantia', 'admin', '356325620883578', '899930354455078120', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('36', '2014-01-24', 'Garantia', 'admin', '555555555555555', '893550504569956117', 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('37', '2014-01-24', 'Garantia', 'frank', '0123456789', '9876543210', 'Chapulhuacan');
-INSERT INTO `equipo_entregado` VALUES ('38', '2014-01-24', 'Reparacion', 'admin', '35662456', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('39', '2014-01-24', 'Reparacion', 'admin', '78000544', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('40', '2014-01-24', 'Reparacion', 'admin', '234234234', null, 'Tlanchinol');
-INSERT INTO `equipo_entregado` VALUES ('41', '2014-02-08', 'Garantia', 'admin', '333444555666444', '895220201207820050', 'Tlanchinol');
+INSERT INTO `equipo_entregado` VALUES ('1', '2014-01-09', 'Garantia', 'bety', '999888999', '9999', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('2', '2014-01-09', 'Garantia', 'bety', '299992388299', '88813389', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('3', '2014-01-09', 'Reparacion', 'admin', '2342342424', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('4', '2014-01-09', 'Reparacion', 'admin', '1231', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('5', '2014-01-09', 'Garantia', 'bety', '234970324079234', '8883778', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('6', '2014-01-09', 'Reparacion', 'christian', '1', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('7', '2014-01-09', 'Reparacion', 'christian', '2342424', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('8', '2014-01-09', 'Reparacion', 'christian', '23234234234234', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('9', '2014-01-09', 'Garantia', 'christian', '123456', '933498', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('10', '2014-01-09', 'Garantia', 'christian', '997744', '913291', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('11', '2014-01-09', 'Garantia', 'christian', '898289938888499', '1231213', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('12', '2014-01-09', 'Reparacion', 'christian', '341234234243', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('13', '2014-01-10', 'Reparacion', 'admin', '3433445', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('14', '2014-01-10', 'Reparacion', 'admin', '8888888888888888888', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('15', '2014-01-10', 'Garantia', 'admin', '234970324079234', '98897', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('16', '2014-01-10', 'Garantia', 'admin', '9840292890', '92938399', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('17', '2014-01-10', 'Reparacion', 'admin', '2342342424', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('18', '2014-01-10', 'Reparacion', 'admin', '234970324079234', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('19', '2014-01-10', 'Reparacion', 'admin', '299992388299', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('20', '2014-01-10', 'Reparacion', 'admin', '234970324079234', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('21', '2014-01-14', 'Garantia', 'admin', '999888999', '9999', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('22', '2014-01-14', 'Garantia', 'admin', '234970324079234', '98897', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('23', '2014-01-14', 'Garantia', 'admin', '234970324079234', '8883778', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('24', '2014-01-14', 'Garantia', 'admin', '22', '2134345345', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('25', '2014-01-14', 'Garantia', 'admin', '9840292890', '92938399', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('26', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('27', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('28', '2014-01-14', 'Garantia', 'admin', '', '', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('29', '2014-01-14', 'Garantia', 'admin', '513764222183965', '8965880812100011146', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('30', '2014-01-15', 'Reparacion', 'admin', '3456567', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('31', '2014-01-17', 'Garantia', 'admin', '357117056385350', '895202117831002263', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('32', '2014-01-17', 'Reparacion', 'pisa', '55778445612345', null, 'Pisaflores', null, null);
+INSERT INTO `equipo_entregado` VALUES ('33', '2014-01-21', 'Garantia', 'admin', '307312075680399', '892020227831001162', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('34', '2014-01-23', 'Garantia', 'frank', 'sssssssssssssss', 'qqq', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('35', '2014-01-24', 'Garantia', 'admin', '356325620883578', '899930354455078120', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('36', '2014-01-24', 'Garantia', 'admin', '555555555555555', '893550504569956117', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('37', '2014-01-24', 'Garantia', 'frank', '0123456789', '9876543210', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('38', '2014-01-24', 'Reparacion', 'admin', '35662456', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('39', '2014-01-24', 'Reparacion', 'admin', '78000544', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('40', '2014-01-24', 'Reparacion', 'admin', '234234234', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('41', '2014-02-08', 'Garantia', 'admin', '333444555666444', '895220201207820050', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('42', '2014-04-29', 'Reparacion', 'frank', '67773322', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('43', '2014-04-29', 'Reparacion', 'frank', '9982000', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('44', '2014-04-29', 'Reparacion', 'frank', '67773322', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('45', '2014-04-30', 'Garantia', 'admin', '', '', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('46', '2014-05-02', 'Garantia', 'iza', '9992233', '887652', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('47', '2014-05-02', 'Garantia', 'iza', '423234234111', '99933002', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('48', '2014-05-02', 'Garantia', 'iza', '997744', '913291', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('49', '2014-05-02', 'Garantia', 'iza', '8888333', '8882344', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('50', '2014-05-02', 'Reparacion', 'iza', '35434345', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('51', '2014-05-02', 'Reparacion', 'iza', '67773322', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('52', '2014-05-02', 'Reparacion', 'iza', '38495738945', null, 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('53', '2014-05-03', 'Garantia', 'iza', '8888333', '8882344', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('54', '2014-05-03', 'Garantia', 'frank', '123456', '933498', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('55', '2014-05-03', 'Garantia', 'iza', '123456', '933498', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('56', '2014-05-03', 'Garantia', 'frank', '', '', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('57', '2014-05-03', 'Garantia', 'frank', '', '', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('58', '2014-05-03', 'Garantia', 'frank', '', '', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('59', '2014-05-03', 'Garantia', 'frank', '', '', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('60', '2014-05-03', 'Garantia', 'frank', '', '', 'Chapulhuacan', null, null);
+INSERT INTO `equipo_entregado` VALUES ('61', '2014-05-03', 'Garantia', 'admin', '', '', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('62', '2014-05-03', 'Garantia', 'admin', '4535345', '34535345', 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('63', '2014-05-03', 'Reparacion', 'admin', '99139993399', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('64', '2014-05-03', 'Reparacion', 'admin', '99139993399', null, 'Tlanchinol', null, null);
+INSERT INTO `equipo_entregado` VALUES ('65', '2014-05-03', 'Reparacion', 'admin', '99139993398', null, 'Tlanchinol', null, null);
 
 -- ----------------------------
 -- Table structure for equipo_garantia
@@ -2143,13 +1879,14 @@ CREATE TABLE `equipo_garantia` (
   `idequipo` int(10) unsigned zerofill DEFAULT '0000000000',
   `marca_equipo` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `imei_equipo` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `accesorios` varchar(150) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `accesorios` varchar(150) COLLATE latin1_spanish_ci DEFAULT 'ninguno',
   `fecha` date DEFAULT NULL,
   `iccid_equipo` varchar(20) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idempleado` int(11) DEFAULT NULL,
-  `observaciones` varchar(100) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `observaciones` varchar(100) COLLATE latin1_spanish_ci DEFAULT 'ninguna',
   `modelo_equipo` varchar(30) COLLATE latin1_spanish_ci DEFAULT NULL,
   `idsucursal` int(11) DEFAULT NULL,
+  `mes` int(3) DEFAULT NULL,
   PRIMARY KEY (`idequipo_garantia`),
   KEY `idempleado_idx` (`idempleado`) USING BTREE,
   KEY `id_empleado_idx` (`idempleado`) USING BTREE,
@@ -2157,24 +1894,31 @@ CREATE TABLE `equipo_garantia` (
   KEY `id__sucursal_idx` (`idsucursal`) USING BTREE,
   CONSTRAINT `equipo_garantia_ibfk_1` FOREIGN KEY (`idempleado`) REFERENCES `empleado` (`idempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `equipo_garantia_ibfk_2` FOREIGN KEY (`idsucursal`) REFERENCES `sucursal` (`idsucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of equipo_garantia
 -- ----------------------------
-INSERT INTO `equipo_garantia` VALUES ('4', '0000000004', 'HP', '898289938888499', 'Bateria litio 22', '2014-01-08', '1231213', '21', 'Polvoso', 'DV 4000', '1');
-INSERT INTO `equipo_garantia` VALUES ('8', '0000000008', 'Apple', '997744', 'Un skin', '2014-01-09', '913291', '21', 'Muy bien cuidado', 'iPhone 4', '1');
-INSERT INTO `equipo_garantia` VALUES ('9', '0000000009', 'Apple', '123456', 'Un skin y otra cosa', '2014-01-09', '933498', '21', 'Muy bien cuidado', 'iPhone 5', '1');
-INSERT INTO `equipo_garantia` VALUES ('10', '0000000010', 'Apple', '9992233', 'Bla bla bla', '2014-01-09', '887652', '22', 'Bla bla', 'iPhone 5s', '1');
-INSERT INTO `equipo_garantia` VALUES ('14', '0000000011', 'Samsung', '513764333785555', 'tapa, cable de datos, ', '2014-01-14', '896600081207820050', '19', 'display roto', 'GT-E1205L', '2');
-INSERT INTO `equipo_garantia` VALUES ('16', '0000000013', 'alcatel', '516673031842298', '', '2014-01-15', '8952200678100055588', '19', '', 'OT-808 ROSA', '2');
-INSERT INTO `equipo_garantia` VALUES ('17', '0000000014', 'alcatel', '516673031842298', '', '2014-01-15', '895220066880006663', '19', '', 'OT-808 Blanco', '2');
-INSERT INTO `equipo_garantia` VALUES ('18', '0000000015', 'APPLE', '507893201843378', 'funda, audifonos', '2014-01-15', '895220207370053215', '19', 'telefono golpeado', 'IPHONE 4 16GB BLANCO SPA', '2');
-INSERT INTO `equipo_garantia` VALUES ('19', '0000000016', 'APPLE', '352256503335678', 'funda, audifonos', '2014-01-15', '895520204569966616', '19', '', 'IPHONE 4 16GB NEGRO SPA', '2');
-INSERT INTO `equipo_garantia` VALUES ('22', '0000000019', 'Motorola', '358727056353550', 'ninguno', '2014-01-17', '895202117831002263', '19', 'equipo con carcasa rayada', 'Razr x', '2');
-INSERT INTO `equipo_garantia` VALUES ('23', '0000000020', 'Marca test', '423234234111', '222', '2014-01-24', '99933002', '21', '1', '1244', '1');
-INSERT INTO `equipo_garantia` VALUES ('24', '0000000021', 'Phone brand', '299948840038', '', '2014-01-24', '213123123123', '19', '', 'Phone model', '2');
-INSERT INTO `equipo_garantia` VALUES ('25', '0000000022', 'MODELO', '99828823399', '', '2014-02-08', '9992899', '19', '', 'MARCA', '2');
+INSERT INTO `equipo_garantia` VALUES ('4', '0000000004', 'HP', '898289938888499', 'Bateria litio 22', '2014-01-08', '1231213', '21', 'Polvoso', 'DV 4000', '1', null);
+INSERT INTO `equipo_garantia` VALUES ('14', '0000000011', 'Samsung', '513764333785555', 'tapa, cable de datos, ', '2014-01-14', '896600081207820050', '19', 'display roto', 'GT-E1205L', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('16', '0000000013', 'alcatel', '516673031842298', '', '2014-01-15', '8952200678100055588', '19', '', 'OT-808 ROSA', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('17', '0000000014', 'alcatel', '516673031842298', '', '2014-01-15', '895220066880006663', '19', '', 'OT-808 Blanco', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('18', '0000000015', 'APPLE', '507893201843378', 'funda, audifonos', '2014-01-15', '895220207370053215', '19', 'telefono golpeado', 'IPHONE 4 16GB BLANCO SPA', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('19', '0000000016', 'APPLE', '352256503335678', 'funda, audifonos', '2014-01-15', '895520204569966616', '19', '', 'IPHONE 4 16GB NEGRO SPA', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('22', '0000000019', 'Motorola', '358727056353550', 'ninguno', '2014-01-17', '895202117831002263', '19', 'equipo con carcasa rayada', 'Razr x', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('24', '0000000021', 'Phone brand', '299948840038', '', '2014-01-24', '213123123123', '19', '', 'Phone model', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('25', '0000000022', 'MODELO', '99828823399', '', '2014-02-08', '9992899', '19', '', 'MARCA', '2', null);
+INSERT INTO `equipo_garantia` VALUES ('26', '0000000022', '43254325435', '43534554', 'ssdfsdfsdf', '2014-04-30', '34534543545', '19', 'sdfsdfsdf', '2434435', '2', '4');
+INSERT INTO `equipo_garantia` VALUES ('27', '0000000022', 'iPhone', '3454435345345', '', '2014-04-30', '77765556', '19', '', '4S', '2', '4');
+INSERT INTO `equipo_garantia` VALUES ('28', '0000000022', 'samung', '1', 'ninguno', '2014-04-30', '999', '21', 'no se', 'samsung', '1', '4');
+INSERT INTO `equipo_garantia` VALUES ('29', '0000000022', 'samung', '1', 'ninguno', '2014-04-30', '999', '21', 'no se', 'samsung', '1', '4');
+INSERT INTO `equipo_garantia` VALUES ('30', '0000000022', 'No existente', '00', 'ninguno', '2014-04-30', '2234234', '19', 'Celular para flexeo', 'No existente', '2', '4');
+INSERT INTO `equipo_garantia` VALUES ('31', '0000000022', 'Marca test', '2342444', '', '2014-04-30', '99001122333', '21', 'adadsfdsf', 'Modelo test', '1', '4');
+INSERT INTO `equipo_garantia` VALUES ('32', '0000000023', 'Samsung', '2346666', '', '2014-04-30', '002233', '19', '', 'Samsung HD', '2', '4');
+INSERT INTO `equipo_garantia` VALUES ('33', '0000000024', 'ninguno', '434345345', 'asdfsdfsdf', '2014-04-30', '234234234', '19', 'dsafdfsdf', 'ninguno', '2', '4');
+INSERT INTO `equipo_garantia` VALUES ('36', '0000000000', null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `equipo_garantia` VALUES ('38', '0000000026', 'Samsung', '123456789', 'audifonos, bateria', '2014-05-03', '123456789', '21', 'eqipo rayado', 'Samsung LX', '1', '5');
+INSERT INTO `equipo_garantia` VALUES ('39', '0000000027', 'Samsung', '123456789', 'audifonos, bateria', '2014-05-03', '123456789', '21', 'eqipo rayado', 'Samsung LX', '1', '5');
 
 -- ----------------------------
 -- Table structure for equipo_reparacion
@@ -2187,23 +1931,32 @@ CREATE TABLE `equipo_reparacion` (
   `imei_equipo` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `modelo_equipo` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
-  `observaciones` varchar(145) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `observaciones` varchar(145) COLLATE latin1_spanish_ci DEFAULT 'ninguna',
   `fecha_entrega` date DEFAULT NULL,
   `idsucursal` int(11) DEFAULT NULL,
   `idempleado` int(11) DEFAULT NULL,
+  `mes` int(10) DEFAULT NULL,
   PRIMARY KEY (`idequipo_reparacion`),
   KEY `FK_SUC_REP_idx` (`idsucursal`) USING BTREE,
-  KEY `fk_idempleado_idx` (`idempleado`),
+  KEY `fk_idempleado_idx` (`idempleado`) USING BTREE,
   CONSTRAINT `equipo_reparacion_ibfk_1` FOREIGN KEY (`idsucursal`) REFERENCES `sucursal` (`idsucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_idempleado` FOREIGN KEY (`idempleado`) REFERENCES `empleado` (`idempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+  CONSTRAINT `equipo_reparacion_ibfk_2` FOREIGN KEY (`idempleado`) REFERENCES `empleado` (`idempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- ----------------------------
 -- Records of equipo_reparacion
 -- ----------------------------
-INSERT INTO `equipo_reparacion` VALUES ('22', '1', 'Motorola', '99139993399', 'TIP', '2014-01-26', '', null, '2', '19');
-INSERT INTO `equipo_reparacion` VALUES ('23', '2', 'Motorola', '99139993399', 'TIP', '2014-01-26', '', null, '2', '19');
-INSERT INTO `equipo_reparacion` VALUES ('24', '3', 'Motorola', '99139993398', 'TIP', '2014-01-26', '', null, '2', '19');
+INSERT INTO `equipo_reparacion` VALUES ('30', '9', 'Apple', '67773322', 'iPhone 4', '2014-04-29', 'telefono mugroso', null, '1', '21', null);
+INSERT INTO `equipo_reparacion` VALUES ('31', '10', 'Apple', '67773322', 'iPhone 4', '2014-04-29', 'telefono mugroso', null, '1', '21', null);
+INSERT INTO `equipo_reparacion` VALUES ('32', '11', 'Apple', '67773322', 'iPhone 4', '2014-04-29', 'telefono mugroso', null, '1', '21', null);
+INSERT INTO `equipo_reparacion` VALUES ('34', '13', 'Samsungq', '909027333885', 'TX 8000', '2014-04-30', 'esta rayado :D', null, '1', '21', '4');
+INSERT INTO `equipo_reparacion` VALUES ('35', '14', 'Samsung', '9999999', 'Galaxy Ace', '2014-05-02', '', null, '1', '30', '5');
+INSERT INTO `equipo_reparacion` VALUES ('36', '15', 'Samsung', '9999999', 'Galaxy Ace', '2014-05-02', '', null, '1', '30', '5');
+INSERT INTO `equipo_reparacion` VALUES ('37', '16', 'Samsung', '9999999', 'Galaxy Ace', '2014-05-02', '', null, '1', '30', '5');
+INSERT INTO `equipo_reparacion` VALUES ('38', '17', 'Samsung', '9999999', 'Galaxy Ace', '2014-05-02', 'tenia una rayadura en el dispplay', null, '1', '30', '5');
+INSERT INTO `equipo_reparacion` VALUES ('39', '18', 'Apple', '123456789', 'iPhone 4', '2014-05-03', '', null, '2', '19', '5');
+INSERT INTO `equipo_reparacion` VALUES ('40', '19', 'Apple', '153456750', 'iPhone 4', '2014-05-03', '', null, '2', '19', '5');
+INSERT INTO `equipo_reparacion` VALUES ('41', '20', '', '', '', '2014-05-04', '', null, '2', '19', '5');
 
 -- ----------------------------
 -- Table structure for municipio
@@ -2222,6 +1975,24 @@ INSERT INTO `municipio` VALUES ('1', 'Chapulhuacan');
 INSERT INTO `municipio` VALUES ('2', 'Tlanchinol');
 INSERT INTO `municipio` VALUES ('3', 'Tepehuacan');
 INSERT INTO `municipio` VALUES ('4', 'Pisaflores');
+
+-- ----------------------------
+-- Table structure for nivel_usuario
+-- ----------------------------
+DROP TABLE IF EXISTS `nivel_usuario`;
+CREATE TABLE `nivel_usuario` (
+  `idnivel` int(10) NOT NULL AUTO_INCREMENT,
+  `nivel` int(11) DEFAULT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idnivel`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of nivel_usuario
+-- ----------------------------
+INSERT INTO `nivel_usuario` VALUES ('1', '0', 'Desarrollador');
+INSERT INTO `nivel_usuario` VALUES ('2', '1', 'Administrador');
+INSERT INTO `nivel_usuario` VALUES ('3', '2', 'Empleado');
 
 -- ----------------------------
 -- Table structure for permiso_usuario
@@ -2279,20 +2050,45 @@ INSERT INTO `sucursal` VALUES ('3', 'Tepehuacan de Guerrero', '3');
 INSERT INTO `sucursal` VALUES ('4', 'Pisaflores', '4');
 
 -- ----------------------------
--- Table structure for venta
+-- Table structure for t_test_triggers
 -- ----------------------------
-DROP TABLE IF EXISTS `venta`;
-CREATE TABLE `venta` (
-  `idventa` int(11) NOT NULL AUTO_INCREMENT,
-  `idventa_detalle` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idventa`),
-  KEY `idventa_detalle_idx` (`idventa_detalle`) USING BTREE,
-  CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`idventa_detalle`) REFERENCES `venta_detalle` (`idventa_detalle`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+DROP TABLE IF EXISTS `t_test_triggers`;
+CREATE TABLE `t_test_triggers` (
+  `campo1` varchar(200) DEFAULT NULL,
+  `idtrigger` smallint(6) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idtrigger`)
+) ENGINE=InnoDB AUTO_INCREMENT=3536 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of venta
+-- Records of t_test_triggers
 -- ----------------------------
+INSERT INTO `t_test_triggers` VALUES ('sdfsdfsdf', '1');
+INSERT INTO `t_test_triggers` VALUES ('trigger de prueba', '2');
+INSERT INTO `t_test_triggers` VALUES ('sdfsdfsd', '3');
+INSERT INTO `t_test_triggers` VALUES ('adsasdds', '4');
+INSERT INTO `t_test_triggers` VALUES ('prueba', '5');
+INSERT INTO `t_test_triggers` VALUES ('sdfsfsd', '6');
+INSERT INTO `t_test_triggers` VALUES ('dsfsdfsdfsdfsdf', '7');
+INSERT INTO `t_test_triggers` VALUES ('sdfsdfsdfsdf', '3535');
+
+-- ----------------------------
+-- Table structure for t_test_triggers_2
+-- ----------------------------
+DROP TABLE IF EXISTS `t_test_triggers_2`;
+CREATE TABLE `t_test_triggers_2` (
+  `campo1` varchar(200) DEFAULT NULL,
+  `idtrigger` smallint(6) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idtrigger`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of t_test_triggers_2
+-- ----------------------------
+INSERT INTO `t_test_triggers_2` VALUES ('trigger de prueba', '1');
+INSERT INTO `t_test_triggers_2` VALUES ('trigger de prueba', '2');
+INSERT INTO `t_test_triggers_2` VALUES ('trigger de prueba', '3');
+INSERT INTO `t_test_triggers_2` VALUES ('trigger de prueba', '4');
+INSERT INTO `t_test_triggers_2` VALUES ('trigger de prueba', '5');
 
 -- ----------------------------
 -- Table structure for venta_detalle
@@ -2309,83 +2105,212 @@ CREATE TABLE `venta_detalle` (
   `precio` decimal(10,0) DEFAULT NULL,
   `sucursal` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
   `iccid_celular` varchar(45) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `mes` int(10) DEFAULT NULL,
   PRIMARY KEY (`idventa_detalle`),
   KEY `FK_EAlmacen_idx` (`idequipo_almacen`) USING BTREE,
   CONSTRAINT `venta_detalle_ibfk_1` FOREIGN KEY (`idequipo_almacen`) REFERENCES `equipo_almacen` (`idequipo_almacen`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='/*Falta agregar los idempleado y idequipo_almacen*/';
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='/*Falta agregar los idempleado y idequipo_almacen*/';
 
 -- ----------------------------
 -- Records of venta_detalle
 -- ----------------------------
-INSERT INTO `venta_detalle` VALUES ('1', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8001', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('2', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('3', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('4', null, '2014-01-05', 'Nokia', 'Nokia', '18993', 'frank', '899', 'Chapulhuacan', null);
-INSERT INTO `venta_detalle` VALUES ('5', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223424', 'frank', '399', 'Chapulhuacan', null);
-INSERT INTO `venta_detalle` VALUES ('6', null, '2014-01-05', 'Chat', 'LG', '231313131', 'frank', '799', 'Chapulhuacan', null);
-INSERT INTO `venta_detalle` VALUES ('7', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'frank', '8000', 'Chapulhuacan', null);
-INSERT INTO `venta_detalle` VALUES ('8', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223423', 'frank', '399', 'Chapulhuacan', null);
-INSERT INTO `venta_detalle` VALUES ('9', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'bety', '10300', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('10', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'bety', '10000', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('11', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'bety', '8000', 'Tlanchinol', null);
-INSERT INTO `venta_detalle` VALUES ('12', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', '3847952345566666');
-INSERT INTO `venta_detalle` VALUES ('13', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8000', 'Tlanchinol', '123456');
-INSERT INTO `venta_detalle` VALUES ('14', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', '122334455667');
-INSERT INTO `venta_detalle` VALUES ('15', null, '2014-01-05', 'Chat', 'LG', '231313131', 'christian', '799', 'Chapulhuacan', '455467567');
-INSERT INTO `venta_detalle` VALUES ('16', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223423', 'christian', '399', 'Chapulhuacan', '234567');
-INSERT INTO `venta_detalle` VALUES ('17', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'christian', '8000', 'Chapulhuacan', '908489399');
-INSERT INTO `venta_detalle` VALUES ('18', null, '2014-01-05', 'Chat', 'LG', '231313131', 'christian', '799', 'Chapulhuacan', '455467567');
-INSERT INTO `venta_detalle` VALUES ('19', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223424', 'christian', '399', 'Chapulhuacan', '12313213213');
-INSERT INTO `venta_detalle` VALUES ('20', null, '2014-01-05', 'Nokia', 'Nokia', '18993', 'christian', '899', 'Chapulhuacan', '232323');
-INSERT INTO `venta_detalle` VALUES ('21', null, '2014-01-05', 'P709', 'LG', '333', 'christian', '300', 'Chapulhuacan', '333');
-INSERT INTO `venta_detalle` VALUES ('22', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654');
-INSERT INTO `venta_detalle` VALUES ('23', null, '2014-01-05', 'INSPIRE 3D 3G', 'HTC', '445543', 'admin', '300', 'Tlanchinol', '33333');
-INSERT INTO `venta_detalle` VALUES ('24', null, '2014-01-05', 'P708', 'LG', '2', 'admin', '300', 'Tlanchinol', '2');
-INSERT INTO `venta_detalle` VALUES ('25', null, '2014-01-05', 'P708', 'LG', '555', 'admin', '300', 'Tlanchinol', '444');
-INSERT INTO `venta_detalle` VALUES ('26', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1');
-INSERT INTO `venta_detalle` VALUES ('27', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654');
-INSERT INTO `venta_detalle` VALUES ('28', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1');
-INSERT INTO `venta_detalle` VALUES ('29', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', '3847952345566666');
-INSERT INTO `venta_detalle` VALUES ('30', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', '122334455667');
-INSERT INTO `venta_detalle` VALUES ('31', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8000', 'Tlanchinol', '123456');
-INSERT INTO `venta_detalle` VALUES ('32', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654');
-INSERT INTO `venta_detalle` VALUES ('33', null, '2014-01-05', 'P708', 'LG', '555', 'admin', '300', 'Tlanchinol', '444');
-INSERT INTO `venta_detalle` VALUES ('34', null, '2014-01-05', 'INSPIRE 3D 3G', 'HTC', '445543', 'admin', '300', 'Tlanchinol', '33333');
-INSERT INTO `venta_detalle` VALUES ('35', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1');
-INSERT INTO `venta_detalle` VALUES ('36', null, '2014-01-05', 'Nokia', 'Nokia', '223', 'chapulhuacan', '899', 'Chapulhuacan', '232323');
-INSERT INTO `venta_detalle` VALUES ('37', null, '2014-01-05', '9900 Negro', 'Blackberry', '9992', 'chapulhuacan', '10379', 'Chapulhuacan', '689923');
-INSERT INTO `venta_detalle` VALUES ('38', null, '2014-01-05', '9900 Negro', 'Blackberry', '567566', 'chapulhuacan', '10379', 'Chapulhuacan', '589589');
-INSERT INTO `venta_detalle` VALUES ('39', null, '2014-01-05', 'P708', 'LG', '2', 'admin', '300', 'Tlanchinol', '2');
-INSERT INTO `venta_detalle` VALUES ('40', null, '2014-01-05', 'P708', 'LG', '323', 'admin', '300', 'Tlanchinol', '343');
-INSERT INTO `venta_detalle` VALUES ('41', null, '2014-01-05', 'Chat', 'LG', '231313131', 'pao', '799', 'Chapulhuacan', '455467567');
-INSERT INTO `venta_detalle` VALUES ('42', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'pao', '8000', 'Chapulhuacan', '908489399');
-INSERT INTO `venta_detalle` VALUES ('43', null, '2014-01-05', '9900 Blanco', 'Blackberry', '56732234', 'admin', '10379', 'Tlanchinol', '589789');
-INSERT INTO `venta_detalle` VALUES ('44', null, '2014-01-05', 'XT925 RAZR HD', 'Motorola\r', '355189021656973', 'frank', '6249', 'Chapulhuacan', '8952020013595535312');
-INSERT INTO `venta_detalle` VALUES ('45', null, '2014-01-05', 'V795 NEGRO', 'ZTE', '355189021756910', 'frank', '979', 'Chapulhuacan', '8952020013599576524');
-INSERT INTO `venta_detalle` VALUES ('46', null, '2014-01-05', 'V795 ROJO', 'ZTE\r', '355189021660905', 'frank', '979', 'Chapulhuacan', '8952020013595036614');
-INSERT INTO `venta_detalle` VALUES ('47', null, '2014-01-05', 'LT26 XPERIA S', 'Motorola\r', '355189021656975', 'frank', '5739', 'Chapulhuacan', '8952020013595535514');
-INSERT INTO `venta_detalle` VALUES ('48', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656935', 'bety', '7169', 'Tlanchinol', '8952020023595535423');
-INSERT INTO `venta_detalle` VALUES ('49', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656979', 'bety', '7169', 'Tlanchinol', '8952020013595535423');
-INSERT INTO `venta_detalle` VALUES ('50', null, '2014-01-05', 'iphone 4s', 'apple', '0', 'frank', '10', 'Chapulhuacan', '0');
-INSERT INTO `venta_detalle` VALUES ('51', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656933', 'admin', '8999', 'Tlanchinol', '8952020013105535221');
-INSERT INTO `venta_detalle` VALUES ('52', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355259025685655', 'admin', '7169', 'Tlanchinol', '8952020013595534807');
-INSERT INTO `venta_detalle` VALUES ('53', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656934', 'admin', '8999', 'Tlanchinol', '8952020013095535322');
-INSERT INTO `venta_detalle` VALUES ('54', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656998', 'chapulhuacan', '7169', 'Chapulhuacan', '8952020013595534706');
-INSERT INTO `venta_detalle` VALUES ('55', null, '2014-01-05', 'ABC', 'DCE', '221', 'admin', '1300', 'Tlanchinol', '332');
-INSERT INTO `venta_detalle` VALUES ('56', null, '2014-01-05', 'ABC', 'DCE', '220', 'admin', '1300', 'Tlanchinol', '331');
-INSERT INTO `venta_detalle` VALUES ('57', null, '2014-01-05', 'ABC', 'DCE', '219', 'frank', '1300', 'Chapulhuacan', '330');
-INSERT INTO `venta_detalle` VALUES ('58', null, '2014-01-05', 'D680 G PRO LITE', 'LG\r', '355189021656971', 'frank', '4999', 'Chapulhuacan', '8952020013595535110');
-INSERT INTO `venta_detalle` VALUES ('59', null, '2014-01-05', 'ABC', 'DCE', '222', 'frank', '1300', 'Chapulhuacan', '333');
-INSERT INTO `venta_detalle` VALUES ('60', null, '2014-01-05', 'IPHONE 4 16GB BLANCO SPA', 'apple', '355288991656999', 'frank', '8849', 'Chapulhuacan', '8952020013595535211');
-INSERT INTO `venta_detalle` VALUES ('61', null, '2014-01-05', 'IPHONE 4 16GB BLANCO SPA', 'Apple', '355288991656666', 'frank', '8849', 'Chapulhuacan', '8952031013595535222');
-INSERT INTO `venta_detalle` VALUES ('62', null, '2014-01-05', null, null, null, null, null, null, null);
-INSERT INTO `venta_detalle` VALUES ('63', null, '2014-01-05', 'MOTO X XT1058 BLANCO', 'Motorola\r', '355189021656937', 'frank', '8999', 'Chapulhuacan', '8952020013525535514');
-INSERT INTO `venta_detalle` VALUES ('64', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656938', 'chapulhuacan', '8999', 'Chapulhuacan', '8952020013593535120');
-INSERT INTO `venta_detalle` VALUES ('65', null, '2014-03-19', 'yyy', 'xxx', '132', 'frank', '1290', 'Chapulhuacan', '567');
-INSERT INTO `venta_detalle` VALUES ('66', null, '2014-03-18', 'V795 NEGRO', 'ZTE\r', '355189021746909', 'frank', '979', 'Chapulhuacan', '8952020013598574423');
-INSERT INTO `venta_detalle` VALUES ('67', null, '2014-03-18', 'V795 NEGRO', 'ZTE\r', '355189021716906', 'frank', '979', 'Chapulhuacan', '8952020013594568120');
-INSERT INTO `venta_detalle` VALUES ('68', null, '2014-03-18', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656932', 'frank', '8999', 'Chapulhuacan', '8952020013125535120');
-INSERT INTO `venta_detalle` VALUES ('69', null, '2014-03-17', 'MOTO X XT1058 BLANCO', 'Motorola\r', '355189021656931', 'frank', '8999', 'Chapulhuacan', '8952020010495535514');
+INSERT INTO `venta_detalle` VALUES ('1', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8001', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('2', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('3', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('4', null, '2014-01-05', 'Nokia', 'Nokia', '18993', 'frank', '899', 'Chapulhuacan', null, '1');
+INSERT INTO `venta_detalle` VALUES ('5', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223424', 'frank', '399', 'Chapulhuacan', null, '1');
+INSERT INTO `venta_detalle` VALUES ('6', null, '2014-01-05', 'Chat', 'LG', '231313131', 'frank', '799', 'Chapulhuacan', null, '1');
+INSERT INTO `venta_detalle` VALUES ('7', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'frank', '8000', 'Chapulhuacan', null, '1');
+INSERT INTO `venta_detalle` VALUES ('8', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223423', 'frank', '399', 'Chapulhuacan', null, '1');
+INSERT INTO `venta_detalle` VALUES ('9', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'bety', '10300', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('10', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'bety', '10000', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('11', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'bety', '8000', 'Tlanchinol', null, '1');
+INSERT INTO `venta_detalle` VALUES ('12', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', '3847952345566666', '1');
+INSERT INTO `venta_detalle` VALUES ('13', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8000', 'Tlanchinol', '123456', '1');
+INSERT INTO `venta_detalle` VALUES ('14', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', '122334455667', '1');
+INSERT INTO `venta_detalle` VALUES ('15', null, '2014-01-05', 'Chat', 'LG', '231313131', 'christian', '799', 'Chapulhuacan', '455467567', '1');
+INSERT INTO `venta_detalle` VALUES ('16', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223423', 'christian', '399', 'Chapulhuacan', '234567', '1');
+INSERT INTO `venta_detalle` VALUES ('17', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'christian', '8000', 'Chapulhuacan', '908489399', '1');
+INSERT INTO `venta_detalle` VALUES ('18', null, '2014-01-05', 'Chat', 'LG', '231313131', 'christian', '799', 'Chapulhuacan', '455467567', '1');
+INSERT INTO `venta_detalle` VALUES ('19', null, '2014-01-05', 'XT 300', 'Sony Ericsson', '1313223424', 'christian', '399', 'Chapulhuacan', '12313213213', '1');
+INSERT INTO `venta_detalle` VALUES ('20', null, '2014-01-05', 'Nokia', 'Nokia', '18993', 'christian', '899', 'Chapulhuacan', '232323', '1');
+INSERT INTO `venta_detalle` VALUES ('21', null, '2014-01-05', 'P709', 'LG', '333', 'christian', '300', 'Chapulhuacan', '333', '1');
+INSERT INTO `venta_detalle` VALUES ('22', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654', '1');
+INSERT INTO `venta_detalle` VALUES ('23', null, '2014-01-05', 'INSPIRE 3D 3G', 'HTC', '445543', 'admin', '300', 'Tlanchinol', '33333', '1');
+INSERT INTO `venta_detalle` VALUES ('24', null, '2014-01-05', 'P708', 'LG', '2', 'admin', '300', 'Tlanchinol', '2', '1');
+INSERT INTO `venta_detalle` VALUES ('25', null, '2014-01-05', 'P708', 'LG', '555', 'admin', '300', 'Tlanchinol', '444', '1');
+INSERT INTO `venta_detalle` VALUES ('26', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1', '1');
+INSERT INTO `venta_detalle` VALUES ('27', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654', '1');
+INSERT INTO `venta_detalle` VALUES ('28', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1', '1');
+INSERT INTO `venta_detalle` VALUES ('29', null, '2014-01-05', 'iPhone 5S', 'Apple', '1213121', 'admin', '10300', 'Tlanchinol', '3847952345566666', '1');
+INSERT INTO `venta_detalle` VALUES ('30', null, '2014-01-05', 'iPhone 5', 'Apple', '112233', 'admin', '10000', 'Tlanchinol', '122334455667', '1');
+INSERT INTO `venta_detalle` VALUES ('31', null, '2014-01-05', 'iPhone 4S', 'Apple', '333443', 'admin', '8000', 'Tlanchinol', '123456', '1');
+INSERT INTO `venta_detalle` VALUES ('32', null, '2014-01-05', 'Chic WF Blanco', 'Azumi', '343434', 'admin', '639', 'Tlanchinol', '987654', '1');
+INSERT INTO `venta_detalle` VALUES ('33', null, '2014-01-05', 'P708', 'LG', '555', 'admin', '300', 'Tlanchinol', '444', '1');
+INSERT INTO `venta_detalle` VALUES ('34', null, '2014-01-05', 'INSPIRE 3D 3G', 'HTC', '445543', 'admin', '300', 'Tlanchinol', '33333', '1');
+INSERT INTO `venta_detalle` VALUES ('35', null, '2014-01-05', 'E450F WOLVERINE LENTES NEGRO,BLANCO 3G', 'LG', '1', 'admin', '300', 'Tlanchinol', '1', '1');
+INSERT INTO `venta_detalle` VALUES ('36', null, '2014-01-05', 'Nokia', 'Nokia', '223', 'chapulhuacan', '899', 'Chapulhuacan', '232323', '1');
+INSERT INTO `venta_detalle` VALUES ('37', null, '2014-01-05', '9900 Negro', 'Blackberry', '9992', 'chapulhuacan', '10379', 'Chapulhuacan', '689923', '1');
+INSERT INTO `venta_detalle` VALUES ('38', null, '2014-01-05', '9900 Negro', 'Blackberry', '567566', 'chapulhuacan', '10379', 'Chapulhuacan', '589589', '1');
+INSERT INTO `venta_detalle` VALUES ('39', null, '2014-01-05', 'P708', 'LG', '2', 'admin', '300', 'Tlanchinol', '2', '1');
+INSERT INTO `venta_detalle` VALUES ('40', null, '2014-01-05', 'P708', 'LG', '323', 'admin', '300', 'Tlanchinol', '343', '1');
+INSERT INTO `venta_detalle` VALUES ('41', null, '2014-01-05', 'Chat', 'LG', '231313131', 'pao', '799', 'Chapulhuacan', '455467567', '1');
+INSERT INTO `venta_detalle` VALUES ('42', null, '2014-01-05', 'iPhone 4S', 'Apple', '333444', 'pao', '8000', 'Chapulhuacan', '908489399', '1');
+INSERT INTO `venta_detalle` VALUES ('43', null, '2014-01-05', '9900 Blanco', 'Blackberry', '56732234', 'admin', '10379', 'Tlanchinol', '589789', '1');
+INSERT INTO `venta_detalle` VALUES ('44', null, '2014-01-05', 'XT925 RAZR HD', 'Motorola\r', '355189021656973', 'frank', '6249', 'Chapulhuacan', '8952020013595535312', '1');
+INSERT INTO `venta_detalle` VALUES ('45', null, '2014-01-05', 'V795 NEGRO', 'ZTE', '355189021756910', 'frank', '979', 'Chapulhuacan', '8952020013599576524', '1');
+INSERT INTO `venta_detalle` VALUES ('46', null, '2014-01-05', 'V795 ROJO', 'ZTE\r', '355189021660905', 'frank', '979', 'Chapulhuacan', '8952020013595036614', '1');
+INSERT INTO `venta_detalle` VALUES ('47', null, '2014-01-05', 'LT26 XPERIA S', 'Motorola\r', '355189021656975', 'frank', '5739', 'Chapulhuacan', '8952020013595535514', '1');
+INSERT INTO `venta_detalle` VALUES ('48', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656935', 'bety', '7169', 'Tlanchinol', '8952020023595535423', '1');
+INSERT INTO `venta_detalle` VALUES ('49', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656979', 'bety', '7169', 'Tlanchinol', '8952020013595535423', '1');
+INSERT INTO `venta_detalle` VALUES ('50', null, '2014-01-05', 'iphone 4s', 'apple', '0', 'frank', '10', 'Chapulhuacan', '0', '1');
+INSERT INTO `venta_detalle` VALUES ('51', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656933', 'admin', '8999', 'Tlanchinol', '8952020013105535221', '1');
+INSERT INTO `venta_detalle` VALUES ('52', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355259025685655', 'admin', '7169', 'Tlanchinol', '8952020013595534807', '1');
+INSERT INTO `venta_detalle` VALUES ('53', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656934', 'admin', '8999', 'Tlanchinol', '8952020013095535322', '1');
+INSERT INTO `venta_detalle` VALUES ('54', null, '2014-01-05', 'ONE PLATA', 'HTC\r', '355189021656998', 'chapulhuacan', '7169', 'Chapulhuacan', '8952020013595534706', '1');
+INSERT INTO `venta_detalle` VALUES ('55', null, '2014-01-05', 'ABC', 'DCE', '221', 'admin', '1300', 'Tlanchinol', '332', '1');
+INSERT INTO `venta_detalle` VALUES ('56', null, '2014-01-05', 'ABC', 'DCE', '220', 'admin', '1300', 'Tlanchinol', '331', '1');
+INSERT INTO `venta_detalle` VALUES ('57', null, '2014-01-05', 'ABC', 'DCE', '219', 'frank', '1300', 'Chapulhuacan', '330', '1');
+INSERT INTO `venta_detalle` VALUES ('58', null, '2014-01-05', 'D680 G PRO LITE', 'LG\r', '355189021656971', 'frank', '4999', 'Chapulhuacan', '8952020013595535110', '1');
+INSERT INTO `venta_detalle` VALUES ('59', null, '2014-01-05', 'ABC', 'DCE', '222', 'frank', '1300', 'Chapulhuacan', '333', '1');
+INSERT INTO `venta_detalle` VALUES ('60', null, '2014-01-05', 'IPHONE 4 16GB BLANCO SPA', 'apple', '355288991656999', 'frank', '8849', 'Chapulhuacan', '8952020013595535211', '1');
+INSERT INTO `venta_detalle` VALUES ('61', null, '2014-01-05', 'IPHONE 4 16GB BLANCO SPA', 'Apple', '355288991656666', 'frank', '8849', 'Chapulhuacan', '8952031013595535222', '1');
+INSERT INTO `venta_detalle` VALUES ('62', null, '2014-01-05', null, null, null, null, null, null, null, '1');
+INSERT INTO `venta_detalle` VALUES ('63', null, '2014-01-05', 'MOTO X XT1058 BLANCO', 'Motorola\r', '355189021656937', 'frank', '8999', 'Chapulhuacan', '8952020013525535514', '1');
+INSERT INTO `venta_detalle` VALUES ('64', null, '2014-01-05', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656938', 'chapulhuacan', '8999', 'Chapulhuacan', '8952020013593535120', '1');
+INSERT INTO `venta_detalle` VALUES ('65', null, '2014-03-19', 'yyy', 'xxx', '132', 'frank', '1290', 'Chapulhuacan', '567', '3');
+INSERT INTO `venta_detalle` VALUES ('66', null, '2014-03-18', 'V795 NEGRO', 'ZTE\r', '355189021746909', 'frank', '979', 'Chapulhuacan', '8952020013598574423', '3');
+INSERT INTO `venta_detalle` VALUES ('67', null, '2014-03-18', 'V795 NEGRO', 'ZTE\r', '355189021716906', 'frank', '979', 'Chapulhuacan', '8952020013594568120', '3');
+INSERT INTO `venta_detalle` VALUES ('68', null, '2014-03-18', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656932', 'frank', '8999', 'Chapulhuacan', '8952020013125535120', '3');
+INSERT INTO `venta_detalle` VALUES ('69', null, '2014-03-17', 'MOTO X XT1058 BLANCO', 'Motorola\r', '355189021656931', 'frank', '8999', 'Chapulhuacan', '8952020010495535514', '3');
+INSERT INTO `venta_detalle` VALUES ('70', null, '2014-04-15', 'LT26 XPERIA S', 'Motorola\r', '355189021656976', 'christian', '5739', 'Chapulhuacan', '8952020013595535120', '4');
+INSERT INTO `venta_detalle` VALUES ('71', null, '2014-04-22', 'P880 NEGRO 3G', 'LG\r', '355189021656972', 'frank', '4999', 'Chapulhuacan', '8952020013595535211', '4');
+INSERT INTO `venta_detalle` VALUES ('72', null, '2014-04-29', 'Modelo test', 'Modelo test', '99928345678', 'pisa', '6250', 'Pisaflores', '999283456', '4');
+INSERT INTO `venta_detalle` VALUES ('73', null, '2014-04-29', 'NX-200', 'LG', '9993234234', 'frank', '999', 'Chapulhuacan', '234234234234', '4');
+INSERT INTO `venta_detalle` VALUES ('74', null, '2014-05-02', 'NX-500', 'LG', '35434577711', 'iza', '1399', 'Chapulhuacan', '23423456677', '5');
+INSERT INTO `venta_detalle` VALUES ('75', null, '2014-05-04', 'MOTO X XT1058 NEGRO', 'Motorola\r', '355189021656978', 'tepehuacan', '8999', 'Tepehuacan de Guerrero', '8952020013595535322', '5');
+INSERT INTO `venta_detalle` VALUES ('76', null, '2014-05-04', 'ONE PLATA', 'HTC\r', '355189021656930', 'tepehuacan', '7169', 'Tepehuacan de Guerrero', '8952020013595535524', '5');
+INSERT INTO `venta_detalle` VALUES ('77', null, '2014-05-04', 'XT925 RAZR HD', 'Motorola\r', '355189021656974', 'tepehuacan', '6249', 'Tepehuacan de Guerrero', '8952020013595535413', '5');
+INSERT INTO `venta_detalle` VALUES ('78', null, '2014-05-04', 'ONE PLATA', 'HTC\r', '355189021656936', 'tepehuacan', '7169', 'Tepehuacan de Guerrero', '8952020013595535524', '5');
+
+-- ----------------------------
+-- View structure for c_clientes_garantia
+-- ----------------------------
+DROP VIEW IF EXISTS `c_clientes_garantia`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_clientes_garantia` AS (
+	SELECT nombre_cliente, telefono_contacto, marca_equipo, modelo_equipo, imei_equipo, accesorios, observaciones, fecha, sucursal
+	FROM cliente_garantia
+	JOIN equipo_garantia ON equipo_garantia.idequipo_garantia = cliente_garantia.idequipo_Garantia
+	JOIN sucursal ON equipo_garantia.idsucursal = sucursal.idsucursal
+	JOIN empleado ON equipo_garantia.idempleado = empleado.idempleado
+) ;
+
+-- ----------------------------
+-- View structure for c_clientes_reparacion
+-- ----------------------------
+DROP VIEW IF EXISTS `c_clientes_reparacion`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_clientes_reparacion` AS (
+	SELECT nombre_cliente, telefono_contacto, marca_equipo, modelo_equipo, imei_equipo, observaciones, fecha, sucursal
+	FROM cliente_reparacion
+	JOIN equipo_reparacion ON equipo_reparacion.idequipo_reparacion = cliente_reparacion.idequipo_reparacion
+	JOIN sucursal ON equipo_reparacion.idsucursal = sucursal.idsucursal
+	JOIN empleado ON equipo_reparacion.idempleado = empleado.idempleado
+) ;
+
+-- ----------------------------
+-- View structure for c_clientes_ventas
+-- ----------------------------
+DROP VIEW IF EXISTS `c_clientes_ventas`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_clientes_ventas` AS (
+	SELECT idcliente as cliente, nombre, domicilio, telefono, modelo_celular, imei_celular, marca_celular, iccid_celular, venta_detalle.sucursal as sucursal
+	FROM cliente
+	JOIN venta_detalle ON venta_detalle.idventa_detalle = cliente.idventa
+) ;
+
+-- ----------------------------
+-- View structure for c_empleados
+-- ----------------------------
+DROP VIEW IF EXISTS `c_empleados`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_empleados` AS (
+	SELECT empleado AS Usuario, Sucursal,idNivel as id
+	FROM empleado 
+	JOIN sucursal ON sucursal.idsucursal = empleado.idsucursal
+) ;
+
+-- ----------------------------
+-- View structure for c_equipos_almacen
+-- ----------------------------
+DROP VIEW IF EXISTS `c_equipos_almacen`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_equipos_almacen` AS (
+SELECT marca_celular, modelo_celular, imei_celular, iccid_celular, precioCelular, equipo_almacen.idsucursal AS ids
+FROM equipo_almacen
+JOIN sucursal ON equipo_almacen.idsucursal = sucursal.idsucursal
+) ;
+
+-- ----------------------------
+-- View structure for c_garantia
+-- ----------------------------
+DROP VIEW IF EXISTS `c_garantia`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `c_garantia` AS (
+SELECT sucursal, nombre_cliente AS titular, imei_equipo,iccid_equipo,accesorios,equipo_garantia.idequipo_garantia, equipo_garantia.idsucursal,observaciones
+FROM equipo_garantia
+JOIN cliente_garantia ON cliente_garantia.idequipo_garantia = equipo_garantia.idequipo_garantia
+JOIN sucursal ON sucursal.idsucursal = equipo_garantia.idsucursal
+) ;
+
+-- ----------------------------
+-- View structure for v_equipos_garantia
+-- ----------------------------
+DROP VIEW IF EXISTS `v_equipos_garantia`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `v_equipos_garantia` AS (
+SELECT marca_equipo Marca, modelo_equipo Modelo, imei_equipo IMEI, iccid_equipo ICCID, Accesorios, observaciones, nombre_cliente Titular, telefono_contacto, fecha,equipo_garantia.idequipo_garantia, empleado, sucursal.idsucursal, sucursal
+FROM equipo_garantia
+JOIN cliente_garantia ON equipo_garantia.idequipo_garantia = cliente_garantia.idequipo_garantia
+JOIN sucursal ON sucursal.idsucursal = equipo_garantia.idsucursal
+JOIN empleado on empleado.idempleado = equipo_garantia.idempleado
+) ;
+
+-- ----------------------------
+-- View structure for v_equipos_reparacion
+-- ----------------------------
+DROP VIEW IF EXISTS `v_equipos_reparacion`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`  VIEW `v_equipos_reparacion` AS (
+SELECT marca_equipo AS Marca, modelo_equipo AS Modelo, imei_equipo AS IMEI, nombre_cliente as Titular, telefono_contacto, fecha, equipo_reparacion.idsucursal as idsucursal
+FROM equipo_reparacion
+JOIN cliente_reparacion ON equipo_reparacion.idequipo_reparacion = cliente_reparacion.idequipo_reparacion
+JOIN sucursal ON sucursal.idsucursal = equipo_reparacion.idsucursal
+ORDER BY fecha DESC
+) ;
+
+-- ----------------------------
+-- Procedure structure for insercion_catalogo_clientes
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `insercion_catalogo_clientes`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insercion_catalogo_clientes`()
+BEGIN
+	#Routine body goes here...
+	#variables
+	DECLARE fecha DATE;
+	DECLARE nombre VARCHAR(40);
+	DECLARE done INT DEFAULT 0;
+	DECLARE i INT DEFAULT 0;
+
+	DECLARE cur1 cursor FOR SELECT fecha_venta FROM venta_detalle;
+
+	 UPDATE venta_detalle SET fecha_venta = DATE_FORMAT(fecha_venta,'%d/%m/%Y');
+	-- UPDATE venta_detalle SET fecha_venta = fecha_venta+1;
+
+	/*OPEN cur1;
+		FETCH cur1 INTO fecha;
+		REPEAT
+			UPDATE venta_detalle SET fecha_venta = DATE_FORMAT(fecha_venta,'%d/%m/%Y') WHERE idventa_detalle = i+1;
+		UNTIL done
+		END REPEAT;
+	CLOSE cur1;*/
+END
+;;
+DELIMITER ;
 
 -- ----------------------------
 -- Procedure structure for prueba_fecha
@@ -2414,6 +2339,22 @@ BEGIN
 	CLOSE cur1;*/
 
 
+END
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `TEST_TRIGGER`;
+DELIMITER ;;
+CREATE TRIGGER `TEST_TRIGGER` AFTER INSERT ON `t_test_triggers` FOR EACH ROW BEGIN
+INSERT INTO t_test_triggers_2
+SET 
+    t_test_triggers_2.campo1 = "trigger de prueba22";
+END
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `TEST_TRIGGER_copy`;
+DELIMITER ;;
+CREATE TRIGGER `TEST_TRIGGER_copy` BEFORE INSERT ON `t_test_triggers_2` FOR EACH ROW BEGIN
+SET NEW.campo1 = "trigger de prueba";
 END
 ;;
 DELIMITER ;
